@@ -1,199 +1,156 @@
-<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-            <div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-right">
-                                <div class="big-tagline">
-                                    <h2><strong>SmartEDU </strong> education College</h2>
-                                    <p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight">SmartEDU <strong>education school</strong></h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company</h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">1 IP included with each server
-                                        Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-                                        FREE Reboots</p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <!-- Left Control -->
-        <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="fa fa-angle-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
+<section class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-service-item owl-carousel">
 
-        <!-- Right Control -->
-        <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="fa fa-angle-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-01.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Education</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-02.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Teachers</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-03.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Students</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-02.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Online Meeting</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-03.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Networking</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<div id="overviews" class="section wb">
+<section class="upcoming-meetings" id="meetings">
     <div class="container">
-        <div class="section-title row text-center">
-            <div class="col-md-8 offset-md-2">
-                <h3>About</h3>
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Upcoming Meetings</h2>
+                </div>
             </div>
-        </div><!-- end title -->
-
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="message-box">
-                    <h4>2018 BEST SmartEDU education school</h4>
-                    <h2>Welcome to SmartEDU education school</h2>
-                    <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                    <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                </div><!-- end messagebox -->
-            </div><!-- end col -->
-
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="post-media wow fadeIn">
-                    <img src="{{asset('assets')}}/images/about_02.jpg" alt="" class="img-fluid img-rounded">
-                </div><!-- end media -->
-            </div><!-- end col -->
-        </div>
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="post-media wow fadeIn">
-                    <img src="{{asset('assets')}}/images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                </div><!-- end media -->
-            </div><!-- end col -->
-
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="message-box">
-                    <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
-
-                    <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                </div><!-- end messagebox -->
-            </div><!-- end col -->
-
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<section class="section lb page-section">
-    <div class="container">
-        <div class="section-title row text-center">
-            <div class="col-md-8 offset-md-2">
-                <h3>Our history</h3>
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+            <div class="col-lg-4">
+                <div class="categories">
+                    <h4>Meeting Catgories</h4>
+                    <ul>
+                        <li><a href="#">Sed tempus enim leo</a></li>
+                        <li><a href="#">Aenean molestie quis</a></li>
+                        <li><a href="#">Cras et metus vestibulum</a></li>
+                        <li><a href="#">Nam et condimentum</a></li>
+                        <li><a href="#">Phasellus nec sapien</a></li>
+                    </ul>
+                    <div class="main-button-red">
+                        <a href="meetings.html">All Upcoming Meetings</a>
+                    </div>
+                </div>
             </div>
-        </div><!-- end title -->
-        <div class="timeline">
-            <div class="timeline__wrap">
-                <div class="timeline__items">
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-01">
-                            <h2>2018</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$22.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>10</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-02">
-                            <h2>2015</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$36.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt="Online Teaching"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>24</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-03">
-                            <h2>2014</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$14.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt="Higher Education"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>26</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Higher Education Conference</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-04">
-                            <h2>2012</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-01">
-                            <h2>2010</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-02">
-                            <h2>2007</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-03">
-                            <h2>2004</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__content img-bg-04">
-                            <h2>2002</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$48.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>30</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Student Training Meetup</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,296 +159,993 @@
     </div>
 </section>
 
-<div class="section cl">
+<section class="apply-now" id="apply">
     <div class="container">
-        <div class="row text-left stat-wrap">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
-                <p class="stat_count">12000</p>
-                <h3>Students</h3>
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
-                <p class="stat_count">240</p>
-                <h3>Courses</h3>
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
-                <p class="stat_count">55</p>
-                <h3>Years Completed</h3>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div id="plan" class="section lb">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Choose Your Plan</h3>
-            <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div><!-- end title -->
-
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="message-box">
-                    <ul class="nav nav-pills nav-stacked" id="myTabs">
-                        <li><a class="active" href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
-                        <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
-                    </ul>
+            <div class="col-lg-6 align-self-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
+                            <div class="main-button-red">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
+                            <div class="main-button-yellow">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div><!-- end col -->
+            </div>
+            <div class="col-lg-6">
+                <div class="accordions is-first-expanded">
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>About Edu Meeting HTML Template</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>HTML CSS Bootstrap Layout</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
+                                    Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>Please tell your friends</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
+                                    Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion last-accordion">
+                        <div class="accordion-head">
+                            <span>Share this to your colleagues</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
+                                    Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        <hr class="invis">
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tab-content">
-                    <div class="tab-pane active fade show" id="tab1">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$45</h2>
-                                        <h3>per month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$59</h2>
-                                        <h3>per month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$85</h2>
-                                        <h3>per month</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end pane -->
-
-                    <div class="tab-pane fade" id="tab2">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$477</h2>
-                                        <h3>Year</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$485</h2>
-                                        <h3>Year</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="pricing-table pricing-table-highlighted">
-                                    <div class="pricing-table-header grd1">
-                                        <h2>$500</h2>
-                                        <h3>Year</h3>
-                                    </div>
-                                    <div class="pricing-table-space"></div>
-                                    <div class="pricing-table-features">
-                                        <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                        <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                        <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                        <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                        <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                    </div>
-                                    <div class="pricing-table-sign-up">
-                                        <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end pane -->
-                </div><!-- end content -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+<section class="our-courses" id="courses">
     <div class="container">
-        <div class="section-title text-center">
-            <h3>Testimonials</h3>
-            <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div><!-- end title -->
-
         <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="testi-carousel owl-carousel owl-theme">
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_01.png" alt="" class="img-fluid">
-                            <h4>James Fernando </h4>
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Our Popular Courses</h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="owl-courses-item owl-carousel">
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="Course One">
+                        <div class="down-content">
+                            <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$160</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                        </div>
-                        <!-- end testi-meta -->
                     </div>
-                    <!-- end testimonial -->
-
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_02.png" alt="" class="img-fluid">
-                            <h4>Jacques Philips </h4>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="Course Two">
+                        <div class="down-content">
+                            <h4>Curabitur molestie dignissim purus vel</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$180</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                        </div>
-                        <!-- end testi-meta -->
                     </div>
-                    <!-- end testimonial -->
-
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_03.png" alt="" class="img-fluid ">
-                            <h4>Venanda Mercy </h4>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Nulla at ipsum a mauris egestas tempor</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$140</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                        </div>
-                        <!-- end testi-meta -->
                     </div>
-                    <!-- end testimonial -->
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_01.png" alt="" class="img-fluid">
-                            <h4>James Fernando </h4>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Aenean molestie quis libero gravida</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$120</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                            <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                        </div>
-                        <!-- end testi-meta -->
                     </div>
-                    <!-- end testimonial -->
-
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_02.png" alt="" class="img-fluid">
-                            <h4>Jacques Philips </h4>
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$250</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                            <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                        </div>
-                        <!-- end testi-meta -->
                     </div>
-                    <!-- end testimonial -->
-
-                    <div class="testimonial clearfix">
-                        <div class="testi-meta">
-                            <img src="{{asset('assets')}}/images/testi_03.png" alt="" class="img-fluid">
-                            <h4>Venanda Mercy </h4>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="">
+                        <div class="down-content">
+                            <h4>TemplateMo is the best website for Free CSS</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$270</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                            <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Web Design Templates at your finger tips</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$340</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- end testi-meta -->
-                    </div><!-- end testimonial -->
-                </div><!-- end carousel -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Please visit our website again</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$360</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Responsive HTML Templates for you</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$400</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Download Free CSS Layouts for your business</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$430</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Morbi in libero blandit lectus cursus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$480</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Curabitur molestie dignissim purus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$560</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="parallax section dbcolor">
+<section class="our-facts">
     <div class="container">
-        <div class="row logos">
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_01.png" alt="" class="img-repsonsive"></a>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>A Few Facts About Our University</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content percentage">
+                                    <div class="count-digit">94</div>
+                                    <div class="count-title">Succesed Students</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">126</div>
+                                    <div class="count-title">Current Teachers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content new-students">
+                                    <div class="count-digit">2345</div>
+                                    <div class="count-title">New Students</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">32</div>
+                                    <div class="count-title">Awards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_02.png" alt="" class="img-repsonsive"></a>
+            <div class="col-lg-6 align-self-center">
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="assets/images/play-icon.png" alt=""></a>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_03.png" alt="" class="img-repsonsive"></a>
+        </div>
+    </div>
+</section><section class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-service-item owl-carousel">
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-01.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Education</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-02.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Teachers</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-03.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Students</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-02.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Online Meeting</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/service-icon-03.png" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Best Networking</h4>
+                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_04.png" alt="" class="img-repsonsive"></a>
+        </div>
+    </div>
+</section>
+
+<section class="upcoming-meetings" id="meetings">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Upcoming Meetings</h2>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_05.png" alt="" class="img-repsonsive"></a>
+            <div class="col-lg-4">
+                <div class="categories">
+                    <h4>Meeting Catgories</h4>
+                    <ul>
+                        <li><a href="#">Sed tempus enim leo</a></li>
+                        <li><a href="#">Aenean molestie quis</a></li>
+                        <li><a href="#">Cras et metus vestibulum</a></li>
+                        <li><a href="#">Nam et condimentum</a></li>
+                        <li><a href="#">Phasellus nec sapien</a></li>
+                    </ul>
+                    <div class="main-button-red">
+                        <a href="meetings.html">All Upcoming Meetings</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="{{asset('assets')}}/images/logo_06.png" alt="" class="img-repsonsive"></a>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$22.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>10</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$36.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt="Online Teaching"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>24</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$14.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt="Higher Education"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>26</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Higher Education Conference</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>$48.00</span>
+                                </div>
+                                <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>Nov <span>30</span></h6>
+                                </div>
+                                <a href="meeting-details.html"><h4>Student Training Meetup</h4></a>
+                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+        </div>
+    </div>
+</section>
+
+<section class="apply-now" id="apply">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
+                            <div class="main-button-red">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
+                            <div class="main-button-yellow">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordions is-first-expanded">
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>About Edu Meeting HTML Template</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>HTML CSS Bootstrap Layout</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
+                                    Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>Please tell your friends</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
+                                    Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion last-accordion">
+                        <div class="accordion-head">
+                            <span>Share this to your colleagues</span>
+                            <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
+                                    Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-courses" id="courses">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Our Popular Courses</h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="owl-courses-item owl-carousel">
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="Course One">
+                        <div class="down-content">
+                            <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$160</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="Course Two">
+                        <div class="down-content">
+                            <h4>Curabitur molestie dignissim purus vel</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$180</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Nulla at ipsum a mauris egestas tempor</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$140</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Aenean molestie quis libero gravida</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$250</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="">
+                        <div class="down-content">
+                            <h4>TemplateMo is the best website for Free CSS</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$270</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Web Design Templates at your finger tips</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$340</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Please visit our website again</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$360</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-01.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Responsive HTML Templates for you</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$400</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-02.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Download Free CSS Layouts for your business</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$430</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-03.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Morbi in libero blandit lectus cursus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$480</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/course-04.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Curabitur molestie dignissim purus</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>$560</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-facts">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>A Few Facts About Our University</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content percentage">
+                                    <div class="count-digit">94</div>
+                                    <div class="count-title">Succesed Students</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">126</div>
+                                    <div class="count-title">Current Teachers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content new-students">
+                                    <div class="count-digit">2345</div>
+                                    <div class="count-title">New Students</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">32</div>
+                                    <div class="count-title">Awards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="assets/images/play-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
