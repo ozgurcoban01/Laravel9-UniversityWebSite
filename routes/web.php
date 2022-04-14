@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\adminpanel\HomeController as AdminController;
+use App\Http\Controllers\adminpanel\teachersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,10 @@ use App\Http\Controllers\adminpanel\HomeController as AdminController;
 Route::get('/', [HomeController::class,'index'])->name('index');
 
 Route::get('/admin', [AdminController::class,'index'])->name('admin');
+
+Route::get('/admin/teachers', [teachersController::class,'index'])->name('admin_teachers');
+Route::get('/admin/teachers/create', [teachersController::class,'create'])->name('admin_teachers_create');
+Route::post('/admin/teachers/store', [teachersController::class,'store'])->name('admin_teachers_store');
 
 
 Route::middleware([
