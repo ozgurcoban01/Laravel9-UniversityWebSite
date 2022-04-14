@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\adminpanel\HomeController as AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,9 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('index');
+
+Route::get('/admin', [AdminController::class,'index'])->name('admin');
+
 
 Route::middleware([
     'auth:sanctum',
