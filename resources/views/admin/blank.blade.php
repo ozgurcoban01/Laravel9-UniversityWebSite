@@ -5,7 +5,7 @@
     <div class="container-fluid page-body-wrapper">
         @include('admin.header')
         <div class="main-panel">
-            @include('admin.frommainpanel')
+            @include('admin.blankmainpanel')
             @include('admin.footer')
         </div>
     </div>

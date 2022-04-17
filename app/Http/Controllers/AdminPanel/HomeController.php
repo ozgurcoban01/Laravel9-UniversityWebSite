@@ -12,4 +12,8 @@ class HomeController extends Controller
     public function index(){
         return view('admin.index');
     }
+
+    public function blank(){
+        return view('admin.blank');
+    }
 }

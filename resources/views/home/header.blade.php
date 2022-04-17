@@ -12,8 +12,8 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li><a href="meetings.html">Meetings</a></li>
+                        <li class="scroll-to-section"><a href="/admin" class="active">Home</a></li>
+                        <li><a href="/admin">Meetings</a></li>
                         <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Pages</a>

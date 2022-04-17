@@ -15,17 +15,18 @@ return new class extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->string('f_name');
-            $table->string('l_name');
-            $table->integer('age');
+            $table->string('sysdate');
+            $table->string('fname');
+            $table->string('lname');
+            $table->string('gender');
+            $table->date('bdate');
+            $table->integer('age')->nullable();
+            $table->date('rdate')->nullable();
+            $table->string('email');
             $table->string('degree');
-            $table->string('faculty');
-            $table->string('articles')->nullable();
-            $table->date('enter_date');
-            $table->date('retire_date')->nullable();
+            $table->string('lessons');
             $table->string('description')->nullable();
-            $table->foreignId('lessons_id');
-            $table->string('image')->nullable();
+
             $table->timestamps();
         });
     }

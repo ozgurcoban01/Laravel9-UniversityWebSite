@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\adminpanel;
+namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\teachers;
@@ -15,8 +15,9 @@ class teachersController extends Controller
      */
     public function index()
     {
+        $data=teachers::all();
+        return view('admin.teachers.index',['data'=>$data]);
         //
-        return view('admin.teachers.index');
     }
 
     /**
@@ -26,8 +27,8 @@ class teachersController extends Controller
      */
     public function create()
     {
-        //
         return view('admin.teachers.create');
+        //
     }
 
     /**
@@ -39,17 +40,22 @@ class teachersController extends Controller
     public function store(Request $request)
     {
         $data=new teachers();
-        $data->f_name=$request->f_name;
-        $data->lessons_id=$request->lessons_id;
-        $data->l_name=$request->l_name;
-        $data->age=$request->age;
+
+
+        $data->fname=$request->fname;
+        $data->lname=$request->lname;
+        $data->gender=$request->gender;
+        $data->bdate=$request->bdate;
+        $data->rdate=$request->rdate;
+        $data->email=$request->email;
         $data->degree=$request->degree;
-        $data->faculty=$request->faculty;
-        $data->enter_date=$request->enter_date;
+        $data->lessons=$request->lessons;
         $data->description=$request->description;
+
         $data->save();
 
-
+        return redirect('admin/teachers');
+        //
     }
 
     /**
@@ -72,6 +78,8 @@ class teachersController extends Controller
     public function edit(teachers $teachers)
     {
         //
+
+        return view('admin.teachers.edit');
     }
 
     /**

@@ -6,7 +6,7 @@
 
         @include('admin.header')
         <div class="main-panel">
-            @include('admin.blankmainpanel')
+            @include('admin.frommainpanel')
             @include('admin.footer')
         </div>
     </div>

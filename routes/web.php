@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\adminpanel\HomeController as AdminController;
-use App\Http\Controllers\adminpanel\teachersController;
+use App\Http\Controllers\AdminPanel\teachersController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +18,15 @@ use App\Http\Controllers\adminpanel\teachersController;
 
 Route::get('/', [HomeController::class,'index'])->name('index');
 
-Route::get('/admin', [AdminController::class,'index'])->name('admin');
+Route::get('/admin', [AdminController::class,'blank'])->name('admin');
 
-Route::get('/admin/teachers', [teachersController::class,'index'])->name('admin_teachers');
-Route::get('/admin/teachers/create', [teachersController::class,'create'])->name('admin_teachers_create');
-Route::post('/admin/teachers/store', [teachersController::class,'store'])->name('admin_teachers_store');
+Route::get('/admin/teachers', [teachersController::class,'index'])->name('index');
 
+Route::get('/admin/teachers/create', [teachersController::class,'create'])->name('create');
+
+Route::post('/admin/teachers/store', [teachersController::class,'store'])->name('store');
+
+Route::get('/admin/teachers/edit/{id}', [teachersController::class,'edit'])->name('edit');
 
 Route::middleware([
     'auth:sanctum',

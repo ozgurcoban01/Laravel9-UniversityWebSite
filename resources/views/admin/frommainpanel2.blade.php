@@ -21,8 +21,6 @@
                         <input type="number" class="form-control" name="age" placeholder="Age">
                     </div>
 
-
-
                     <div  class="form-group">
                         <label for="degree">Degree</label>
                         <select style="color: white" class="form-control" name="degree" >
@@ -52,8 +50,6 @@
                         <textarea class="form-control" name="article" rows="4"></textarea>
                     </div>
 
-
-
                     <div class="form-group">
                         <label for="enter_date">Enter Date</label>
                         <input type="date" class="form-control" name="enter_date">
@@ -61,7 +57,7 @@
 
                     <div class="form-group">
                         <label for="lessons_id">Lessons Id</label>
-                        <input type="number" class="form-control" name="lessons_id">
+                        <input type="numbermd" class="form-control" name="lessons_id">
                     </div>
 
                     <div class="form-group">
