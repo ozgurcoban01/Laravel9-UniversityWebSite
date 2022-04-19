@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\adminpanel\HomeController as AdminController;
-use App\Http\Controllers\AdminPanel\teachersController;
+use App\Http\Controllers\AdminPanel\HomeController as AdminController;
+use App\Http\Controllers\AdminPanel\TeachersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +13,18 @@ use App\Http\Controllers\AdminPanel\teachersController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-| Second Test Commit
+|
 */
 
 Route::get('/', [HomeController::class,'index'])->name('index');
 
-Route::get('/admin', [AdminController::class,'blank'])->name('admin');
+Route::get('/admin', [AdminController::class,'index'])->name('admin');
 
-Route::get('/admin/teachers', [teachersController::class,'index'])->name('index');
-
-Route::get('/admin/teachers/create', [teachersController::class,'create'])->name('create');
-
-Route::post('/admin/teachers/store', [teachersController::class,'store'])->name('store');
-
-Route::get('/admin/teachers/edit/{id}', [teachersController::class,'edit'])->name('edit');
+Route::get('/admin/teachers', [TeachersController::class,'index'])->name('teachers');
+Route::get('/admin/teachers/create', [TeachersController::class,'create'])->name('create');
+Route::get('/admin/teachers/create2', [TeachersController::class,'create'])->name('create');
+Route::post('/admin/teachers/store', [TeachersController::class,'store'])->name('store');
+Route::get('/admin/teachers/edit/{id}', [TeachersController::class,'edit'])->name('store');
 
 Route::middleware([
     'auth:sanctum',
