@@ -25,6 +25,7 @@ Route::get('/admin/teachers/create', [TeachersController::class,'create'])->name
 Route::get('/admin/teachers/create2', [TeachersController::class,'create'])->name('create');
 Route::post('/admin/teachers/store', [TeachersController::class,'store'])->name('store');
 Route::get('/admin/teachers/edit/{id}', [TeachersController::class,'edit'])->name('store');
+Route::post('/admin/teachers/update/{id}', [TeachersController::class,'update'])->name('update');
 
 Route::middleware([
     'auth:sanctum',

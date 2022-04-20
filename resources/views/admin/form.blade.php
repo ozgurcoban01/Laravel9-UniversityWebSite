@@ -25,6 +25,7 @@
                                 <label for="gender">Gender</label>
                                 <div class="col-md-6">
                                     <div class="form-group">
+
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input required type="radio" class="form-check-input" name="gender" id="optionsRadios1" value="Male">
@@ -70,7 +71,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Lessons</label>
-                                            <select required name="lessons" class="js-example-basic-multiple w-100" multiple="multiple">
+                                            <select required name="lessons" class="js-example-basic-multiple w-100" >
                                                 <option value="Computer">Computer</option>
                                                 <option value="Architect">Architect</option>
                                                 <option value="Machine">Machine</option>

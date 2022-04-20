@@ -87,9 +87,23 @@ class TeachersController extends Controller
      * @param  \App\Models\Teachers  $teachers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teachers $teachers)
+    public function update(Request $request, Teachers $teachers,$id)
     {
         //
+        $data=Teachers::find($id);
+
+        $data->fname=$request->fname;
+        $data->lname=$request->lname;
+        $data->gender=$request->gender;
+        $data->bdate=$request->bdate;
+        $data->rdate=$request->rdate;
+        $data->degree=$request->degree;
+        $data->lessons=$request->lessons;
+        $data->email=$request->email;
+        $data->description=$request->description;
+
+        $data->save();
+        return redirect('admin/teachers');
     }
 
     /**
