@@ -10,7 +10,7 @@
 
                     <div class="card-body">
                         <h4 class="card-title" style="font-size: xx-large">Persons</h4>
-                        <a href="/admin/teachers/create" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Teacher</div></a>
+                        <a href="{{route('admin.teachers.create')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Teacher</div></a>
 
                         <p class="card-description">
 
@@ -99,13 +99,13 @@
                                             {{$rs->description}}
                                         </td>
                                         <td>
-                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="/admin/teachers/edit/{{$rs->id}}">Edit</a></div>
+                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.teachers.edit',['id'=>$rs->id])}}">Edit</a></div>
                                         </td>
                                         <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" onclick="return confirm('Deleting Are You Ok!!!')" href="/admin/teachers/delete/{{$rs->id}}">Delete</a></div>
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" onclick="return confirm('Deleting Are You Ok!!!')" >Delete</a></div>
                                         </td>
                                         <td >
-                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="/admin/teachers/show/{{$rs->id}}">Show</a></div>
+                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.teachers.show',['id'=>$rs->id])}}">Show</a></div>
 
                                         </td>
                                     </tr>

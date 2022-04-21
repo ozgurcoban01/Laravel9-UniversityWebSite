@@ -18,15 +18,20 @@ use App\Http\Controllers\AdminPanel\TeachersController;
 
 Route::get('/', [HomeController::class,'index'])->name('index');
 
-Route::get('/admin', [AdminController::class,'index'])->name('admin');
+Route::prefix('admin')->name('admin.')->group(function(){
 
-Route::get('/admin/teachers', [TeachersController::class,'index'])->name('teachers');
-Route::get('/admin/teachers/create', [TeachersController::class,'create'])->name('create');
-Route::get('/admin/teachers/create2', [TeachersController::class,'create'])->name('create');
-Route::post('/admin/teachers/store', [TeachersController::class,'store'])->name('store');
-Route::get('/admin/teachers/edit/{id}', [TeachersController::class,'edit'])->name('store');
-Route::post('/admin/teachers/update/{id}', [TeachersController::class,'update'])->name('update');
-Route::get('/admin/teachers/show/{id}', [TeachersController::class,'show'])->name('show');
+    Route::get('/', [AdminController::class,'index'])->name('index');
+
+    Route::prefix('teachers')->name('teachers.')->controller(TeachersController::class)->group(function(){
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/show/{id}','show')->name('show');
+
+    });
+});
 
 Route::middleware([
     'auth:sanctum',

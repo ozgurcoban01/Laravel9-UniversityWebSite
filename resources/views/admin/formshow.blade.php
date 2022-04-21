@@ -6,10 +6,10 @@
         <div>
             <img style=" box-shadow: 0px 0px 26px 12px rgba(0,0,0,0.24);border-radius:100px;width: 200px;height: 200px"src="{{asset('assets')}}/images/faces/face1.jpg" alt="image"/>
             <div style="margin: 20px 35px">
-                <a href="/admin/teachers/edit/{{$data->id}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
+                <a href="{{route('admin.teachers.edit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
             </div>
             <div style="margin: 20px 25px">
-                <a href="/admin/teachers/delete/{{$data->id}}" style="text-decoration:none;color: inherit;"><div class="btn btn-danger">Delete Teacher</div></a>
+                <a href="{{route('admin.teachers.edit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-danger">Delete Teacher</div></a>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
                             <tbody>
                             <tr>
                                 <td style="font-weight:bold">Id</td>
-                                <td>{{$data->fname}}</td>
+                                <td>{{$data->id}}</td>
 
                             </tr>
                             <tr>
@@ -60,11 +60,15 @@
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">E-mail</td>
-                                <td>{{$data->emil}}</td>
+                                <td>{{$data->email}}</td>
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">Degree</td>
                                 <td>{{$data->degree}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold">Faculty</td>
+                                <td>{{$data->lessons}}</td>
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">Description</td>

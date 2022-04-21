@@ -8,7 +8,7 @@
                         <p class="card-description">
                             About Teacher
                         </p>
-                        <form method="post" action="/admin/teachers/store" class="forms-sample">
+                        <form method="post" action="{{route('admin.teachers.store')}}" class="forms-sample">
                             @csrf
                             <!-- FIRST NAME -->
                             <div class="form-group">
