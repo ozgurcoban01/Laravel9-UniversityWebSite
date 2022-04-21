@@ -9,7 +9,7 @@
                 <a href="{{route('admin.teachers.edit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
             </div>
             <div style="margin: 20px 25px">
-                <a href="{{route('admin.teachers.edit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-danger">Delete Teacher</div></a>
+                <a href="{{route('admin.teachers.destroy',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-danger">Delete Teacher</div></a>
             </div>
         </div>
     </div>

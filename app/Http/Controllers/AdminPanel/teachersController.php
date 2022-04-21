@@ -114,8 +114,12 @@ class TeachersController extends Controller
      * @param  \App\Models\Teachers  $teachers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teachers $teachers)
+    public function destroy(Teachers $teachers,$id)
     {
         //
+        $data=Teachers::find($id);
+
+        $data->delete();
+        return redirect('admin/teachers');
     }
 }

@@ -102,7 +102,7 @@
                                             <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.teachers.edit',['id'=>$rs->id])}}">Edit</a></div>
                                         </td>
                                         <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" onclick="return confirm('Deleting Are You Ok!!!')" >Delete</a></div>
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.teachers.destroy',['id'=>$rs->id])}}" >Delete</a></div>
                                         </td>
                                         <td >
                                             <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.teachers.show',['id'=>$rs->id])}}">Show</a></div>

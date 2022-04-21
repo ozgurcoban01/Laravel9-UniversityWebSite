@@ -180,6 +180,12 @@
                 <span class="menu-title">Teachers</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.events.list')}}">
+                <i class="mdi mdi-star-circle menu-icon"></i>
+                <span class="menu-title">Events</span>
+            </a>
+        </li>
 
     </ul>
 </nav>

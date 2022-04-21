@@ -1,5 +1,5 @@
 @extends('layouts.adminbase')
 
 @section('content')
-    @include('admin.formshow')
+    @include('admin.teachersblades.formshow')
 @endsection
