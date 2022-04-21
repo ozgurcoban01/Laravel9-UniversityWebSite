@@ -62,9 +62,11 @@ class TeachersController extends Controller
      * @param  \App\Models\Teachers  $teachers
      * @return \Illuminate\Http\Response
      */
-    public function show(Teachers $teachers)
+    public function show(Teachers $teachers,$id)
     {
         //
+        $data=Teachers::find($id);
+        return view('admin.teachers.show',['data'=>$data]);
     }
 
     /**

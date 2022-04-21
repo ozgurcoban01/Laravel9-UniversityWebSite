@@ -102,7 +102,7 @@
                                             <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="/admin/teachers/edit/{{$rs->id}}">Edit</a></div>
                                         </td>
                                         <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="/admin/teachers/delete/{{$rs->id}}">Delete</a></div>
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" onclick="return confirm('Deleting Are You Ok!!!')" href="/admin/teachers/delete/{{$rs->id}}">Delete</a></div>
                                         </td>
                                         <td >
                                             <div ><a class="btn btn-success btn-rounded btn-fw" href="/admin/teachers/show/{{$rs->id}}">Show</a></div>
