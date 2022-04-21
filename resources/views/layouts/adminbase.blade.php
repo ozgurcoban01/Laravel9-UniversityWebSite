@@ -31,7 +31,11 @@
 
             @include('admin.circlebar')
             @include('admin.sidebar')
-            @yield('content')
+            <div class="main-panel">
+                @yield('content')
+                @include('admin.footer')
+            </div>
+
 
         </div>
     </div>

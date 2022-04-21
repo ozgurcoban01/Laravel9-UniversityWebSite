@@ -1,16 +1,17 @@
 
 
-<!-- partial:partials/_settings-panel.html -->
+<div class="content-wrapper">
 
-
-<div class="main-panel">
-    <div class="content-wrapper">
         <div class="row">
 
-            <div class="col-lg-12 grid-margin stretch-card">
+            <div  class="col-lg-12 grid-margin stretch-card">
+
                 <div class="card">
+
                     <div class="card-body">
-                        <h4 class="card-title">Persons</h4>
+                        <h4 class="card-title" style="font-size: xx-large">Persons</h4>
+                        <a href="/admin/teachers/create" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Teacher</div></a>
+
                         <p class="card-description">
 
                         </p>
@@ -25,10 +26,7 @@
                                         User
                                     </th>
                                     <th>
-                                        First name
-                                    </th>
-                                    <th>
-                                        Last Name
+                                        Name
                                     </th>
                                     <th>
                                         Gender
@@ -75,11 +73,9 @@
                                         </td>
 
                                         <td>
-                                            {{$rs->fname}}
+                                            {{$rs->fname}} {{$rs->lname}}
                                         </td>
-                                        <td>
-                                            {{$rs->lname}}
-                                        </td>
+
                                         <td>
                                             {{$rs->gender}}
                                         </td>
@@ -103,13 +99,13 @@
                                             {{$rs->description}}
                                         </td>
                                         <td>
-                                            <div ><a class="btn btn-warning btn-icon-text" href="/admin/teachers/edit/{{$rs->id}}">Edit</a></div>
+                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="/admin/teachers/edit/{{$rs->id}}">Edit</a></div>
                                         </td>
                                         <td>
-                                            <div ><a class="btn btn-danger btn-icon-text" href="/admin/teachers/delete/{{$rs->id}}">Delete</a></div>
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="/admin/teachers/delete/{{$rs->id}}">Delete</a></div>
                                         </td>
                                         <td >
-                                            <div ><a class="btn btn-success btn-icon-text" href="/admin/teachers/show/{{$rs->id}}">Show</a></div>
+                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="/admin/teachers/show/{{$rs->id}}">Show</a></div>
 
                                         </td>
                                     </tr>
@@ -118,6 +114,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -125,16 +122,6 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
-        </div>
-    </footer>
-    <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.html -->
 
-    <!-- partial -->
-</div>
 <!-- main-panel ends -->
 
