@@ -8,7 +8,7 @@
                         <p class="card-description">
                             About Teacher
                         </p>
-                        <form method="post" action="{{route('admin.teachers.store')}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.teachers.store')}}" enctype="multipart/form-data" class="forms-sample">
                             @csrf
                             <!-- FIRST NAME -->
                             <div class="form-group">
@@ -18,7 +18,7 @@
                             <!-- LAST NAME -->
                             <div class="form-group">
                                 <label for="lname">Last Name</label>
-                                <input v type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
+                                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
                             </div>
                             <!-- GENDER -->
                             <div class="form-group">
@@ -87,6 +87,13 @@
                                 <label for="description">Description</label>
                                 <input type="text" class="form-control" id="description" placeholder="Description" name="description">
                             </div>
+
+                            <!-- IMAGE -->
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" id="image"name="image">
+                            </div>
+
 
 
                             <button type="submit" class="btn btn-primary me-2">Submit</button>

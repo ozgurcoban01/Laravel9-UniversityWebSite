@@ -4,7 +4,10 @@
 <div class="content-wrapper">
     <div style="margin: 10px;position: absolute;margin: 0 0 0 180px">
         <div>
-            <img style=" box-shadow: 0px 0px 26px 12px rgba(0,0,0,0.24);border-radius:100px;width: 200px;height: 200px"src="{{asset('assets')}}/images/faces/face1.jpg" alt="image"/>
+            @if($data->image)
+                <img style=" box-shadow: 0px 0px 26px 12px rgba(0,0,0,0.24);border-radius:100px;width: 200px;height: 200px"src="{{Storage::url($data->image)}}" alt="image"/>
+            @endif
+
             <div style="margin: 20px 35px">
                 <a href="{{route('admin.teachers.sedit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
             </div>

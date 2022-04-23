@@ -9,8 +9,8 @@
                 <div class="card">
 
                     <div class="card-body">
-                        <h4 class="card-title" style="font-size: xx-large">Persons</h4>
-                        <a href="{{route('admin.teachers.create')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Teacher</div></a>
+                        <h4 class="card-title" style="font-size: xx-large">Events</h4>
+                        <a href="{{route('admin.events.create')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Event</div></a>
 
                         <p class="card-description">
 
@@ -20,25 +20,19 @@
                                 <thead>
                                 <tr>
                                     <th>
-                                        Id
+                                        Event Id
                                     </th>
                                     <th>
-                                        User
+                                        Event Name
                                     </th>
                                     <th>
-                                        Name
+                                        Event Starts
                                     </th>
                                     <th>
-                                        Gender
+                                        Event Ends
                                     </th>
                                     <th>
-                                        Age
-                                    </th>
-                                    <th>
-                                        E-mail
-                                    </th>
-                                    <th>
-                                        Degree
+                                        Description
                                     </th>
                                     <th>
                                         Edit
@@ -58,40 +52,33 @@
                                         <td>
                                             #{{$rs->id}}
                                         </td>
-                                        <td class="py-1">
-                                            @if($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}" alt="image">
-                                            @endif
+                                        <td>
+                                            {{$rs->name}}
+                                        </td>
+                                        <td>
+                                            {{$rs->sdate}} {{$rs->stime}}
+                                        </td>
+                                        <td>
+                                            {{$rs->edate}} {{$rs->etime}}
+                                        </td>
+                                        <td>
+                                            {{$rs->description}}
                                         </td>
 
                                         <td>
-                                            {{$rs->fname}} {{$rs->lname}}
+                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.events.edit',['id'=>$rs->id])}}">Edit</a></div>
                                         </td>
 
                                         <td>
-                                            {{$rs->gender}}
-                                        </td>
-                                        <td>
-                                            {{$rs->age}}
-                                        </td>
-                                        <td>
-                                            {{$rs->email}}
-                                        </td>
-                                        <td>
-                                            {{$rs->degree}}
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.events.destroy',['id'=>$rs->id])}}"  >Delete</a></div>
                                         </td>
 
-                                        <td>
-                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.teachers.edit',['id'=>$rs->id])}}">Edit</a></div>
-                                        </td>
-                                        <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.teachers.destroy',['id'=>$rs->id])}}" >Delete</a></div>
-                                        </td>
                                         <td >
-                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.teachers.show',['id'=>$rs->id])}}">Show</a></div>
+                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.events.show',['id'=>$rs->id])}}">Show</a></div>
 
                                         </td>
                                     </tr>
+
                                 @endforeach
 
                                 </tbody>

@@ -53,6 +53,10 @@
                                 <td>{{$data->etime}}</td>
                             </tr>
                             <tr>
+                                <td style="font-weight:bold">Image</td>
+                                <td>{{$data->etime}}</td>
+                            </tr>
+                            <tr>
                                 <td style="font-weight:bold">Description</td>
                                 <td>{{$data->description}}</td>
                             </tr>
@@ -60,12 +64,6 @@
                                 <td style="font-weight:bold;vertical-align: top;"><div>About Event</div></td>
                                 <td><?php echo nl2br($str); ?></td>
                             </tr>
-                            @if($data->image)
-                                <tr>
-                                    <td style="font-weight:bold;vertical-align: top;">Banner Image</td>
-                                    <td><img style="height: 100px;width: 100px" src="{{Storage::url($data->image)}}" alt="image"></td>
-                                </tr>
-                            @endif
                             <tr>
                                 <td style="font-weight:bold">Created</td>
                                 <td>{{$data->created_at}}</td>

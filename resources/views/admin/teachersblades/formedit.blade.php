@@ -9,7 +9,7 @@
                         <p class="card-description">
                             Form For Change <span style="font-weight: bold">Id: {{$data->id}}</span> Who is <span style="font-weight: bold">{{$data->fname}} {{$data->lname}}</span>
                         </p>
-                        <form method="post" action="{{route('admin.teachers.update',['id'=>$data->id])}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.teachers.update',['id'=>$data->id])}}" enctype="multipart/form-data" class="forms-sample">
                         @csrf
                         <!-- FIRST NAME -->
                             <div class="form-group">
@@ -100,6 +100,14 @@
                                 <label for="description">Description</label>
                                 <input value="{{$data->description}}" type="text" class="form-control" id="description" name="description">
                             </div>
+                            <!-- IMAGE -->
+                            <div class="form-group">
+                                <label for="description">Image</label>
+                                <input type="file" class="form-control" id="image"  name="image">
+                            </div>
+
+
+
 
 
                             <button type="submit" class="btn btn-primary me-2">Update</button>

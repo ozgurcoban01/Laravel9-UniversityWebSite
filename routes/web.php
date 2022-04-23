@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminController;
 use App\Http\Controllers\AdminPanel\TeachersController;
 use App\Http\Controllers\AdminPanel\EventsController;
+use App\Http\Controllers\AdminPanel\AdminImage;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,19 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
+
+    });
+
+    Route::prefix('image')->name('image.')->controller(AdminImage::class)->group(function(){
+        Route::get('/{tid}', 'index')->name('list');
+        Route::get('/create/{tid}','create')->name('create');
+        Route::post('/store/{tid}','store')->name('store');
+        Route::get('/edit/{tid}/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
+        Route::post('/update/{tid}/{id}','update')->name('update');
+        Route::post('/supdate/{tid}/{id}','supdate')->name('supdate');
+        Route::get('/show/{tid}/{id}','show')->name('show');
+        Route::get('/destroy/{tid}/{id}','destroy')->name('destroy');
 
     });
 });

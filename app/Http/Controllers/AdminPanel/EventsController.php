@@ -4,8 +4,8 @@ namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Events;
-use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventsController extends Controller
 {
@@ -51,6 +51,9 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('event_images');
+        }
 
         $data->save();
         return redirect('admin/events');
@@ -102,6 +105,7 @@ class EventsController extends Controller
         //
         $data=Events::find($id);
 
+        Storage::delete($data->image);
         $data->name=$request->name;
         $data->location=$request->location;
         $data->sdate=$request->sdate;
@@ -110,6 +114,9 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('event_images');
+        }
 
         $data->save();
         return redirect('admin/events');
@@ -120,6 +127,7 @@ class EventsController extends Controller
         //
         $data=Events::find($id);
 
+        Storage::delete($data->image);
         $data->name=$request->name;
         $data->location=$request->location;
         $data->sdate=$request->sdate;
@@ -128,6 +136,9 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('event_images');
+        }
 
         $data->save();
         return redirect()->route('admin.events.show', ['id' => $id]);
@@ -143,7 +154,7 @@ class EventsController extends Controller
     {
         //
         $data=Events::find($id);
-
+        Storage::delete($data->image);
         $data->delete();
         return redirect('admin/events');
     }

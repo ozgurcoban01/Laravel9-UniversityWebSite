@@ -1,4 +1,4 @@
-x
+
 <div class="content-wrapper">
 
         <div class="row">
@@ -9,7 +9,7 @@ x
                         <p class="card-description">
                             Form For Change <span style="font-weight: bold">Id: {{$data->id}}</span> Who is <span style="font-weight: bold">{{$data->fname}} {{$data->lname}}</span>
                         </p>
-                        <form method="post" action="{{route('admin.teachers.supdate',['id'=>$data->id])}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.teachers.supdate',['id'=>$data->id])}}" enctype="multipart/form-data" class="forms-sample">
                         @csrf
                         <!-- FIRST NAME -->
                             <div class="form-group">
@@ -100,7 +100,12 @@ x
                                 <label for="description">Description</label>
                                 <input value="{{$data->description}}" type="text" class="form-control" id="description" name="description">
                             </div>
-
+                            <!-- IMAGE -->
+                            <!-- IMAGE -->
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" id="image"name="image">
+                            </div>
 
                             <button type="submit" class="btn btn-primary me-2">Update</button>
 

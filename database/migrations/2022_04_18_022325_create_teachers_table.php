@@ -21,11 +21,12 @@ return new class extends Migration
             $table->string('gender');
             $table->integer('age')->nullable();
             $table->date('bdate');
-            $table->date('rdate')->nullable();;
+            $table->date('rdate')->nullable();
             $table->string('email');
             $table->string('degree');
             $table->string('lessons');
-            $table->string('description')->nullable();;
+            $table->string('description')->nullable();
+            $table->string('image')->nullable();
 
             $table->timestamps();
         });

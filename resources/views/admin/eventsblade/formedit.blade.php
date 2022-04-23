@@ -9,7 +9,7 @@
                         <p class="card-description">
                             Form For Change <span style="font-weight: bold">Id: {{$data->id}}</span> Event is <span style="font-weight: bold">{{$data->name}}</span>
                         </p>
-                        <form method="post" action="{{route('admin.events.update',['id'=>$data->id])}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.events.update',['id'=>$data->id])}}" enctype="multipart/form-data" class="forms-sample">
                         @csrf
                         <!-- Event Name -->
                             <div class="form-group">
@@ -64,7 +64,11 @@
                                 <label for="aboutevent">About Event</label><br>
                                 <textarea value="{{$data->aboutevent}}" rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ...">{{$data->aboutevent}}</textarea>
                             </div>
-
+                            <!-- IMAGE -->
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" id="image"  name="image">
+                            </div>
 
                             <button type="submit" class="btn btn-primary me-2">Update</button>
 

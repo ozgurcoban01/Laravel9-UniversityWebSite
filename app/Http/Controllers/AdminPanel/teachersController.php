@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminPanel;
 use App\Http\Controllers\Controller;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TeachersController extends Controller
 {
@@ -51,6 +52,10 @@ class TeachersController extends Controller
         $data->lessons=$request->lessons;
         $data->email=$request->email;
         $data->description=$request->description;
+
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('teacher_images');
+        }
 
         $data->save();
         return redirect('admin/teachers');
@@ -101,6 +106,7 @@ class TeachersController extends Controller
         //
         $data=Teachers::find($id);
 
+        Storage::delete($data->image);
         $data->fname=$request->fname;
         $data->lname=$request->lname;
         $data->gender=$request->gender;
@@ -109,7 +115,12 @@ class TeachersController extends Controller
         $data->degree=$request->degree;
         $data->lessons=$request->lessons;
         $data->email=$request->email;
+
         $data->description=$request->description;
+
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('teacher_images');
+        }
 
         $data->save();
         return redirect('admin/teachers');
@@ -120,6 +131,7 @@ class TeachersController extends Controller
         //
         $data=Teachers::find($id);
 
+        Storage::delete($data->image);
         $data->fname=$request->fname;
         $data->lname=$request->lname;
         $data->gender=$request->gender;
@@ -128,6 +140,10 @@ class TeachersController extends Controller
         $data->degree=$request->degree;
         $data->lessons=$request->lessons;
         $data->email=$request->email;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('teacher_images');
+        }
+
         $data->description=$request->description;
 
         $data->save();
@@ -144,7 +160,7 @@ class TeachersController extends Controller
     {
         //
         $data=Teachers::find($id);
-
+        Storage::delete($data->image);
         $data->delete();
         return redirect('admin/teachers');
     }

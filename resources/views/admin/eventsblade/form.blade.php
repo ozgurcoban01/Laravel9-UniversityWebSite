@@ -8,7 +8,7 @@
                         <p class="card-description">
                             About Event
                         </p>
-                        <form method="post" action="{{route('admin.events.store')}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.events.store')}}" enctype="multipart/form-data" class="forms-sample">
                             @csrf
                             <!-- Event Name -->
                             <div class="form-group">
@@ -62,7 +62,11 @@
                                 <label for="aboutevent">About Event</label><br>
                                 <textarea rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
                             </div>
-
+                            <!-- IMAGE -->
+                            <div class="form-group">
+                                <label for="description">Image</label>
+                                <input type="file" class="form-control" id="image"  name="image">
+                            </div>
                             <button type="submit" class="btn btn-primary me-2">Submit</button>
 
                         </form>
