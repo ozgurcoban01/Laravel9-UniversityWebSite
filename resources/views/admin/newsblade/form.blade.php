@@ -6,43 +6,26 @@
                     <div class="card-body">
                         <h4 class="card-title">ADD EVENT</h4>
                         <p class="card-description">
-                            About Event
+                            News Event
                         </p>
-                        <form method="post" action="{{route('admin.events.store')}}" enctype="multipart/form-data" class="forms-sample">
+                        <form method="post" action="{{route('admin.news.store')}}" enctype="multipart/form-data" class="forms-sample">
                             @csrf
                             <!-- Event Name -->
                             <div class="form-group">
-                                <label for="name">Event Name</label>
-                                <input required type="text" class="form-control" id="name" name="name" placeholder="Event Name" >
+                                <label for="name">News Name</label>
+                                <input required type="text" class="form-control" id="name" name="name" placeholder="News Name" >
                             </div>
 
-                            <!-- START DATE -->
+                            <!-- DATE -->
                             <div class="form-group">
-                                <label for="sdate">Event Start Date</label>
-                                <input required type="date" class="form-control" id="sdate" name="sdate" >
-                            </div>
-
-                            <!-- END DATE -->
-                            <div class="form-group">
-                                <label for="edate">Event End Date</label>
-                                <input required type="date" class="form-control" id="edate" name="edate" >
-                            </div>
-
-                            <!-- START TIME -->
-                            <div class="form-group">
-                                <label for="stime">Event Start Time</label>
-                                <input required type="time" class="form-control" id="stime" name="stime">
-                            </div>
-
-                            <!-- END TIME -->
-                            <div class="form-group">
-                                <label for="etime">Event End Time</label>
-                                <input required type="time" class="form-control" id="etime" name="etime" >
+                                <label for="date">Date</label>
+                                <input required type="date" class="form-control" id="date" name="date" >
                             </div>
 
                             <div class="form-group">
                                 <label>Location</label>
-                                <select required name="location" class="js-example-basic-single w-100">
+                                <select name="location" class="js-example-basic-single w-100">
+                                    <option selected value="">Empty</option>
                                     <option value="Istanbul">Istanbul</option>
                                     <option value="Istanbul">Karabük</option>
                                     <option value="Ankara">Ankara</option>
@@ -60,14 +43,15 @@
 
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
-                                <label for="aboutevent">About Event</label><br>
-                                <textarea rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
+                                <label for="aboutnews">About News</label><br>
+                                <textarea rows = "5" cols = "33" id="aboutnews" name="aboutnews" placeholder=" News About ..."></textarea>
                             </div>
                             <!-- IMAGE -->
                             <div class="form-group">
-                                <label for="description">Image</label>
+                                <label for="image">Image</label>
                                 <input type="file" class="form-control" id="image"  name="image">
                             </div>
+
                             <button type="submit" class="btn btn-primary me-2">Submit</button>
 
                         </form>

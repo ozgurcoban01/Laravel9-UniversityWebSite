@@ -186,6 +186,12 @@
                 <span class="menu-title">Events</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.news.list')}}">
+                <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">News</span>
+            </a>
+        </li>
 
     </ul>
 </nav>

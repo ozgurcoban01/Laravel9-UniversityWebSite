@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminController;
 use App\Http\Controllers\AdminPanel\TeachersController;
 use App\Http\Controllers\AdminPanel\EventsController;
 use App\Http\Controllers\AdminPanel\AdminImage;
+use App\Http\Controllers\AdminPanel\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,19 @@ Route::prefix('admin')->name('admin.')->group(function(){
     });
 
     Route::prefix('events')->name('events.')->controller(EventsController::class)->group(function(){
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::post('/supdate/{id}','supdate')->name('supdate');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+
+    });
+
+    Route::prefix('news')->name('news.')->controller(NewsController::class)->group(function(){
         Route::get('/', 'index')->name('list');
         Route::get('/create','create')->name('create');
         Route::post('/store','store')->name('store');

@@ -46,6 +46,7 @@
                                 <select required name="location" class="js-example-basic-single w-100">
                                     <option selected value="Istanbul">{{$data->location}}</option>
                                     <option value="Istanbul">Istanbul</option>
+                                    <option value="Istanbul">Karabük</option>
                                     <option value="Ankara">Ankara</option>
                                     <option value="Izmir">Izmir</option>
                                     <option value="Bursa">Bursa</option>
