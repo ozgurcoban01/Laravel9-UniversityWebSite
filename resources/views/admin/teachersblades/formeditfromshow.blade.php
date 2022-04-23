@@ -1,15 +1,15 @@
-
+x
 <div class="content-wrapper">
 
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title"><span style="font-weight: normal">Editing</span> {{$data->degree}} {{$data->fname}} {{$data->lname}}</h4>
+                        <h4 class="card-title">Edit {{$data->degree}} {{$data->fname}} {{$data->lname}}</h4>
                         <p class="card-description">
                             Form For Change <span style="font-weight: bold">Id: {{$data->id}}</span> Who is <span style="font-weight: bold">{{$data->fname}} {{$data->lname}}</span>
                         </p>
-                        <form method="post" action="{{route('admin.teachers.update',['id'=>$data->id])}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.teachers.supdate',['id'=>$data->id])}}" class="forms-sample">
                         @csrf
                         <!-- FIRST NAME -->
                             <div class="form-group">

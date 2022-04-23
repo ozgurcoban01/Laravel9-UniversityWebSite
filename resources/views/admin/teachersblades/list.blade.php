@@ -34,23 +34,12 @@
                                     <th>
                                         Age
                                     </th>
-
-                                    <th>
-                                        Retire Date
-                                    </th>
                                     <th>
                                         E-mail
                                     </th>
                                     <th>
                                         Degree
                                     </th>
-                                    <th>
-                                        Lessons
-                                    </th>
-                                    <th>
-                                        Description
-                                    </th>
-
                                     <th>
                                         Edit
                                     </th>
@@ -66,7 +55,7 @@
                                 @foreach($data as $rs)
                                     <tr>
                                         <td>
-                                            {{$rs->id}}
+                                            #{{$rs->id}}
                                         </td>
                                         <td class="py-1">
                                             <img src="{{asset('assets')}}/images/faces/face1.jpg" alt="image"/>
@@ -82,21 +71,11 @@
                                         <td>
                                             {{$rs->age}}
                                         </td>
-
-                                        <td>
-                                            {{$rs->rdate}}
-                                        </td>
                                         <td>
                                             {{$rs->email}}
                                         </td>
                                         <td>
                                             {{$rs->degree}}
-                                        </td>
-                                        <td>
-                                            {{$rs->lessons}}
-                                        </td>
-                                        <td>
-                                            {{$rs->description}}
                                         </td>
                                         <td>
                                             <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.teachers.edit',['id'=>$rs->id])}}">Edit</a></div>

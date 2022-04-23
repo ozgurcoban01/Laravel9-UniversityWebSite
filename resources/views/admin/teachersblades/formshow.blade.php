@@ -6,10 +6,13 @@
         <div>
             <img style=" box-shadow: 0px 0px 26px 12px rgba(0,0,0,0.24);border-radius:100px;width: 200px;height: 200px"src="{{asset('assets')}}/images/faces/face1.jpg" alt="image"/>
             <div style="margin: 20px 35px">
-                <a href="{{route('admin.teachers.edit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
+                <a href="{{route('admin.teachers.sedit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-warning">Edit Teacher</div></a>
             </div>
             <div style="margin: 20px 25px">
                 <a href="{{route('admin.teachers.destroy',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;"><div class="btn btn-danger">Delete Teacher</div></a>
+            </div>
+            <div style="margin: 20px 45px">
+                <a href="{{route('admin.teachers.list')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-success">List Page</div></a>
             </div>
         </div>
     </div>
@@ -31,7 +34,7 @@
                             <tbody>
                             <tr>
                                 <td style="font-weight:bold">Id</td>
-                                <td>{{$data->id}}</td>
+                                <td>#{{$data->id}}</td>
 
                             </tr>
                             <tr>

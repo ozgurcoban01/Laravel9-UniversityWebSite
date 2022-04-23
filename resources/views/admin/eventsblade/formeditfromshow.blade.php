@@ -9,7 +9,7 @@
                         <p class="card-description">
                             Form For Change <span style="font-weight: bold">Id: {{$data->id}}</span> Event is <span style="font-weight: bold">{{$data->name}}</span>
                         </p>
-                        <form method="post" action="{{route('admin.events.update',['id'=>$data->id])}}" class="forms-sample">
+                        <form method="post" action="{{route('admin.events.supdate',['id'=>$data->id])}}" class="forms-sample">
                         @csrf
                         <!-- Event Name -->
                             <div class="form-group">

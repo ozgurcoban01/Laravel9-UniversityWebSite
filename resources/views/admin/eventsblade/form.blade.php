@@ -60,7 +60,7 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>
-                                <textarea rows = "5" cols = "60" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
+                                <textarea rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary me-2">Submit</button>

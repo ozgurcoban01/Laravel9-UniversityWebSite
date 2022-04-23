@@ -28,7 +28,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/create','create')->name('create');
         Route::post('/store','store')->name('store');
         Route::get('/edit/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
         Route::post('/update/{id}','update')->name('update');
+        Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
 
@@ -39,7 +41,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/create','create')->name('create');
         Route::post('/store','store')->name('store');
         Route::get('/edit/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
         Route::post('/update/{id}','update')->name('update');
+        Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
 

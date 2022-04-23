@@ -50,7 +50,7 @@
                                 @foreach($data as $rs)
                                     <tr>
                                         <td>
-                                            {{$rs->id}}
+                                            #{{$rs->id}}
                                         </td>
                                         <td>
                                             {{$rs->name}}

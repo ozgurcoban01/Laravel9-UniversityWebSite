@@ -82,6 +82,13 @@ class TeachersController extends Controller
         return view('admin.teachers.edit',['data'=>$data]);
     }
 
+    public function sedit(Teachers $teachers,$id)
+    {
+        //
+        $data=Teachers::find($id);
+        return view('admin.teachers.sedit',['data'=>$data]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -106,6 +113,25 @@ class TeachersController extends Controller
 
         $data->save();
         return redirect('admin/teachers');
+    }
+
+    public function supdate(Request $request, Teachers $teachers,$id)
+    {
+        //
+        $data=Teachers::find($id);
+
+        $data->fname=$request->fname;
+        $data->lname=$request->lname;
+        $data->gender=$request->gender;
+        $data->bdate=$request->bdate;
+        $data->rdate=$request->rdate;
+        $data->degree=$request->degree;
+        $data->lessons=$request->lessons;
+        $data->email=$request->email;
+        $data->description=$request->description;
+
+        $data->save();
+        return redirect()->route('admin.teachers.show', ['id' => $id]);
     }
 
     /**

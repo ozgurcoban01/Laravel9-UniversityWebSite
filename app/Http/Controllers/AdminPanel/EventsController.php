@@ -83,6 +83,12 @@ class EventsController extends Controller
         $data=Events::find($id);
         return view('admin.events.edit',['data'=>$data]);
     }
+    public function sedit(Events $events,$id)
+    {
+        //
+        $data=Events::find($id);
+        return view('admin.events.sedit',['data'=>$data]);
+    }
 
     /**
      * Update the specified resource in storage.
@@ -107,6 +113,24 @@ class EventsController extends Controller
 
         $data->save();
         return redirect('admin/events');
+    }
+
+    public function supdate(Request $request, Events $events,$id)
+    {
+        //
+        $data=Events::find($id);
+
+        $data->name=$request->name;
+        $data->location=$request->location;
+        $data->sdate=$request->sdate;
+        $data->edate=$request->edate;
+        $data->stime=$request->stime;
+        $data->etime=$request->etime;
+        $data->aboutevent=$request->aboutevent;
+        $data->description=$request->description;
+
+        $data->save();
+        return redirect()->route('admin.events.show', ['id' => $id]);
     }
 
     /**
