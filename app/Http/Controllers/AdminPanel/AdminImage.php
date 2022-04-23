@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class AdminImage extends Controller
 {
@@ -12,19 +16,28 @@ class AdminImage extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($tid)
+    public function index($nid)
     {
-        //
+        $news=News::find($nid);
+       // $images=Image::where('news_id',$nid);
+        $images=DB::table('images')->where('news_id',$nid)->get();
+
+        return view('admin.image.index',[
+            'news'=>$news,
+            'images'=>$images
+
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create($tid)
+    public function create(Request $request,$nid)
     {
-        //
+
+
     }
 
     /**
@@ -33,9 +46,19 @@ class AdminImage extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$tid)
+    public function store(Request $request,$nid)
     {
-        //
+        $data=new Image();
+
+        $data->news_id=$nid;
+        $data->title=$request->title;
+
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('news_galery');
+        }
+
+        $data->save();
+        return redirect()->route('admin.image.list',['nid'=>$nid]);
     }
 
     /**
@@ -51,13 +74,17 @@ class AdminImage extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($nid,$id)
     {
         //
+        $news=News::find($nid);
+        $images=Image::find($id);
+
+        return view('admin.image.edit',['news'=>$news,'images'=>$images]);
     }
 
     /**
@@ -67,9 +94,23 @@ class AdminImage extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$tid, $id)
+    public function update(Request $request,$nid, $id)
     {
         //
+        $data=Image::find($id);
+
+        Storage::delete($data->image);
+
+        $data->news_id=$nid;
+
+        $data->title=$request->title;
+
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('news_galery');
+        }
+
+        $data->save();
+        return redirect()->route('admin.image.list',['nid'=>$nid]);
     }
 
     /**
@@ -78,8 +119,12 @@ class AdminImage extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($tid,$id)
+    public function destroy($nid,$id)
     {
         //
+        $data=Image::find($id);
+        Storage::delete($data->image);
+        $data->delete();
+        return redirect()->route('admin.image.list',['nid'=>$nid]);
     }
 }

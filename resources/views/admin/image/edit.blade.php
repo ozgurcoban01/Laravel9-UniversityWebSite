@@ -1,5 +1,5 @@
-@extends('layouts.adminbase')
+@extends('layouts.adminimagewindow')
 
 @section('content')
-    @include('admin.image.formedit')
+    @include('admin.imageblade.formedit')
 @endsection

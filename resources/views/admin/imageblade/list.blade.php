@@ -34,15 +34,7 @@
                                     <th>
                                         Description
                                     </th>
-                                    <th>
-                                        Edit
-                                    </th>
-                                    <th>
-                                        Delete
-                                    </th>
-                                    <th>
-                                        Show
-                                    </th>
+
 
                                 </tr>
                                 </thead>
@@ -65,18 +57,6 @@
                                             {{$rs->description}}
                                         </td>
 
-                                        <td>
-                                            <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.events.edit',['id'=>$rs->id])}}">Edit</a></div>
-                                        </td>
-
-                                        <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.events.destroy',['id'=>$rs->id])}}"  >Delete</a></div>
-                                        </td>
-
-                                        <td >
-                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.events.show',['id'=>$rs->id])}}">Show</a></div>
-
-                                        </td>
                                     </tr>
 
                                 @endforeach

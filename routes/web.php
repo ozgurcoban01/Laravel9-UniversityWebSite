@@ -65,15 +65,14 @@ Route::prefix('admin')->name('admin.')->group(function(){
     });
 
     Route::prefix('image')->name('image.')->controller(AdminImage::class)->group(function(){
-        Route::get('/{tid}', 'index')->name('list');
-        Route::get('/create/{tid}','create')->name('create');
-        Route::post('/store/{tid}','store')->name('store');
-        Route::get('/edit/{tid}/{id}','edit')->name('edit');
+        Route::get('/{nid}', 'index')->name('list');
+        Route::post('/store/{nid}','store')->name('store');
+        Route::get('/edit/{nid}/{id}','edit')->name('edit');
         Route::get('/sedit/{id}','sedit')->name('sedit');
-        Route::post('/update/{tid}/{id}','update')->name('update');
-        Route::post('/supdate/{tid}/{id}','supdate')->name('supdate');
-        Route::get('/show/{tid}/{id}','show')->name('show');
-        Route::get('/destroy/{tid}/{id}','destroy')->name('destroy');
+        Route::post('/update/{nid}/{id}','update')->name('update');
+        Route::post('/supdate/{nid}/{id}','supdate')->name('supdate');
+        Route::get('/show/{nid}/{id}','show')->name('show');
+        Route::get('/destroy/{nid}/{id}','destroy')->name('destroy');
 
     });
 });

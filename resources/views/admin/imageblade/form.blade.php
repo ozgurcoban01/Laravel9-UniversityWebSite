@@ -1,86 +1,142 @@
 
+
 <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">ADD EVENT</h4>
-                        <p class="card-description">
-                            About Event
-                        </p>
-                        <form method="post" action="{{route('admin.events.store')}}" class="forms-sample">
-                            @csrf
-                            <!-- Event Name -->
+
+    <div class="row">
+
+        <div  class="col-lg-12 grid-margin stretch-card">
+
+            <div class="card">
+
+                <div class="card-body">
+                    <h2>Photo for <strong>{{$news->name}}</strong> News</h2>
+                    <form method="post" action="{{route('admin.image.store',['nid'=>$news->id])}}" enctype="multipart/form-data" class="forms-sample">
+                        @csrf
+                        <!-- TITLE -->
                             <div class="form-group">
-                                <label for="name">Event Name</label>
-                                <input required type="text" class="form-control" id="name" name="name" placeholder="Event Name" >
+                                <label for="title">Title</label>
+                                <input required type="text" class="form-control" id="title" name="title" placeholder="Image Title" >
                             </div>
 
-                            <!-- START DATE -->
-                            <div class="form-group">
-                                <label for="sdate">Event Start Date</label>
-                                <input required type="date" class="form-control" id="sdate" name="sdate" >
-                            </div>
+                        <!-- IMAGE -->
+                        <div class="form-group">
+                            <label for="date">Image</label>
+                            <input required type="file" class="form-control" id="image" name="image" >
+                        </div>
 
-                            <!-- END DATE -->
-                            <div class="form-group">
-                                <label for="edate">Event End Date</label>
-                                <input required type="date" class="form-control" id="edate" name="edate" >
-                            </div>
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
 
-                            <!-- START TIME -->
-                            <div class="form-group">
-                                <label for="stime">Event Start Time</label>
-                                <input required type="time" class="form-control" id="stime" name="stime">
-                            </div>
 
-                            <!-- END TIME -->
-                            <div class="form-group">
-                                <label for="etime">Event End Time</label>
-                                <input required type="time" class="form-control" id="etime" name="etime" >
-                            </div>
+                    <p class="card-description">
 
-                            <div class="form-group">
-                                <label>Location</label>
-                                <select required name="location" class="js-example-basic-single w-100">
-                                    <option value="Istanbul">Istanbul</option>
-                                    <option value="Ankara">Ankara</option>
-                                    <option value="Izmir">Izmir</option>
-                                    <option value="Bursa">Bursa</option>
-                                    <option value="Samsun">Samsun</option>
-                                </select>
-                            </div>
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Image Id
+                                </th>
+                                <th>
+                                    Image Title
+                                </th>
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Edit
+                                </th>
+                                <th>
+                                    Delete
+                                </th>
+{{--                                @if ($images->teacher_id)--}}
+{{--                                    <td>--}}
+{{--                                        {{$rs->teacher_id}}--}}
+{{--                                    </td>--}}
+{{--                                @endif--}}
 
-                            <!-- DESCRIPTION -->
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" class="form-control" id="description" placeholder="Description" name="description">
-                            </div>
+{{--                                @if ($images->event_id)--}}
+{{--                                    <td>--}}
+{{--                                        {{$rs->event_id}}--}}
+{{--                                    </td>--}}
+{{--                                @endif--}}
 
-                            <!-- ABOUTEVENT -->
-                            <div class="form-group">
-                                <label for="aboutevent">About Event</label><br>
-                                <textarea rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
-                            </div>
-                            <!-- IMAGE -->
-                            <div class="form-group">
-                                <label for="description">Image</label>
-                                <input type="file" class="form-control" id="image"  name="image">
-                            </div>
-                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+{{--                                @if ($images->announce_id)--}}
+{{--                                    <td>--}}
+{{--                                        {{$rs->announce_id}}--}}
+{{--                                    </td>--}}
+{{--                                @endif--}}
 
-                        </form>
+{{--                                @if ($images->news_id)--}}
+{{--                                    <td>--}}
+{{--                                        {{$rs->news_id}}--}}
+{{--                                    </td>--}}
+{{--                                @endif--}}
+
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($images as $rs)
+                                <tr>
+                                    <td>
+                                        #{{$rs->id}}
+                                    </td>
+                                    <td>
+                                        {{$rs->title}}
+                                    </td>
+                                    <td>
+                                        @if($rs->image)
+                                            <img style="border-radius:15px;width: 200px;height: auto " src="{{Storage::url($rs->image)}}">
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <div  ><a class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.image.edit',['nid'=>$news->id,'id'=>$rs->id])}}">Edit</a></div>
+                                    </td>
+
+                                    <td>
+                                        <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.image.destroy',['nid'=>$news->id,'id'=>$rs->id])}}">Delete</a></div>
+                                    </td>
+{{--                                    @if ($images->teacher_id)--}}
+{{--                                        <td>--}}
+{{--                                            {{$rs->teacher_id}}--}}
+{{--                                        </td>--}}
+{{--                                    @endif--}}
+
+{{--                                    @if ($images->event_id)--}}
+{{--                                        <td>--}}
+{{--                                            {{$rs->event_id}}--}}
+{{--                                        </td>--}}
+{{--                                    @endif--}}
+
+{{--                                    @if ($images->announce_id)--}}
+{{--                                        <td>--}}
+{{--                                            {{$rs->announce_id}}--}}
+{{--                                        </td>--}}
+{{--                                    @endif--}}
+
+{{--                                    @if ($images->news_id)--}}
+{{--                                        <td>--}}
+{{--                                            {{$rs->news_id}}--}}
+{{--                                        </td>--}}
+{{--                                    @endif--}}
+
+                                </tr>
+
+                            @endforeach
+
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
             </div>
-
-
-
         </div>
-    </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:../../partials/_footer.html -->
 
-    <!-- partial -->
+    </div>
+</div>
+
 
 <!-- main-panel ends -->
+

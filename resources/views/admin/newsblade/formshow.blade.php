@@ -58,6 +58,10 @@
                                 </tr>
                             @endif
                             <tr>
+                                <td style="font-weight:bold">Image Galery</td>
+                                <td>{{$data->created_at}}</td>
+                            </tr>
+                            <tr>
                                 <td style="font-weight:bold">Created</td>
                                 <td>{{$data->created_at}}</td>
                             </tr>
