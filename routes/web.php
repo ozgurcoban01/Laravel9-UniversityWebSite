@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminPanel\TeachersController;
 use App\Http\Controllers\AdminPanel\EventsController;
 use App\Http\Controllers\AdminPanel\AdminImage;
 use App\Http\Controllers\AdminPanel\NewsController;
+use App\Http\Controllers\AdminPanel\AnnounceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,19 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::get('/', [AdminController::class,'index'])->name('index');
 
     Route::prefix('teachers')->name('teachers.')->controller(TeachersController::class)->group(function(){
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::post('/supdate/{id}','supdate')->name('supdate');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+
+    });
+
+    Route::prefix('announce')->name('announce.')->controller(AnnounceController::class)->group(function(){
         Route::get('/', 'index')->name('list');
         Route::get('/create','create')->name('create');
         Route::post('/store','store')->name('store');
@@ -75,6 +89,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/destroy/{nid}/{id}','destroy')->name('destroy');
 
     });
+
+
 });
 
 Route::middleware([
