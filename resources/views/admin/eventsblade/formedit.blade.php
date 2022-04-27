@@ -60,6 +60,12 @@
                                 <input type="text" class="form-control" id="description" placeholder="Description" name="description"value="{{$data->description}}">
                             </div>
 
+                            <!-- DESCRIPTION -->
+                            <div class="form-group">
+                                <label for="description">Short Description</label>
+                                <input type="text" class="form-control" id="sdescription" placeholder="Description" name="sdescription"value="{{$data->sdescription}}">
+                            </div>
+
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>

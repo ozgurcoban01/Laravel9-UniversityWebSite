@@ -58,6 +58,12 @@
                                 <input type="text" class="form-control" id="description" placeholder="Description" name="description">
                             </div>
 
+                            <!-- sDESCRIPTION -->
+                            <div class="form-group">
+                                <label for="description">Short Description</label>
+                                <input type="text" class="form-control" id="sdescription" placeholder="Short Description" name="sdescription">
+                            </div>
+
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>

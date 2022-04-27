@@ -56,6 +56,10 @@
                                 <td style="font-weight:bold">Description</td>
                                 <td>{{$data->description}}</td>
                             </tr>
+                            <tr>
+                                <td style="font-weight:bold">Short Description</td>
+                                <td>{{$data->sdescription}}</td>
+                            </tr>
                             <tr >
                                 <td style="font-weight:bold;vertical-align: top;"><div>About Event</div></td>
                                 <td><?php echo nl2br($str); ?></td>

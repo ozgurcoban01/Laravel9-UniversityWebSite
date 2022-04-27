@@ -51,6 +51,7 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        $data->sdescription=$request->sdescription;
         if($request->file('image')){
             $data->image=$request->file('image')->store('event_images');
         }
@@ -114,6 +115,7 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        $data->sdescription=$request->sdescription;
         if($request->file('image')){
             $data->image=$request->file('image')->store('event_images');
         }
@@ -136,6 +138,7 @@ class EventsController extends Controller
         $data->etime=$request->etime;
         $data->aboutevent=$request->aboutevent;
         $data->description=$request->description;
+        $data->sdescription=$request->sdescription;
         if($request->file('image')){
             $data->image=$request->file('image')->store('event_images');
         }
