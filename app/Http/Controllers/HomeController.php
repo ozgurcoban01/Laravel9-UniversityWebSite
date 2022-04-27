@@ -21,4 +21,12 @@ class HomeController extends Controller
         return view('home.index',['sliderdata'=>$sliderdata,'eventdata'=>$eventdata,'announcedata'=>$announcedata,'news'=>$news]);
     }
 
+
+    public function event(Request $request, Events $Events,$id){
+
+        $data=Events::find($id);
+
+        return view('home.event',['data'=>$data]);
+    }
+
 }

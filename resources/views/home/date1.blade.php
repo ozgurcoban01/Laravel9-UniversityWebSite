@@ -27,23 +27,26 @@
                     <div class="row">
                         @foreach($eventdata as $rs)
 
-                            <div class="col-lg-4">
-                                <div class="meeting-item">
-                                    <div class="thumb">
-                                        <div class="price">
-                                            <span>{{$rs->location}}</span>
+
+                                <div class="col-lg-4">
+                                    <a href="{{route('event',['id'=>$rs->id])}}">
+                                        <div class="meeting-item">
+                                            <div class="thumb">
+                                                <div class="price">
+                                                    <span>{{$rs->location}}</span>
+                                                </div><img src="{{Storage::url($rs->image)}}" alt="New Lecturer Meeting">
+                                            </div>
+                                            <div class="down-content">
+                                                <div class="date">
+                                                    <h6>NOV<span>10</span></h6>
+                                                </div>
+                                                <h4>{{$rs->name}}</h4>
+                                                <p style="height: 40px" >{{$rs->description}}...</p>
+                                            </div>
                                         </div>
-                                        <a href="{{asset('assets')}}/meeting-details.html"><img src="{{Storage::url($rs->image)}}" alt="New Lecturer Meeting"></a>
-                                    </div>
-                                    <div class="down-content">
-                                        <div class="date">
-                                            <h6>NOV<span>10</span></h6>
-                                        </div>
-                                        <a href="{{asset('assets')}}/meeting-details.html"><h4>{{$rs->description}}</h4></a>
-                                        <p style="height: 40px" >{{$rs->sdescription}}...</p>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
+
                         @endforeach
 
 
