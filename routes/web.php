@@ -22,6 +22,7 @@ use App\Http\Controllers\AdminPanel\AnnounceController;
 
 Route::get('/', [HomeController::class,'index'])->name('index');
 Route::get('/event/{id}', [HomeController::class,'event'])->name('event');
+Route::get('/teacher/{id}', [HomeController::class,'teacher'])->name('teacher');
 
 Route::prefix('admin')->name('admin.')->group(function(){
 

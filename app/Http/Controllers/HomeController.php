@@ -29,4 +29,11 @@ class HomeController extends Controller
         return view('home.event',['data'=>$data]);
     }
 
+    public function teacher(Request $request, Teachers $Teachers,$id){
+
+        $data=Teachers::find($id);
+
+        return view('home.teacher',['data'=>$data]);
+    }
+
 }

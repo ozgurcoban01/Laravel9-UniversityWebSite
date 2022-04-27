@@ -11,7 +11,7 @@
                 <div class="owl-service-item owl-carousel">
                     @foreach($sliderdata as $rs)
 
-                    <a href="{{route('admin.teachers.list')}}">
+                    <a href="{{route('teacher',['id'=>$rs->id])}}">
                         <div style="cursor:pointer" class="item">
                             <div  class="icon">
                                 {{--                            <img src="{{asset('assets')}}/assets/images/service-icon-01.png" alt="">--}}
