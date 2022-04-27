@@ -84,8 +84,20 @@
                             </div>
                             <!-- DESCRIPTION -->
                             <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+                                <label for="description">Description</label><br>
+                                <textarea rows = "15" cols = "60" id="description" name="description" placeholder=" This Description ...">
+
+                                </textarea>
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#description' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
 
                             <!-- IMAGE -->

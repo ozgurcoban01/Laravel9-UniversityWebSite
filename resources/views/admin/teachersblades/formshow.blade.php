@@ -75,10 +75,10 @@
                             <tr>
                                 <td style="font-weight:bold">Faculty</td>
                                 <td>{{$data->lessons}}</td>
-                            </tr>
+
                             <tr>
                                 <td style="font-weight:bold">Description</td>
-                                <td>{{$data->description}}</td>
+                                <td><a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.teachers.description',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-message-text menu-icon-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">Created</td>
@@ -92,9 +92,13 @@
 
                             </tbody>
                         </table>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
 

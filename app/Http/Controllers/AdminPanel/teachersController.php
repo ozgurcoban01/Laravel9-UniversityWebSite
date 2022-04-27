@@ -164,4 +164,10 @@ class TeachersController extends Controller
         $data->delete();
         return redirect('admin/teachers');
     }
+    public function description(Teachers $teachers,$id)
+    {
+        //
+        $data=Teachers::find($id);
+        return view('admin.teachersblades.descriptionpage',['data'=>$data]);
+    }
 }

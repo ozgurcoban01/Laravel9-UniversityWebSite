@@ -97,8 +97,18 @@
                         </div>
                         <!-- DESCRIPTION -->
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input value="{{$data->description}}" type="text" class="form-control" id="description" name="description">
+                            <label for="description">Description</label><br>
+                            <textarea rows = "15" cols = "60" id="description" name="description" placeholder=" This Description ...">{!! $data->description !!}</textarea>
+                            <script>
+                                ClassicEditor
+                                    .create( document.querySelector( '#description' ) )
+                                    .then( editor => {
+                                        console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                        console.error( error );
+                                    } );
+                            </script>
                         </div>
                         <!-- IMAGE -->
                         <div class="form-group">

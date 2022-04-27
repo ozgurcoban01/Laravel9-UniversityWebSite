@@ -36,6 +36,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/description/{id}','description')->name('description');
 
     });
 
