@@ -82,14 +82,11 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Lessons</label>
-                                            <select  required name="lessons" class="js-example-basic-multiple w-100">
-                                                <option selected value="Computer">{{$data->lessons}}</option>
-                                                <option value="Computer">Computer</option>
-                                                <option value="Architect">Architect</option>
-                                                <option value="Machine">Machine</option>
-                                                <option value="Electric">Electric</option>
-                                                <option value="Civil">Civil</option>
+                                            <label>Faculty</label>
+                                            <select required name="faculties_id" class="js-example-basic-multiple w-100" >
+                                                @foreach($facultylist as $rs)
+                                                    <option value="{{$rs->id}}" >{{$rs->name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

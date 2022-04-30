@@ -176,6 +176,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.faculty.list')}}">
+                <i class="mdi mdi-school menu-icon"></i>
+                <span class="menu-title">Faculties</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.teachers.list')}}">
                 <i class="mdi mdi-account-multiple-outline menu-icon"></i>
                 <span class="menu-title">Teachers</span>

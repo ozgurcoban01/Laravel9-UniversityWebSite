@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('announces', function (Blueprint $table) {
             $table->id();
 
-            $table->string('description');
+            $table->longText('description');
             $table->string('aboutannounce');
             $table->date('sdate');
             $table->date('udate')->nullable();

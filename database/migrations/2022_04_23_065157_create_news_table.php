@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('location')->nullable();
             $table->date('date');
             $table->string('aboutnews');
-            $table->string('description');
+            $table->longText('description');
             $table->string('image')->nullable();
 
             $table->timestamps();

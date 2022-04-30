@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Faculties;
 
 class TeachersController extends Controller
 {
@@ -29,7 +30,8 @@ class TeachersController extends Controller
     public function create()
     {
         //
-        return view('admin.teachers.create');
+        $facultylist=Faculties::all();
+        return view('admin.teachers.create',['facultylist'=>$facultylist]);
     }
 
     /**
@@ -43,13 +45,13 @@ class TeachersController extends Controller
         //
         $data=new Teachers();
 
+        $data->faculties_id	=$request->faculties_id	;
         $data->fname=$request->fname;
         $data->lname=$request->lname;
         $data->gender=$request->gender;
         $data->bdate=$request->bdate;
         $data->rdate=$request->rdate;
         $data->degree=$request->degree;
-        $data->lessons=$request->lessons;
         $data->email=$request->email;
         $data->description=$request->description;
 
@@ -83,15 +85,20 @@ class TeachersController extends Controller
     public function edit(Teachers $teachers,$id)
     {
         //
+        $facultylist=Faculties::all();
+
         $data=Teachers::find($id);
-        return view('admin.teachers.edit',['data'=>$data]);
+        return view('admin.teachers.edit',['data'=>$data],['facultylist'=>$facultylist]);
     }
 
     public function sedit(Teachers $teachers,$id)
     {
+
         //
+        $facultylist=Faculties::all();
+
         $data=Teachers::find($id);
-        return view('admin.teachers.sedit',['data'=>$data]);
+        return view('admin.teachers.sedit',['data'=>$data],['facultylist'=>$facultylist]);
     }
 
     /**
@@ -111,9 +118,9 @@ class TeachersController extends Controller
         $data->lname=$request->lname;
         $data->gender=$request->gender;
         $data->bdate=$request->bdate;
+        $data->faculties_id=$request->faculties_id;
         $data->rdate=$request->rdate;
         $data->degree=$request->degree;
-        $data->lessons=$request->lessons;
         $data->email=$request->email;
 
         $data->description=$request->description;
@@ -136,9 +143,9 @@ class TeachersController extends Controller
         $data->lname=$request->lname;
         $data->gender=$request->gender;
         $data->bdate=$request->bdate;
+        $data->faculties_id=$request->faculties_id;
         $data->rdate=$request->rdate;
         $data->degree=$request->degree;
-        $data->lessons=$request->lessons;
         $data->email=$request->email;
         if($request->file('image')){
             $data->image=$request->file('image')->store('teacher_images');
