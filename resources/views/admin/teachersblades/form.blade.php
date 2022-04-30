@@ -73,7 +73,7 @@
                                             <label>Faculty</label>
                                             <select required name="faculties_id" class="js-example-basic-multiple w-100" >
                                                @foreach($facultylist as $rs)
-                                                    <option value="{{$rs->id}}" >{{$rs->name}}</option>
+                                                    <option value="{{$rs->id}}">{{\App\Http\Controllers\AdminPanel\FacultyController::getParentsTree($rs,$rs->name)}}</option>
                                                 @endforeach
                                             </select>
                                         </div>

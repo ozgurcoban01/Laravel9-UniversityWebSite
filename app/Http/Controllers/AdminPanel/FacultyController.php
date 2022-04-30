@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faculties;
+use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -88,8 +89,17 @@ class FacultyController extends Controller
     {
         //
         $data=Faculties::find($id);
-        $datalist=Faculties::all();
-        return view('admin.faculty.show',['data'=>$data,'datalist'=>$datalist]);
+
+        $rs=$data->teachers;
+        return view('admin.faculty.show',['data'=>$data,'teac'=>$rs]);
+    }
+    public function teacherlist(Teachers $Teachers,Faculties $Faculties,$id)
+    {
+        //
+
+        $data=Faculties::find($id);
+        $rs=$data->teachers;
+        return view('admin.facultyblade.teacherlist',['data'=>$data,'teac'=>$rs]);
     }
 
     /**

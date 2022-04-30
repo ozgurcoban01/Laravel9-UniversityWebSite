@@ -34,6 +34,7 @@
                                 <textarea rows = "15" cols = "60" id="aboutfaculty" name="aboutfaculty" placeholder=" This Faculty ..."></textarea>
                             </div>
 
+
                             <!-- IMAGE -->
                             <div class="form-group">
                                 <label for="image">Image</label>

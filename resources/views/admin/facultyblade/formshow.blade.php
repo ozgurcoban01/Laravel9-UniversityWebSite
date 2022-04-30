@@ -40,6 +40,17 @@
                                 <td>{{\App\Http\Controllers\AdminPanel\FacultyController::getParentsTree($data,$data->name)}}</td>
                             </tr>
 
+                            <tr>
+                                <td style="font-weight:bold;vertical-align: top;"><div>Teachers</div></td>
+
+                                <td>
+                                    <a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.faculty.teacherlist',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-account-search menu-icon-right"></i></a>
+                                </td>
+
+
+                            </tr>
+
+
                             @if($data->image)
                                 <tr>
                                     <td style="font-weight:bold;vertical-align: top;">Banner Image</td>

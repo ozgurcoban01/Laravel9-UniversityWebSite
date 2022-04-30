@@ -73,6 +73,7 @@ class TeachersController extends Controller
     {
         //
         $data=Teachers::find($id);
+
         return view('admin.teachers.show',['data'=>$data]);
     }
 

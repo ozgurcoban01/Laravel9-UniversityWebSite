@@ -92,6 +92,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/teacherlist/{id}','teacherlist')->name('teacherlist');
 
     });
 
