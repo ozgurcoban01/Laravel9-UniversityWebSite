@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announce;
 use App\Models\Events;
+use App\Models\Faculties;
 use App\Models\News;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
@@ -11,6 +12,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
+    public static function mainCategoryList($id){
+
+        return Faculties::where('parent_id','=',$id)->with('children')->get();
+    }
+
     public function index(){
 
         $sliderdata=Teachers::limit(6)->get();
@@ -34,6 +40,16 @@ class HomeController extends Controller
         $data=Teachers::find($id);
 
         return view('home.teacher',['data'=>$data]);
+    }
+    public function faculty(Request $request,Faculties $faculties, Teachers $Teachers,$id){
+
+        $data=Faculties::find($id);
+
+        $rs=$data->teachers;
+
+        $flist=self::mainCategoryList($id);
+
+        return view('home.faculties',['data'=>$data,'teac'=>$rs,'flist'=>$flist]);
     }
 
 }

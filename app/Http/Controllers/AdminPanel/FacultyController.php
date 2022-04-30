@@ -93,6 +93,14 @@ class FacultyController extends Controller
         $rs=$data->teachers;
         return view('admin.faculty.show',['data'=>$data,'teac'=>$rs]);
     }
+    public function sshow(Faculties $Faculties,$id)
+    {
+        //
+        $data=Faculties::find($id);
+
+        $rs=$data->teachers;
+        return view('admin.facultysubs.show',['data'=>$data,'teac'=>$rs]);
+    }
     public function teacherlist(Teachers $Teachers,Faculties $Faculties,$id)
     {
         //

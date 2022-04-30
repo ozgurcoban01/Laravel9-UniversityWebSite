@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style2.css">
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style3.scss">
     <link rel="stylesheet" href="{{asset('assets')}}/burger2/style.css">
+
     <!--
 
     TemplateMo 569 Edu Meeting
@@ -35,6 +36,10 @@
 </head>
 
 <body>
+<div class="sub-header">
+    @yield('subheader')
+    @include('home.subheader')
+</div>
 @include('home.header')
 @yield('content')
 @include('home.footer')

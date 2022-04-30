@@ -12,5 +12,13 @@ class Faculties extends Model
     public function teachers(){
         return $this->hasMany(Teachers::class);
     }
+
+    public function parent(){
+        return $this->belongsTo(Faculties::class,'parent_id');
+    }
+
+    public function children(){
+        return $this->hasMany(Faculties::class,'parent_id');
+    }
 }
 

@@ -141,7 +141,7 @@
 
 .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: rgba(66, 111, 145, 0.85);
+    color: rgba(0, 137, 239, 0.85);
     font-size: 1.5rem;
     padding: 1rem;
     transition: 0.2s ease;
@@ -154,8 +154,34 @@
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
-    color: inherit;
+
     text-decoration: none;
     transition: color 0.4s ease;
 }
+.text1{
+    font-size: xx-large;
 
+    color: rgba(183, 34, 34, 0.85);
+    transition: 0.2s ease-in-out;
+}
+.text1:hover{
+    color: white;
+    font-weight: bold;
+    font-size: xxx-large;
+
+
+}
+
+.text2{
+    font-size: xx-large;
+    font-weight: normal;
+    opacity: 100;
+    transition:0.4s ease;
+}
+
+
+.text1:hover .text2 {
+
+    opacity: 100%;
+    transition:0.4s ease;
+}

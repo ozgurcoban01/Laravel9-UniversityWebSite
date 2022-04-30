@@ -24,6 +24,7 @@ use App\Http\Controllers\AdminPanel\FacultyController;
 Route::get('/', [HomeController::class,'index'])->name('index');
 Route::get('/event/{id}', [HomeController::class,'event'])->name('event');
 Route::get('/teacher/{id}', [HomeController::class,'teacher'])->name('teacher');
+Route::get('/faculty/{id}', [HomeController::class,'faculty'])->name('faculty');
 
 Route::prefix('admin')->name('admin.')->group(function(){
 
@@ -91,9 +92,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/update/{id}','update')->name('update');
         Route::post('/supdate/{id}','supdate')->name('supdate');
         Route::get('/show/{id}','show')->name('show');
+        Route::get('/sshow/{id}','sshow')->name('sshow');
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/teacherlist/{id}','teacherlist')->name('teacherlist');
-
     });
 
     Route::prefix('image')->name('image.')->controller(AdminImage::class)->group(function(){
