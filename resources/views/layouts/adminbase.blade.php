@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{asset('assets')}}/vendors/typicons/typicons.css">
     <link rel="stylesheet" href="{{asset('assets')}}/vendors/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="{{asset('assets')}}/vendors/css/vendor.bundle.base.css">
+
+
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="{{asset('assets')}}/vendors/select2/select2.min.css">

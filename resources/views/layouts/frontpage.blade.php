@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/owl.css">
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/lightbox.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/burger/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/burger/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/burger/style2.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/burger/style3.scss">
+    <link rel="stylesheet" href="{{asset('assets')}}/burger2/style.css">
     <!--
 
     TemplateMo 569 Edu Meeting

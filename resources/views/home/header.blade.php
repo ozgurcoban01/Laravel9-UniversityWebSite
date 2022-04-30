@@ -1,5 +1,45 @@
 <!-- Sub Header -->
 <div class="sub-header">
+{{--    <div style="position: absolute" class="hamburger-menu">--}}
+{{--        <input id="menu__toggle" type="checkbox" />--}}
+{{--        <label class="menu__btn" for="menu__toggle">--}}
+{{--            <div class="line">--}}
+{{--                <span class="line"></span>--}}
+{{--            </div>--}}
+{{--        </label>--}}
+
+{{--        <ul class="menu__box">--}}
+{{--            <li><a class="menu__item" href="#">Home</a></li>--}}
+{{--            <li><a class="menu__item" href="#">About</a></li>--}}
+{{--            <li><a class="menu__item" href="#">Team</a></li>--}}
+{{--            <li><a class="menu__item" href="#">Contact</a></li>--}}
+{{--            <li><a class="menu__item" href="#">Twitter</a></li>--}}
+
+{{--        </ul>--}}
+{{--    </div>--}}
+{{----------------------------}}
+
+    <div>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-sm-8">
@@ -23,14 +63,18 @@
 
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
+
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
+
+
                     <!-- ***** Logo Start ***** -->
                     <a href="{{asset('assets')}}/index.html" class="logo">
                         Edu Meeting
                     </a>
+
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">

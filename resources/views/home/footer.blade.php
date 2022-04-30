@@ -12,6 +12,9 @@
 <script src="{{asset('assets')}}/assets/js/video.js"></script>
 <script src="{{asset('assets')}}/assets/js/slick-slider.js"></script>
 <script src="{{asset('assets')}}/assets/js/custom.js"></script>
+<script src="{{asset('assets')}}/burger/script.js"></script>
+<script src="{{asset('assets')}}/burger/script.js"></script>
+<script src="{{asset('assets')}}/burger2/script.js"></script>
 <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');
