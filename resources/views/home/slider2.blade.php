@@ -11,7 +11,7 @@
                 <div class="owl-courses-item owl-carousel">
 
                     @foreach($announcedata as $rs)
-                        <a href="">
+                        <a href="{{route('announce',['id'=>$rs->id])}}">
                             <div  class="item">
                                 <div style="border-radius: 20%" class="down-content">
                                     <h4>{{$rs->description}}</h4>
@@ -19,12 +19,13 @@
                                         <div class="row">
                                             <div class="col-8">
                                                 <ul>
-                                                    {{$rs->sdate}}
+                                                    <li>{{$rs->sdate}}</li>
+                                                    @if($rs->udate)
+                                                        <li style="color: red">{{$rs->udate}}</li>
+                                                    @endif
                                                 </ul>
                                             </div>
-                                            <div class="col-4">
-                                                <span>{{$rs->udate}}</span>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

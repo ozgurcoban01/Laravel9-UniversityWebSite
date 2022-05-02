@@ -9,7 +9,7 @@
             <div class="col-lg-12">
                 <div class="owl-courses-item owl-carousel">
                     @foreach($news as $rs)
-                        <a href="">
+                        <a href="{{route('news',['id'=>$rs->id])}}">
                             <div class="item">
                                 <img src="{{Storage::url($rs->image)}}" alt="Course One">
                                 <div class="down-content">

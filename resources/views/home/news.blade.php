@@ -1,38 +1,6 @@
 @extends('layouts.frontpage')
-@section('subheader')
 
-    @if(count($flist))
-        <div>
-            <div class="menu-wrap">
-                <input type="checkbox" class="toggler">
-                <div class="hamburger"><div></div></div>
-                <div class="menu">
-
-                    <div>
-                        <div>
-                            <ul>
-                                @foreach($flist as $rs)
-                                    <div class="text1">
-                                        <li><a class="text1" href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a></li>
-
-                                        {{--                                    @if(count($rs->children))--}}
-                                        {{--                                        @include('home.subburger',['children'=>$rs->children])--}}
-                                        {{--                                    @endif--}}
-                                    </div>
-
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
-
-@endsection
 @section('content')
-
-
 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
@@ -89,29 +57,58 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="meeting-single-item">
-                                <div class="thumb">
-                                    <div class="date">
-                                        <h6>Nov <span>12</span></h6>
+                                <div style="overflow: hidden" class="thumb" >
+                                    <!-- Основной блок слайдера -->
+                                    <div class="slider">
+                                        @foreach($image as $rs)
+                                            @if($rs->news_id==$data->id)
+
+                                                <div class="item">
+                                                    <img  src="{{Storage::url($rs->image)}}">
+                                                </div>
+
+                                        @endif
+                                    @endforeach
+
+
+                                        <!-- Кнопки-стрелочки -->
+                                        <a class="previous" onclick="previousSlide()">&#10094;</a>
+                                        <a class="next" onclick="nextSlide()">&#10095;</a>
                                     </div>
-{{--                                    <a href="meeting-details.html"><img style="width: 1296px;height: 400px;" src="{{asset('assets')}}/assets/images/single-meeting.jpg" alt=""></a>--}}
-                                    <a><img style="width: 1296px;height: 400px;" src="{{Storage::url($data->image)}}" alt=""></a>
+
+
+
                                 </div>
                                 <div class="down-content">
-                                    <a ><h4>{{$data->name}}</h4></a>
+                                    <a ><h2>{{$data->name}}</h2></a><br>
 
+                                    <p>{{$data->description}}</p>
                                     <p class="description">
-                                        {{$data->aboutfaculty}}
+                                        {{$data->aboutnews}}
+
                                     </p>
                                     <div class="row">
-                                        Realeted Peoples <br><br>
-                                        @foreach($teac as $rs)
-                                           <a href="{{route('teacher',['id'=>$rs->id])}}"><div><span style="font-weight: bold">{{$rs->degree}}</span> {{$rs->fname}} {{$rs->lname}}</div></a>
-                                        @endforeach
+                                        <div class="col-lg-4">
+                                            <div class="hours">
+                                                <h5>Date</h5>
+                                                <p>{{$data->date}}</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="location">
+                                                <h5>Location</h5>
+                                                <p>{{$data->location}}</p>
+                                            </div>
+                                        </div>
+
 
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
                         <div class="col-lg-12">
                             <div class="main-button-red">
                                 <a href="{{route('index')}}">Back To Meetings List</a>

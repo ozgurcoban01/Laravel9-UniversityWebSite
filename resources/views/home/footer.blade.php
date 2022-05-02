@@ -15,6 +15,7 @@
 <script src="{{asset('assets')}}/burger/script.js"></script>
 <script src="{{asset('assets')}}/burger/script.js"></script>
 <script src="{{asset('assets')}}/burger2/script.js"></script>
+<script src="{{asset('assets')}}/newspageslider/script.js"></script>
 <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');

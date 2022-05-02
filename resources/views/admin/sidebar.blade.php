@@ -206,6 +206,12 @@
                 <span class="menu-title">News</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.degree.list')}}">
+                <i class="mdi mdi-account-convert menu-icon"></i>
+                <span class="menu-title">Degrees</span>
+            </a>
+        </li>
 
 
     </ul>

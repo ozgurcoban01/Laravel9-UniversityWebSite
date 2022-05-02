@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Degree;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -31,7 +32,8 @@ class TeachersController extends Controller
     {
         //
         $facultylist=Faculties::all();
-        return view('admin.teachers.create',['facultylist'=>$facultylist]);
+        $degree=Degree::all();
+        return view('admin.teachers.create',['facultylist'=>$facultylist],['degree'=>$degree]);
     }
 
     /**
@@ -87,9 +89,9 @@ class TeachersController extends Controller
     {
         //
         $facultylist=Faculties::all();
-
+        $degree=degree::all();
         $data=Teachers::find($id);
-        return view('admin.teachers.edit',['data'=>$data],['facultylist'=>$facultylist]);
+        return view('admin.teachers.edit',['data'=>$data,'facultylist'=>$facultylist,'degree'=>$degree]);
     }
 
     public function sedit(Teachers $teachers,$id)
@@ -97,9 +99,9 @@ class TeachersController extends Controller
 
         //
         $facultylist=Faculties::all();
-
+        $degree=degree::all();
         $data=Teachers::find($id);
-        return view('admin.teachers.sedit',['data'=>$data],['facultylist'=>$facultylist]);
+        return view('admin.teachers.sedit',['data'=>$data,'facultylist'=>$facultylist,'degree'=>$degree]);
     }
 
     /**
@@ -115,6 +117,7 @@ class TeachersController extends Controller
         $data=Teachers::find($id);
 
         Storage::delete($data->image);
+
         $data->fname=$request->fname;
         $data->lname=$request->lname;
         $data->gender=$request->gender;

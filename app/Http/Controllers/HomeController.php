@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Announce;
 use App\Models\Events;
 use App\Models\Faculties;
+use App\Models\Image;
 use App\Models\News;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
@@ -12,10 +13,13 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
+
     public static function mainCategoryList($id){
 
         return Faculties::where('parent_id','=',$id)->with('children')->get();
     }
+
+
 
     public function index(){
 
@@ -40,6 +44,19 @@ class HomeController extends Controller
         $data=Teachers::find($id);
 
         return view('home.teacher',['data'=>$data]);
+    }
+    public function announce(Request $request,Announce $announce,$id){
+
+        $data=Announce::find($id);
+
+        return view('home.announce',['data'=>$data]);
+    }
+    public function news(Request $request,Image $image,News $news,$id){
+
+        $data=News::find($id);
+        $image=Image::all();
+
+        return view('home.news',['data'=>$data,'image'=>$image]);
     }
     public function faculty(Request $request,Faculties $faculties, Teachers $Teachers,$id){
 

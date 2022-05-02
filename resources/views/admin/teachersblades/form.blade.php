@@ -62,11 +62,9 @@
                                         <div class="form-group">
                                             <label>Degree</label>
                                             <select required name="degree" class="js-example-basic-single w-100">
-                                                <option value="Professor">Professor</option>
-                                                <option value="Associate Professor">Associate Professor</option>
-                                                <option value="Assistant Professor">Assistant Professor</option>
-                                                <option value="Research Assistant">Research Assistant</option>
-                                                <option value="Prelector">Prelector</option>
+                                                @foreach($degree as $rs)
+                                                    <option value="{{$rs->name}}">{{$rs->name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group">

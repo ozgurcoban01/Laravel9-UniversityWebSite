@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style2.css">
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style3.scss">
     <link rel="stylesheet" href="{{asset('assets')}}/burger2/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/newspageslider/style.css">
+
 
     <!--
 
