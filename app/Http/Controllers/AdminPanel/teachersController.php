@@ -151,6 +151,7 @@ class TeachersController extends Controller
         $data->rdate=$request->rdate;
         $data->degree=$request->degree;
         $data->email=$request->email;
+
         if($request->file('image')){
             $data->image=$request->file('image')->store('teacher_images');
         }

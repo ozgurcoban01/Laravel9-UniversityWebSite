@@ -17,7 +17,6 @@
 
 
 
-
 <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');

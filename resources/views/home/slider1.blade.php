@@ -21,10 +21,11 @@
                                 <p>
                                 <div>
                                     <h7 >{{$rs->degree}}</h7>
-                                    <h3 style="margin: 0 0 20px 0">{{$rs->fname}} {{$rs->lname}}</h3>
+                                    <h3 >{{$rs->fname}} {{$rs->lname}}</h3>
+                                    <h5 >{{$rs->faculties->name}}</h5>
                                 </div>
                                 </p>
-                                <p><h5 >{{$rs->lessons}}</h5></p>
+
                             </div>
                         </div>
                     </a>

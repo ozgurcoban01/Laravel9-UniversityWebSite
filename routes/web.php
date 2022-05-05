@@ -33,6 +33,11 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
     Route::get('/', [AdminController::class,'index'])->name('index');
 
+
+    Route::get('/settings', [AdminController::class,'settings'])->name('settings');
+    Route::post('/settings', [AdminController::class,'update'])->name('settings.update');
+
+
     Route::prefix('teachers')->name('teachers.')->controller(TeachersController::class)->group(function(){
         Route::get('/', 'index')->name('list');
         Route::get('/create','create')->name('create');

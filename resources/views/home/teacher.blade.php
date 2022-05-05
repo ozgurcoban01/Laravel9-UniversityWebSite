@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="down-content">
                                     <a href="meeting-details.html"><h4>{{$data->degree}} {{$data->fname}} {{$data->lname}}</h4></a>
-                                    <p>From {{$data->lessons}} </p>
+                                    <p>From <a href="{{route('faculty',['id'=>$data->faculties->id])}}">{{$data->faculties->name}}</a> </p>
                                     <p class="description">
                                         {{$data->description}}
                                     </p>
