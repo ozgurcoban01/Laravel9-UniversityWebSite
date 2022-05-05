@@ -24,8 +24,9 @@
                         <li class="has-sub">
                             <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
                             <ul class="sub-menu">
-                                <li><a href="{{asset('assets')}}/meetings.html">Upcoming Meetings</a></li>
-                                <li><a href="{{asset('assets')}}/meeting-details.html">Meeting Details</a></li>
+                                <li><a href="{{route('aboutus')}}">About Us</a></li>
+                                <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                <li><a href="{{route('references')}}">References</a></li>
                             </ul>
                         </li>
                         <li class="scroll-to-section"><a href="{{asset('assets')}}/#courses">Courses</a></li>

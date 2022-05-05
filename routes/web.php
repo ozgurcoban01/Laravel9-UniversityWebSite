@@ -29,6 +29,10 @@ Route::get('/announce/{id}', [HomeController::class,'announce'])->name('announce
 Route::get('/news/{id}', [HomeController::class,'news'])->name('news');
 Route::get('/faculty/{id}', [HomeController::class,'faculty'])->name('faculty');
 
+Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
+Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+Route::get('/references', [HomeController::class,'references'])->name('references');
+
 Route::prefix('admin')->name('admin.')->group(function(){
 
     Route::get('/', [AdminController::class,'index'])->name('index');

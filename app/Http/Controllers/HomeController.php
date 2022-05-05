@@ -7,7 +7,9 @@ use App\Models\Events;
 use App\Models\Faculties;
 use App\Models\Images;
 use App\Models\News;
+use App\Models\Setting;
 use App\Models\Teachers;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,6 +21,24 @@ class HomeController extends Controller
         return Faculties::where('parent_id','=',$id)->with('children')->get();
     }
 
+    public function aboutus(){
+
+        $settings=Setting::first();
+
+        return view('home.aboutus',['settings'=>$settings]);
+    }
+    public function contact(){
+
+        $settings=Setting::first();
+
+        return view('home.contactuspage',['settings'=>$settings]);
+    }
+    public function references(){
+
+        $settings=Setting::first();
+
+        return view('home.references',['settings'=>$settings]);
+    }
 
 
     public function index(){
