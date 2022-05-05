@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Degree;
+use App\Models\Degrees;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -32,7 +32,7 @@ class TeachersController extends Controller
     {
         //
         $facultylist=Faculties::all();
-        $degree=Degree::all();
+        $degree=Degrees::all();
         return view('admin.teachers.create',['facultylist'=>$facultylist],['degree'=>$degree]);
     }
 
@@ -89,7 +89,7 @@ class TeachersController extends Controller
     {
         //
         $facultylist=Faculties::all();
-        $degree=degree::all();
+        $degree=Degrees::all();
         $data=Teachers::find($id);
         return view('admin.teachers.edit',['data'=>$data,'facultylist'=>$facultylist,'degree'=>$degree]);
     }
@@ -99,7 +99,7 @@ class TeachersController extends Controller
 
         //
         $facultylist=Faculties::all();
-        $degree=degree::all();
+        $degree=Degrees::all();
         $data=Teachers::find($id);
         return view('admin.teachers.sedit',['data'=>$data,'facultylist'=>$facultylist,'degree'=>$degree]);
     }

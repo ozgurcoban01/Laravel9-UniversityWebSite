@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Announce;
+use App\Models\Announces;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -17,7 +17,7 @@ class AnnounceController extends Controller
     public function index()
     {
         //
-        $data=Announce::all();
+        $data=Announces::all();
 
         return view('admin.announce.index',['data'=>$data]);
     }
@@ -42,7 +42,7 @@ class AnnounceController extends Controller
     public function store(Request $request)
     {
         //
-        $data=new Announce();
+        $data=new Announces();
 
         $data->sdate=$request->sdate;
         $data->aboutannounce=$request->aboutannounce;
@@ -60,10 +60,10 @@ class AnnounceController extends Controller
      * @param  \App\Models\News $Announce
      * @return \Illuminate\Http\Response
      */
-    public function show(Announce $Announce,$id)
+    public function show(Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
         return view('admin.announce.show',['data'=>$data]);
     }
 
@@ -73,16 +73,16 @@ class AnnounceController extends Controller
      * @param  \App\Models\News $Announce
      * @return \Illuminate\Http\Response
      */
-    public function edit(Announce $Announce,$id)
+    public function edit(Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
         return view('admin.announce.edit',['data'=>$data]);
     }
-    public function sedit(Announce $Announce,$id)
+    public function sedit(Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
         return view('admin.announce.sedit',['data'=>$data]);
     }
 
@@ -93,10 +93,10 @@ class AnnounceController extends Controller
      * @param  \App\Models\News $Announce
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Announce $Announce,$id)
+    public function update(Request $request, Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
 
         $data->sdate=$request->sdate;
         $data->udate=$request->udate;
@@ -107,10 +107,10 @@ class AnnounceController extends Controller
         return redirect('admin/announce');
     }
 
-    public function supdate(Request $request, Announce $Announce,$id)
+    public function supdate(Request $request, Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
 
         $data->sdate=$request->sdate;
         $data->udate=$request->udate;
@@ -127,10 +127,10 @@ class AnnounceController extends Controller
      * @param  \App\Models\News $Announce
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Announce $Announce,$id)
+    public function destroy(Announces $Announce, $id)
     {
         //
-        $data=Announce::find($id);
+        $data=Announces::find($id);
 
         $data->delete();
         return redirect('admin/announce');

@@ -60,7 +60,7 @@
                                         </td>
                                         <td class="py-1">
                                             @if($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}" alt="image">
+                                                <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" alt="image">
                                             @endif
                                         </td>
 

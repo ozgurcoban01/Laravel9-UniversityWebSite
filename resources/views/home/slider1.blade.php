@@ -4,9 +4,9 @@
 
             <div class="col-lg-12">
 
-{{--                <div style="text-align: center" class="section-heading">--}}
-{{--                    <h2>Our Teachers</h2>--}}
-{{--                </div>--}}
+                <div style="text-align: center" class="section-heading">
+                    <h2>Our Teachers</h2>
+                </div>
 
                 <div class="owl-service-item owl-carousel">
                     @foreach($sliderdata as $rs)
@@ -14,7 +14,7 @@
                     <a href="{{route('teacher',['id'=>$rs->id])}}">
                         <div style="cursor:pointer" class="item">
                             <div  class="icon">
-                                {{--                            <img src="{{asset('assets')}}/assets/images/service-icon-01.png" alt="">--}}
+                                <img src="{{secure_asset('assets')}}/assets/images/service-icon-01.png" alt="">
                                 <img style="border-radius: 35px;width: 70px;height: 70px;margin: 0 0 20px 0" src="{{Storage::url($rs->image)}}" alt="">
                             </div>
                             <div class="down-content">
@@ -32,6 +32,8 @@
 
 
                 </div>
+
+
             </div>
         </div>
     </div>

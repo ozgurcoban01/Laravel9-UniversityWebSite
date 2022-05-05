@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Degree;
+use App\Models\Degrees;
 use Illuminate\Http\Request;
 
 class DegreeController extends Controller
@@ -16,7 +16,7 @@ class DegreeController extends Controller
     public function index()
     {
         //
-        $data=Degree::all();
+        $data=Degrees::all();
         return view('admin.degree.index',['data'=>$data]);
     }
 
@@ -40,7 +40,7 @@ class DegreeController extends Controller
     public function store(Request $request)
     {
         //
-        $data=new Degree();
+        $data=new Degrees();
 
         $data->name=$request->name;
         $data->description=$request->description;
@@ -58,7 +58,7 @@ class DegreeController extends Controller
     public function show($id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
 
         return view('admin.degree.show',['data'=>$data]);
     }
@@ -72,13 +72,13 @@ class DegreeController extends Controller
     public function edit($id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
         return view('admin.degree.edit',['data'=>$data]);
     }
     public function sedit($id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
         return view('admin.degree.sedit',['data'=>$data]);
     }
 
@@ -92,7 +92,7 @@ class DegreeController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
 
         $data->name=$request->name;
         $data->description=$request->description;
@@ -104,7 +104,7 @@ class DegreeController extends Controller
     public function supdate(Request $request, $id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
 
         $data->name=$request->name;
         $data->description=$request->description;
@@ -122,7 +122,7 @@ class DegreeController extends Controller
     public function destroy($id)
     {
         //
-        $data=Degree::find($id);
+        $data=Degrees::find($id);
         $data->delete();
         return redirect('admin/degree');
     }

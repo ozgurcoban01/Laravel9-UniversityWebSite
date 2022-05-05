@@ -22,8 +22,9 @@ return new class extends Migration
             $table->date('edate');
             $table->time('stime');
             $table->time('etime');
-            $table->string('aboutevent');
+            $table->longText('aboutevent');
             $table->longText('description');
+            $table->longText('sdescription');
             $table->string('image')->nullable();
 
             $table->timestamps();

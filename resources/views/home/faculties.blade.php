@@ -77,6 +77,9 @@
                 <div class="col-lg-12">
                     <h6>Get all details About</h6>
                     <h2>{{$data->name}}</h2>
+                    @if($data->parent_id!=0)
+                        <h6>from <a href="{{route('faculty',['id'=>$pdata->id])}}">{{$pdata->name}}</a></h6>
+                    @endif
                 </div>
             </div>
         </div>

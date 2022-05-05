@@ -1,6 +1,7 @@
 @extends('layouts.frontpage')
 
 @section('content')
+    <link rel="stylesheet" href="{{asset('assets')}}/newspageslider/style.css">
 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
@@ -123,6 +124,6 @@
                 <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
         </div>
     </section>
-
+    <script src="{{asset('assets')}}/newspageslider/script.js"></script>
 @endsection
 

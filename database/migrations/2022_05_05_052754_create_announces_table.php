@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('degrees', function (Blueprint $table) {
+        Schema::create('announces', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('description');
+            $table->longText('description');
+            $table->longText('aboutannounce');
+            $table->date('sdate');
+            $table->date('udate')->nullable();
 
             $table->timestamps();
         });
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('degrees');
+        Schema::dropIfExists('announces');
     }
 };

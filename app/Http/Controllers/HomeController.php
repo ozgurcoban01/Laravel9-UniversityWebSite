@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Announce;
+use App\Models\Announces;
 use App\Models\Events;
 use App\Models\Faculties;
-use App\Models\Image;
+use App\Models\Images;
 use App\Models\News;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class HomeController extends Controller
 
         $sliderdata=Teachers::limit(6)->get();
         $eventdata=Events::all();
-        $announcedata=Announce::limit(8)->get();
+        $announcedata=Announces::limit(8)->get();
         $news=News::all();
 
         return view('home.index',['sliderdata'=>$sliderdata,'eventdata'=>$eventdata,'announcedata'=>$announcedata,'news'=>$news]);
@@ -45,16 +45,16 @@ class HomeController extends Controller
 
         return view('home.teacher',['data'=>$data]);
     }
-    public function announce(Request $request,Announce $announce,$id){
+    public function announce(Request $request,Announces $announce,$id){
 
-        $data=Announce::find($id);
+        $data=Announces::find($id);
 
         return view('home.announce',['data'=>$data]);
     }
-    public function news(Request $request,Image $image,News $news,$id){
+    public function news(Request $request,Images $image,News $news,$id){
 
         $data=News::find($id);
-        $image=Image::all();
+        $image=Images::all();
 
         return view('home.news',['data'=>$data,'image'=>$image]);
     }
@@ -62,11 +62,13 @@ class HomeController extends Controller
 
         $data=Faculties::find($id);
 
+        $pdata=Faculties::find($data->parent_id);
+
         $rs=$data->teachers;
 
         $flist=self::mainCategoryList($id);
 
-        return view('home.faculties',['data'=>$data,'teac'=>$rs,'flist'=>$flist]);
+        return view('home.faculties',['data'=>$data,'teac'=>$rs,'flist'=>$flist,'pdata'=>$pdata]);
     }
 
 }

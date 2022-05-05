@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Image;
+use App\Models\Images;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -48,7 +48,7 @@ class AdminImage extends Controller
      */
     public function store(Request $request,$nid)
     {
-        $data=new Image();
+        $data=new Images();
 
         $data->news_id=$nid;
         $data->title=$request->title;
@@ -82,7 +82,7 @@ class AdminImage extends Controller
     {
         //
         $news=News::find($nid);
-        $images=Image::find($id);
+        $images=Images::find($id);
 
         return view('admin.image.edit',['news'=>$news,'images'=>$images]);
     }
@@ -97,7 +97,7 @@ class AdminImage extends Controller
     public function update(Request $request,$nid, $id)
     {
         //
-        $data=Image::find($id);
+        $data=Images::find($id);
 
         Storage::delete($data->image);
 
@@ -122,7 +122,7 @@ class AdminImage extends Controller
     public function destroy($nid,$id)
     {
         //
-        $data=Image::find($id);
+        $data=Images::find($id);
         Storage::delete($data->image);
         $data->delete();
         return redirect()->route('admin.image.list',['nid'=>$nid]);
