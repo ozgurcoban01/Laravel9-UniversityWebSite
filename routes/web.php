@@ -33,6 +33,8 @@ Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/references', [HomeController::class,'references'])->name('references');
 
+Route::get('/ourteachers', [HomeController::class,'ourteachers'])->name('ourteachers');
+
 Route::prefix('admin')->name('admin.')->group(function(){
 
     Route::get('/', [AdminController::class,'index'])->name('index');

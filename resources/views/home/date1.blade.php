@@ -1,6 +1,6 @@
 
 <section class="upcoming-meetings" id="meetings">
-    <div class="container">
+    <div class="container" style="padding: 60px 0 0 0">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">

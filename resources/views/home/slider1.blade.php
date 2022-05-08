@@ -1,14 +1,17 @@
 <section class="services">
-    <div class="container">
+    <div class="container" >
         <div class="row">
 
             <div class="col-lg-12">
 
-                <div style="text-align: center" class="section-heading">
-                    <h2>Our Teachers</h2>
+                <div style="text-align: center" class="section-heading ">
+                    <div class="main-button-red">
+                        <h2 ><a href="{{route('ourteachers')}}">Our Teachers</a></h2>
+                    </div>
+
                 </div>
 
-                <div class="owl-service-item owl-carousel">
+                <div class="owl-service-item owl-carousel" >
                     @foreach($sliderdata as $rs)
 
                     <a href="{{route('teacher',['id'=>$rs->id])}}">

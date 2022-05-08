@@ -1,6 +1,6 @@
 
 <section class="our-courses" id="courses">
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">

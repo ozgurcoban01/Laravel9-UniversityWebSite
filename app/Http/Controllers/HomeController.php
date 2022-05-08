@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announces;
+use App\Models\Degrees;
 use App\Models\Events;
 use App\Models\Faculties;
 use App\Models\Images;
@@ -38,6 +39,13 @@ class HomeController extends Controller
         $settings=Setting::first();
 
         return view('home.references',['settings'=>$settings]);
+    }
+    public function ourteachers(Teachers $Teachers,Degrees $Degrees){
+
+        $teachers=Teachers::all();
+        $degrees=Degrees::all();
+
+        return view('home.ourteachers',['teachers'=>$teachers,'degrees'=>$degrees]);
     }
 
 
