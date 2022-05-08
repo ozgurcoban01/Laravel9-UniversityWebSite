@@ -36,7 +36,9 @@
                 <div class="col-lg-9 align-self-center">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="contact" action="" method="post">
+
+                            <form id="contact" action="{{route('storemessage')}}" method="post">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h2>Let's get in touch</h2>
@@ -66,6 +68,7 @@
                                             <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
                                         </fieldset>
                                     </div>
+                                    <h1>{{\Illuminate\Support\Facades\Session::get('info')}}</h1>
                                 </div>
                             </form>
                         </div>

@@ -7,6 +7,7 @@ use App\Models\Degrees;
 use App\Models\Events;
 use App\Models\Faculties;
 use App\Models\Images;
+use App\Models\Message;
 use App\Models\News;
 use App\Models\Setting;
 use App\Models\Teachers;
@@ -33,6 +34,22 @@ class HomeController extends Controller
         $settings=Setting::first();
 
         return view('home.contactuspage',['settings'=>$settings]);
+    }
+    public function storemessage(Request $request){
+
+        $data=new Message();
+
+        $data->name=$request->input('name');
+        $data->email=$request->input('email');
+        $data->subject=$request->input('subject');
+        $data->message=$request->input('message');
+        $data->note=$request->input('note');
+        $data->ip=$request->ip();
+
+        $data->save();
+
+        return redirect()->route('contact')->with('info','Your Message Has Been Sent!!!');
+
     }
     public function references(){
 
