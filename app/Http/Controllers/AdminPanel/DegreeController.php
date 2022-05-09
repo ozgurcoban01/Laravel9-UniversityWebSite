@@ -13,6 +13,12 @@ class DegreeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function description(Degrees $degrees,$id)
+    {
+        //
+        $data=Degrees::find($id);
+        return view('admin.degreeblade.descriptionpage',['data'=>$data]);
+    }
     public function index()
     {
         //

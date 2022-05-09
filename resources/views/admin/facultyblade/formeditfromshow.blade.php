@@ -30,8 +30,19 @@
 
                         <!-- ABOUTEVENT -->
                         <div class="form-group">
-                            <label for="aboutevent">About Faculty</label><br>
-                            <textarea rows = "15" cols = "60" id="aboutfaculty" name="aboutfaculty" placeholder=" This Faculty ...">{{$data->aboutfaculty}}</textarea>
+                            <label for="aboutfaculty">About Faculty</label><br>
+                            <textarea id="aboutfaculty" name="aboutfaculty" placeholder=" This Faculty ...">{!! $data->aboutfaculty !!}</textarea>
+
+                            <script>
+                                ClassicEditor
+                                    .create( document.querySelector( '#aboutfaculty' ) )
+                                    .then( editor => {
+                                        console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                        console.error( error );
+                                    } );
+                            </script>
                         </div>
 
                         <!-- IMAGE -->

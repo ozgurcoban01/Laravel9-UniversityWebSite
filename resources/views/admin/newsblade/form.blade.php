@@ -44,8 +44,20 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutnews">About News</label><br>
-                                <textarea rows = "5" cols = "33" id="aboutnews" name="aboutnews" placeholder=" News About ..."></textarea>
+                                <textarea id="aboutnews" name="aboutnews" placeholder=" News About ..."></textarea>
+
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#aboutnews' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
+
                             <!-- IMAGE -->
                             <div class="form-group">
                                 <label for="image">Image</label>

@@ -16,12 +16,23 @@
                                 <input required type="text" class="form-control" id="name" name="name" placeholder="Event Name" >
                             </div>
 
+
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="description">Description</label><br>
-                                <textarea rows = "15" cols = "60" id="description" name="description" placeholder=" This Degree ..."></textarea>
-                            </div>
+                                <textarea id="description" name="description" placeholder=" This description ..."></textarea>
 
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#description' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
+                            </div>
 
                             <button type="submit" class="btn btn-primary me-2">Submit</button>
 

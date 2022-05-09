@@ -15,11 +15,10 @@
 
                     <div class="card-body">
 
-                        <h4 style="font-size:xx-large" class="card-title">{{$data->fname}} {{$data->lname}}`s Description</h4>
+                        <h4 style="font-size:xx-large" class="card-title">{{$data->name}}</h4>
 
 
-                        <div>{!! $data->description !!}
-                        </div>
+                        <div>{!! $data->aboutevent !!}</div>
                     </div>
                 </div>
             </div>

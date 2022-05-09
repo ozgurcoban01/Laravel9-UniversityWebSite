@@ -13,10 +13,6 @@
 
                     <h4 style="font-size:xx-large" class="card-title">#{{$data->id}} {{$data->name}} </h4>
 
-                    {{--ABOUT EVENT SHOW PHP--}}
-                    <?php ob_start(); ?>
-                    <div>{{$data->description}}</div>
-                    <?php $str = ob_get_clean(); ?>
 
                     <div class="table-responsive">
                         <table style="font-size:medium" class="table table-hover">
@@ -31,9 +27,9 @@
                                 <td style="font-weight:bold">Name</td>
                                 <td>{{$data->name}}</td>
                             </tr>
-                            <tr >
-                                <td style="font-weight:bold;vertical-align: top;"><div>About Event</div></td>
-                                <td><?php echo nl2br($str); ?></td>
+                            <tr>
+                                <td style="font-weight:bold">About</td>
+                                <td><a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.degree.description',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-message-text menu-icon-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">Created</td>

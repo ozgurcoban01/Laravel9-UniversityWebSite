@@ -35,6 +35,7 @@ class FacultyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -189,5 +190,11 @@ class FacultyController extends Controller
         Storage::delete($data->image);
         $data->delete();
         return redirect('admin/faculty');
+    }
+    public function description(Faculties $Faculties,$id)
+    {
+        //
+        $data=Faculties::find($id);
+        return view('admin.facultyblade.descriptionpage',['data'=>$data]);
     }
 }

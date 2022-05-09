@@ -20,7 +20,18 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="description">Description</label><br>
-                                <textarea rows = "15" cols = "60" id="description" name="description" placeholder=" This Degree ...">{{$data->description}}</textarea>
+                                <textarea id="description" name="description" placeholder=" This description ...">{!! $data->description !!}</textarea>
+
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#description' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
 
                             <button type="submit" class="btn btn-primary me-2">Update</button>

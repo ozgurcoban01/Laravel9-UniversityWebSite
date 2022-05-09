@@ -14,6 +14,12 @@ class AnnounceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function description(Announces $announces,$id)
+    {
+        //
+        $data=Announces::find($id);
+        return view('admin.announceblade.descriptionpage',['data'=>$data]);
+    }
     public function index()
     {
         //

@@ -31,7 +31,18 @@
                         <!-- ABOUTEVENT -->
                         <div class="form-group">
                             <label for="aboutevent">About Announcement</label><br>
-                            <textarea rows = "12" cols = "60" id="aboutannounce" name="aboutannounce" placeholder=" This Annoucement ...">{{$data->aboutannounce}}</textarea>
+                            <textarea id="aboutannounce" name="aboutannounce" placeholder=" This Annoucement ...">{!! $data->aboutannounce !!}</textarea>
+
+                            <script>
+                                ClassicEditor
+                                    .create( document.querySelector( '#aboutannounce' ) )
+                                    .then( editor => {
+                                        console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                        console.error( error );
+                                    } );
+                            </script>
                         </div>
 
                         <button type="submit" class="btn btn-primary me-2">Submit</button>

@@ -161,4 +161,10 @@ class EventsController extends Controller
         $data->delete();
         return redirect('admin/events');
     }
+    public function description(Events $events,$id)
+    {
+        //
+        $data=Events::find($id);
+        return view('admin.degreeblade.descriptionpage',['data'=>$data]);
+    }
 }

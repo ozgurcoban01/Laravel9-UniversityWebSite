@@ -67,8 +67,20 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>
-                                <textarea rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ..."></textarea>
+                                <textarea id="aboutevent" name="aboutevent" placeholder=" This aboutevent ..."></textarea>
+
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#aboutevent' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
+
                             <!-- IMAGE -->
                             <div class="form-group">
                                 <label for="description">Image</label>

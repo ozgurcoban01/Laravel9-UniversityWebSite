@@ -150,4 +150,10 @@ class NewsController extends Controller
         $data->delete();
         return redirect('admin/news');
     }
+    public function description(News $News,$id)
+    {
+        //
+        $data=News::find($id);
+        return view('admin.newsblade.descriptionpage',['data'=>$data]);
+    }
 }

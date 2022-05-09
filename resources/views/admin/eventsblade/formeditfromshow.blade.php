@@ -69,7 +69,18 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>
-                                <textarea value="{{$data->aboutevent}}" rows = "5" cols = "33" id="aboutevent" name="aboutevent" placeholder=" This Event ...">{{$data->aboutevent}}</textarea>
+                                <textarea id="aboutevent" name="aboutevent" placeholder=" This aboutevent ...">{!! $data->aboutevent !!}</textarea>
+
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#aboutevent' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
                             <!-- IMAGE -->
                             <div class="form-group">
