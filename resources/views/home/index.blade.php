@@ -1,4 +1,10 @@
 @extends('layouts.frontpage')
+
+@section('title',$settings->title)
+@section('desciption',$settings->desciption)
+@section('keywords',$settings->keywords)
+@section('icon',\Illuminate\Support\Facades\Storage::url($settings->icon))
+
 @section('subheader')
     @php
         $mainFaculties=\App\Http\Controllers\HomeController::mainCategoryList(0);
@@ -47,6 +53,4 @@
 
     @include('home.animated')
 
-
-    @include('home.contactus')
 @endsection

@@ -47,9 +47,21 @@
                            @csrf
                            <div class="card">
                                <div class="card-body">
+                                   <!-- ABOUTEVENT -->
                                    <div class="form-group">
                                        <label for="note">Note</label><br>
-                                       <textarea rows = "15" cols = "60" id="note" name="note" placeholder=" This Description ...">{!! $data->note !!}</textarea>
+                                       <textarea id="note" name="note" placeholder="Note..."></textarea>
+
+                                       <script>
+                                           ClassicEditor
+                                               .create( document.querySelector( '#note' ) )
+                                               .then( editor => {
+                                                   console.log( editor );
+                                               } )
+                                               .catch( error => {
+                                                   console.error( error );
+                                               } );
+                                       </script>
                                    </div>
                                </div>
                            </div>

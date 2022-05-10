@@ -1,5 +1,10 @@
 @extends('layouts.frontpage')
 
+@section('title','Contact Us')
+@section('desciption',$settings->desciption)
+@section('keywords',$settings->keywords)
+@section('icon',\Illuminate\Support\Facades\Storage::url($settings->icon))
+
 @section('content')
 
     <!-- ***** Header Area Start ***** -->
@@ -60,7 +65,21 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
+                                            <div class="form-group">
+                                                <label for="message"></label><br>
+                                                <textarea id="message" name="message" placeholder="YOUR MESSAGE..."></textarea>
+
+                                                <script>
+                                                    ClassicEditor
+                                                        .create( document.querySelector( '#message' ) )
+                                                        .then( editor => {
+                                                            console.log( editor );
+                                                        } )
+                                                        .catch( error => {
+                                                            console.error( error );
+                                                        } );
+                                                </script>
+                                            </div>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">

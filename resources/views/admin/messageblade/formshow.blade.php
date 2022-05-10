@@ -2,7 +2,7 @@
 <div class="content-wrapper">
 
     <div style="justify-content: center;align-items: center" class="row">
-        <div  class="col-lg-6 grid-margin stretch-card">
+        <div  class="col-lg-12 grid-margin stretch-card">
 
             <div class="card">
 
@@ -43,11 +43,7 @@
                             @if($data->note!=null)
                                 <tr>
                                     <td style="font-weight:bold">Message Note</td>
-                                    <td>
-
-                                            {!! $data->note !!}
-
-                                    </td>
+                                    <td>{!! $data->note !!}</td>
                                 </tr>
                             @endif
                             <tr>

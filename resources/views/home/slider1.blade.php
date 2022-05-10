@@ -5,8 +5,8 @@
             <div class="col-lg-12">
 
                 <div style="text-align: center" class="section-heading ">
-                    <div class="main-button-red">
-                        <h2 ><a href="{{route('ourteachers')}}">Our Teachers</a></h2>
+                    <div class="">
+                        <h2>Our Teachers</h2>
                     </div>
 
                 </div>

@@ -52,9 +52,4 @@
 
         </div>
     </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:../../partials/_footer.html -->
 
-    <!-- partial -->
-
-<!-- main-panel ends -->

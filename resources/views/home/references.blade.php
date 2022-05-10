@@ -1,5 +1,10 @@
 @extends('layouts.frontpage')
 
+@section('title','References')
+@section('desciption',$settings->desciption)
+@section('keywords',$settings->keywords)
+@section('icon',\Illuminate\Support\Facades\Storage::url($settings->icon))
+
 @section('content')
 
     <!-- ***** Header Area Start ***** -->

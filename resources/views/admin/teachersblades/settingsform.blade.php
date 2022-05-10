@@ -116,23 +116,54 @@
 
                                 <div class="tab-pane fade" id="nav-aboutus" role="tabpanel" aria-labelledby="nav-aboutus-tab">
                                     <div class="form-group">
-                                        <label for="aboutus">About Us</label><br>
-                                        <textarea rows = "15" cols = "60" id="aboutus" name="aboutus" placeholder=" This AboutUs ...">{{$data->aboutus}}</textarea>
+                                        <label for="aboutus"></label><br>
+                                        <textarea id="aboutus" name="aboutus" placeholder=" This AboutUs ...">{!! $data->aboutus !!}</textarea>
+                                        <script>
+                                            ClassicEditor
+                                                .create( document.querySelector( '#aboutus' ) )
+                                                .then( editor => {
+                                                    console.log( editor );
+                                                } )
+                                                .catch( error => {
+                                                    console.error( error );
+                                                } );
+                                        </script>
                                     </div>
 
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                     <div class="form-group">
-                                        <label for="aboutus">About Us</label><br>
-                                        <textarea rows = "15" cols = "60" id="contact" name="contact" placeholder="Contact us ...">{{$data->contact}}</textarea>
+                                        <label for="contact"></label><br>
+                                        <textarea id="contact" name="contact" placeholder="Contact us ...">{!! $data->contact !!}</textarea>
+                                        <script>
+                                            ClassicEditor
+                                                .create( document.querySelector( '#contact' ) )
+                                                .then( editor => {
+                                                    console.log( editor );
+                                                } )
+                                                .catch( error => {
+                                                    console.error( error );
+                                                } );
+                                        </script>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-references" role="tabpanel" aria-labelledby="nav-references-tab">
                                     <div class="form-group">
-                                        <label for="contact">Contact us</label><br>
-                                        <textarea rows = "15" cols = "60" id="references" name="references" placeholder="References...">{{$data->references}}</textarea>
+                                        <label for="references"></label><br>
+                                        <textarea id="references" name="references" placeholder="References...">{!! $data->references !!}</textarea>
+
+                                        <script>
+                                            ClassicEditor
+                                                .create( document.querySelector( '#references' ) )
+                                                .then( editor => {
+                                                    console.log( editor );
+                                                } )
+                                                .catch( error => {
+                                                    console.error( error );
+                                                } );
+                                        </script>
                                     </div>
 
                                 </div>

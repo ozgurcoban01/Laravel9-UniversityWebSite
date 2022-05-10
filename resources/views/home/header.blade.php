@@ -11,16 +11,15 @@
 
 
                     <!-- ***** Logo Start ***** -->
-                    <a href="{{asset('assets')}}/index.html" class="logo">
+                    <a href="{{route('index')}}" class="logo">
                         Edu Meeting
                     </a>
 
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="{{asset('assets')}}/#top" class="active">Home</a></li>
-                        <li><a href="{{asset('assets')}}/meetings.html">Meetings</a></li>
-                        <li class="scroll-to-section"><a href="{{asset('assets')}}/#apply">Apply Now</a></li>
+                        <li><a href="{{route('index')}}">Home</a></li>
+                        <li><a href="{{route('ourteachers')}}">Teachers</a></li>
                         <li class="has-sub">
                             <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
                             <ul class="sub-menu">
@@ -29,8 +28,8 @@
                                 <li><a href="{{route('references')}}">References</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="{{asset('assets')}}/#courses">Courses</a></li>
-                        <li class="scroll-to-section"><a href="{{asset('assets')}}/#contact">Contact Us</a></li>
+
+
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
