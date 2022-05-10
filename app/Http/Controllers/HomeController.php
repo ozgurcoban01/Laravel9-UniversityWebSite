@@ -6,6 +6,7 @@ use App\Models\Announces;
 use App\Models\Degrees;
 use App\Models\Events;
 use App\Models\Faculties;
+use App\Models\Faq;
 use App\Models\Images;
 use App\Models\Message;
 use App\Models\News;
@@ -34,6 +35,13 @@ class HomeController extends Controller
         $settings=Setting::first();
 
         return view('home.contactuspage',['settings'=>$settings]);
+    }
+    public function faqs(){
+
+        $data=FAQ::all();
+        $settings=Setting::first();
+
+        return view('home.faqs',['data'=>$data,'settings'=>$settings]);
     }
     public function storemessage(Request $request){
 
@@ -73,9 +81,10 @@ class HomeController extends Controller
         $eventdata=Events::all();
         $announcedata=Announces::limit(8)->get();
         $news=News::all();
+        $faq=Faq::limit(3)->get();
         $settings=Setting::first();
 
-        return view('home.index',['sliderdata'=>$sliderdata,'eventdata'=>$eventdata,'announcedata'=>$announcedata,'news'=>$news,'settings'=>$settings]);
+        return view('home.index',['sliderdata'=>$sliderdata,'eventdata'=>$eventdata,'announcedata'=>$announcedata,'news'=>$news,'settings'=>$settings,'faq'=>$faq]);
     }
 
 

@@ -45,9 +45,9 @@
 
     @include('home.date1')
 
+    @include('home.date2')
+
     @include('home.slider2')
-
-
 
     @include('home.slider3')
 

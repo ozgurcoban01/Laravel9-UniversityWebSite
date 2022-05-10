@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\DegreeController;
+use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -34,6 +35,8 @@ Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/references', [HomeController::class,'references'])->name('references');
 
+Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
+
 Route::get('/ourteachers', [HomeController::class,'ourteachers'])->name('ourteachers');
 
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
@@ -58,6 +61,19 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/show/{id}','show')->name('show');
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/description/{id}','description')->name('description');
+
+    });
+
+    Route::prefix('faq')->name('faq.')->controller(FaqController::class)->group(function(){
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::get('/sedit/{id}','sedit')->name('sedit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::post('/supdate/{id}','supdate')->name('supdate');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
 
     });
 

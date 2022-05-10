@@ -219,6 +219,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.faq.list')}}">
+                <i class="mdi mdi-paperclip menu-icon"></i>
+                <span class="menu-title">FAQ</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.settings')}}">
                 <i class="mdi mdi-settings menu-icon"></i>
                 <span class="menu-title">Settings</span>
