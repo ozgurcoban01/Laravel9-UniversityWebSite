@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('faculties', function (Blueprint $table) {
             $table->id();
 
+            $table->foreignId('parent_id')->default(0);
             $table->string('name');
             $table->longText('aboutfaculty');
             $table->string('image')->nullable();
-            $table->foreignId('parent_id')->default(0);
 
             $table->timestamps();
         });

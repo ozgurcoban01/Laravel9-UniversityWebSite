@@ -20,10 +20,6 @@
                                 @foreach($flist as $rs)
                                     <div class="text1">
                                         <li><a class="text1" href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a></li>
-
-                                        {{--                                    @if(count($rs->children))--}}
-                                        {{--                                        @include('home.subburger',['children'=>$rs->children])--}}
-                                        {{--                                    @endif--}}
                                     </div>
 
                                 @endforeach

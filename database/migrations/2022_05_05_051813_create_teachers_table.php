@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
 
             $table->string('fname');
-            $table->foreignId('faculties_id')->nullable();
             $table->string('lname');
             $table->string('gender');
             $table->integer('age')->nullable();
@@ -26,6 +25,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('degree');
             $table->longText('description')->nullable();
+            $table->foreignId('faculties_id')->nullable();
             $table->string('image')->nullable();
 
             $table->timestamps();

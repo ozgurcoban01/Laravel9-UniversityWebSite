@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/owl.css">
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/lightbox.css">
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/headerdropdown/style.css">
 
 
 

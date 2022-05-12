@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('question');
             $table->longText('answer');
-            $table->string('status')->default('False');
+            $table->string('status')->nullable()->default('False');
 
             $table->timestamps();
         });

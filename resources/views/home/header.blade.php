@@ -1,6 +1,6 @@
-
-<!-- Sub Header -->
-
+@php
+    $mainFaculties=\App\Http\Controllers\HomeController::mainCategoryList(0);
+@endphp
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
 
@@ -9,7 +9,6 @@
             <div class="col-12">
                 <nav class="main-nav">
 
-
                     <!-- ***** Logo Start ***** -->
                     <a href="{{route('index')}}" class="logo">
                         Edu Meeting
@@ -17,20 +16,32 @@
 
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="{{route('index')}}">Home</a></li>
-                        <li><a href="{{route('ourteachers')}}">Teachers</a></li>
-                        <li class="has-sub">
-                            <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{route('aboutus')}}">About Us</a></li>
-                                <li><a href="{{route('contact')}}">Contact Us</a></li>
-                                <li><a href="{{route('references')}}">References</a></li>
-                            </ul>
-                        </li>
 
+                    <div class="menu">
+                        <ul class="nav">
+                            <li class="link"><a href="{{route('index')}}">Home</a></li>
+                            <li class="link"><a href="{{route('ourteachers')}}">Teachers</a></li>
+                            <li>
+                                <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
+                                <ul>
+                                    <li class="link"><a href="{{route('aboutus')}}">About Us</a></li>
+                                    <li class="link"><a href="{{route('contact')}}">Contact Us</a></li>
+                                    <li class="link"><a href="{{route('references')}}">References</a></li>
+                                </ul>
+                            </li>
+                            @foreach($mainFaculties as $rs)
+                                @if(count($rs->children))
+                                    <li><a href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a>
+                                        @include('home.subtree',['children'=>$rs->children])
+                                    </li>
+                                @else
+                                    <li class="link"><a href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a></li>
+                                @endif
+                            @endforeach
 
-                    </ul>
+                        </ul>
+                    </div>
+
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
