@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title')->nullable();
+            $table->string('title')->nullable()->default('Default Title');
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->string('address')->nullable();
@@ -31,8 +31,8 @@ return new class extends Migration
             $table->string('instagram')->nullable();
             $table->string('youtube')->nullable();
             $table->longText('aboutus')->nullable();
-            $table->longText('contact')->nullable();
-            $table->longText('references')->nullable();
+            $table->longText('terms')->nullable();
+            $table->longText('privacy')->nullable();
             $table->string('status')->nullable()->default('False');
             $table->string('icon')->nullable();
 

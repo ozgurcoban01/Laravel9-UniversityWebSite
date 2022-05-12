@@ -13,8 +13,8 @@
                                     <button class="nav-link" id="nav-smtp-tab" data-bs-toggle="tab" data-bs-target="#nav-smtp" type="button" role="tab" aria-controls="nav-smtp" aria-selected="false">SMTP</button>
                                     <button class="nav-link" id="nav-social-tab" data-bs-toggle="tab" data-bs-target="#nav-social" type="button" role="tab" aria-controls="nav-social" aria-selected="false">Social</button>
                                     <button class="nav-link" id="nav-aboutus-tab" data-bs-toggle="tab" data-bs-target="#nav-aboutus" type="button" role="tab" aria-controls="nav-aboutus" aria-selected="false">About us</button>
-                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact us</button>
-                                    <button class="nav-link" id="nav-references-tab" data-bs-toggle="tab" data-bs-target="#nav-references" type="button" role="tab" aria-controls="nav-references" aria-selected="false">Referenced</button>
+                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Terms of Use</button>
+                                    <button class="nav-link" id="nav-references-tab" data-bs-toggle="tab" data-bs-target="#nav-references" type="button" role="tab" aria-controls="nav-references" aria-selected="false">Privacy <Policy></Policy></button>
 
                                 </div>
                             </nav>
@@ -119,14 +119,20 @@
                                         <label for="aboutus"></label><br>
                                         <textarea id="aboutus" name="aboutus" placeholder=" This AboutUs ...">{!! $data->aboutus !!}</textarea>
                                         <script>
-                                            ClassicEditor
-                                                .create( document.querySelector( '#aboutus' ) )
-                                                .then( editor => {
-                                                    console.log( editor );
-                                                } )
-                                                .catch( error => {
-                                                    console.error( error );
-                                                } );
+                                            $('#aboutus').summernote({
+
+                                                tabsize: 2,
+                                                height: 120,
+                                                toolbar: [
+                                                    ['style', ['style']],
+                                                    ['font', ['bold', 'underline', 'clear']],
+                                                    ['color', ['color']],
+                                                    ['para', ['ul', 'ol', 'paragraph']],
+                                                    ['table', ['table']],
+                                                    ['insert', ['link', 'picture', 'video']],
+                                                    ['view', ['fullscreen', 'codeview', 'help']]
+                                                ]
+                                            });
                                         </script>
                                     </div>
 
@@ -134,35 +140,49 @@
 
                                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                     <div class="form-group">
-                                        <label for="contact"></label><br>
-                                        <textarea id="contact" name="contact" placeholder="Contact us ...">{!! $data->contact !!}</textarea>
+                                        <label for="terms"></label><br>
+                                        <textarea id="terms" name="terms" placeholder="TERMS OF USE ...">{!! $data->terms !!}</textarea>
+
                                         <script>
-                                            ClassicEditor
-                                                .create( document.querySelector( '#contact' ) )
-                                                .then( editor => {
-                                                    console.log( editor );
-                                                } )
-                                                .catch( error => {
-                                                    console.error( error );
-                                                } );
+                                            $('#terms').summernote({
+
+                                                tabsize: 2,
+                                                height: 120,
+                                                toolbar: [
+                                                    ['style', ['style']],
+                                                    ['font', ['bold', 'underline', 'clear']],
+                                                    ['color', ['color']],
+                                                    ['para', ['ul', 'ol', 'paragraph']],
+                                                    ['table', ['table']],
+                                                    ['insert', ['link', 'picture', 'video']],
+                                                    ['view', ['fullscreen', 'codeview', 'help']]
+                                                ]
+                                            });
                                         </script>
+
                                     </div>
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-references" role="tabpanel" aria-labelledby="nav-references-tab">
                                     <div class="form-group">
-                                        <label for="references"></label><br>
-                                        <textarea id="references" name="references" placeholder="References...">{!! $data->references !!}</textarea>
+                                        <label for="privacy"></label><br>
+                                        <textarea id="privacy" name="privacy" placeholder="PRIVACY POLICY...">{!! $data->privacy !!}</textarea>
 
                                         <script>
-                                            ClassicEditor
-                                                .create( document.querySelector( '#references' ) )
-                                                .then( editor => {
-                                                    console.log( editor );
-                                                } )
-                                                .catch( error => {
-                                                    console.error( error );
-                                                } );
+                                            $('#privacy').summernote({
+
+                                                tabsize: 2,
+                                                height: 120,
+                                                toolbar: [
+                                                    ['style', ['style']],
+                                                    ['font', ['bold', 'underline', 'clear']],
+                                                    ['color', ['color']],
+                                                    ['para', ['ul', 'ol', 'paragraph']],
+                                                    ['table', ['table']],
+                                                    ['insert', ['link', 'picture', 'video']],
+                                                    ['view', ['fullscreen', 'codeview', 'help']]
+                                                ]
+                                            });
                                         </script>
                                     </div>
 

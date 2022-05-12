@@ -67,17 +67,23 @@
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
                                 <label for="aboutevent">About Event</label><br>
-                                <textarea id="aboutevent" name="aboutevent" placeholder=" This aboutevent ..."></textarea>
+                                <textarea id="aboutevent" name="aboutevent" placeholder=" This Event About  ..."></textarea>
 
                                 <script>
-                                    ClassicEditor
-                                        .create( document.querySelector( '#aboutevent' ) )
-                                        .then( editor => {
-                                            console.log( editor );
-                                        } )
-                                        .catch( error => {
-                                            console.error( error );
-                                        } );
+                                    $('#aboutevent').summernote({
+
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ['style', ['style']],
+                                            ['font', ['bold', 'underline', 'clear']],
+                                            ['color', ['color']],
+                                            ['para', ['ul', 'ol', 'paragraph']],
+                                            ['table', ['table']],
+                                            ['insert', ['link', 'picture', 'video']],
+                                            ['view', ['fullscreen', 'codeview', 'help']]
+                                        ]
+                                    });
                                 </script>
                             </div>
 

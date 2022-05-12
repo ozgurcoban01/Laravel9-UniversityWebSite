@@ -30,10 +30,14 @@
                         <div class="col-lg-12">
                             <div class="filters">
                                 <ul>
-                                    <li data-filter="*"  class="active">All Meetings</li>
-                                    @foreach($degrees as $rs)
-                                        <li data-filter=".{{$rs->name}}">{{$rs->name}}</li>
+                                    <li data-filter="*"  class="active">All Teachers</li>
+
+                                    @foreach($faculties as $rz)
+                                            @if(count($rz->teachers))
+                                                <li data-filter=".{{$rz->id}}">{{$rz->name}}</li>
+                                            @endif
                                     @endforeach
+
                                 </ul>
                             </div>
                         </div>
@@ -42,21 +46,22 @@
                             <div class="row grid">
 
                                 @foreach($teachers as $rs)
-                                    <div class="col-lg-4 templatemo-item-col all {{$rs->degree}}">
-                                        <div class="meeting-item">
-                                            <div class="thumb">
 
-                                                <a href="{{route('teacher',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
-                                            </div>
-                                            <div class="down-content">
-                                                <a href="{{route('teacher',['id'=>$rs->id])}}"><h4>{{$rs->degree}} {{$rs->fname}} {{$rs->lname}}</h4></a>
-                                                <p>From {{$rs->faculties->name}}</p>
+
+                                        <div class="col-lg-4 templatemo-item-col all {{$rs->faculties_id}}">
+                                            <div class="meeting-item">
+                                                <div class="thumb">
+
+                                                    <a href="{{route('teacher',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
+                                                </div>
+                                                <div style="text-align: center" class="down-content">
+                                                    <a  href="{{route('teacher',['id'=>$rs->id])}}"><h4>{{$rs->degree}} <span style="font-weight: normal">{{$rs->fname}} {{$rs->lname}}</span></h4></a>
+                                                    <p style="margin: 0">From <a href="{{route('faculty',['id'=>$rs->faculties->id])}}">{{$rs->faculties->name}}</a></p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+
                                 @endforeach
-
-
 
                             </div>
                         </div>

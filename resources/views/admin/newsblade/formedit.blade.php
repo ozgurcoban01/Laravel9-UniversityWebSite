@@ -48,14 +48,20 @@
                                 <textarea id="aboutnews" name="aboutnews" placeholder=" News About ...">{!! $data->aboutnews !!}</textarea>
 
                                 <script>
-                                    ClassicEditor
-                                        .create( document.querySelector( '#aboutnews' ) )
-                                        .then( editor => {
-                                            console.log( editor );
-                                        } )
-                                        .catch( error => {
-                                            console.error( error );
-                                        } );
+                                    $('#aboutnews').summernote({
+
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ['style', ['style']],
+                                            ['font', ['bold', 'underline', 'clear']],
+                                            ['color', ['color']],
+                                            ['para', ['ul', 'ol', 'paragraph']],
+                                            ['table', ['table']],
+                                            ['insert', ['link', 'picture', 'video']],
+                                            ['view', ['fullscreen', 'codeview', 'help']]
+                                        ]
+                                    });
                                 </script>
                             </div>
 

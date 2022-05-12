@@ -9,6 +9,7 @@ use App\Models\Faculties;
 class Teachers extends Model
 {
     use HasFactory;
+
     public function faculties(){
         return $this->belongsTo(Faculties::class);
     }

@@ -9,6 +9,9 @@ use App\Models\Teachers;
 class Faculties extends Model
 {
     use HasFactory;
+
+    protected $appends=['parent',];
+
     public function teachers(){
         return $this->hasMany(Teachers::class);
     }

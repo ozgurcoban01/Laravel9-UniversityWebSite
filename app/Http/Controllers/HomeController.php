@@ -24,6 +24,22 @@ class HomeController extends Controller
         return Faculties::where('parent_id','=',$id)->with('children')->get();
     }
 
+
+
+    public function ourteachers(Faculties $faculties,Teachers $Teachers,Degrees $Degrees){
+
+        $faculties=Faculties::all();
+
+        $teachers=Teachers::all();
+
+        $degrees=Degrees::all();
+
+        $settings=Setting::first();
+
+
+        return view('home.ourteachers',['teachers'=>$teachers,'degrees'=>$degrees,'settings'=>$settings,'faculties'=>$faculties]);
+    }
+
     public function aboutus(){
 
         $settings=Setting::first();
@@ -65,14 +81,7 @@ class HomeController extends Controller
 
         return view('home.references',['settings'=>$settings]);
     }
-    public function ourteachers(Teachers $Teachers,Degrees $Degrees){
 
-        $teachers=Teachers::all();
-        $degrees=Degrees::all();
-        $settings=Setting::first();
-
-        return view('home.ourteachers',['teachers'=>$teachers,'degrees'=>$degrees,'settings'=>$settings]);
-    }
 
 
     public function index(){
@@ -119,16 +128,16 @@ class HomeController extends Controller
     }
     public function faculty(Request $request,Faculties $faculties, Teachers $Teachers,$id){
 
-        $data=Faculties::find($id);
+        $faculty=Faculties::find($id);
+        $pdata=$faculty->parent;
 
-        $pdata=Faculties::find($data->parent_id);
+        $teacher=$faculty->teachers;
 
-        $rs=$data->teachers;
         $settings=Setting::first();
 
         $flist=self::mainCategoryList($id);
 
-        return view('home.faculties',['data'=>$data,'teac'=>$rs,'flist'=>$flist,'pdata'=>$pdata,'settings'=>$settings]);
+        return view('home.faculties',['data'=>$faculty,'teac'=>$teacher,'flist'=>$flist,'settings'=>$settings,'pdata'=>$pdata]);
     }
 
 }

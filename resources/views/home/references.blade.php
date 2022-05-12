@@ -15,8 +15,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>REFERENCES</h2>
-                    <h6>Get all details About Us</h6>
+                    <h2>PRIVACY</h2>
+
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="meeting-single-item">
-                                <div class="down-content">{!! $settings->references !!}</div>
+                                <div class="down-content">{!! $settings->privacy !!}</div>
                             </div>
                         </div>
                         <div class="col-lg-12">

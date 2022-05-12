@@ -55,11 +55,8 @@
                                 <div class="down-content">
                                     <a ><h2>{{$data->name}}</h2></a><br>
 
-                                    <p>{{$data->description}}</p>
-                                    <p class="description">
-                                        {{$data->aboutnews}}
-
-                                    </p>
+                                    <p>{{$data->description}}</p><br><br>
+                                    {!! $data->aboutnews !!}<br><br>
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="hours">

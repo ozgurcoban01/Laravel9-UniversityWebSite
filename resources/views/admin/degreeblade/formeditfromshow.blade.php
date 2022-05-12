@@ -23,14 +23,20 @@
                                 <textarea id="description" name="description" placeholder=" This description ...">{!! $data->description !!}</textarea>
 
                                 <script>
-                                    ClassicEditor
-                                        .create( document.querySelector( '#description' ) )
-                                        .then( editor => {
-                                            console.log( editor );
-                                        } )
-                                        .catch( error => {
-                                            console.error( error );
-                                        } );
+                                    $('#description').summernote({
+
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ['style', ['style']],
+                                            ['font', ['bold', 'underline', 'clear']],
+                                            ['color', ['color']],
+                                            ['para', ['ul', 'ol', 'paragraph']],
+                                            ['table', ['table']],
+                                            ['insert', ['link', 'picture', 'video']],
+                                            ['view', ['fullscreen', 'codeview', 'help']]
+                                        ]
+                                    });
                                 </script>
                             </div>
 

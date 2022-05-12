@@ -21,14 +21,7 @@
                         <ul class="nav">
                             <li class="link"><a href="{{route('index')}}">Home</a></li>
                             <li class="link"><a href="{{route('ourteachers')}}">Teachers</a></li>
-                            <li>
-                                <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
-                                <ul>
-                                    <li class="link"><a href="{{route('aboutus')}}">About Us</a></li>
-                                    <li class="link"><a href="{{route('contact')}}">Contact Us</a></li>
-                                    <li class="link"><a href="{{route('references')}}">References</a></li>
-                                </ul>
-                            </li>
+
                             @foreach($mainFaculties as $rs)
                                 @if(count($rs->children))
                                     <li><a href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a>
@@ -38,7 +31,14 @@
                                     <li class="link"><a href="{{route('faculty',['id'=>$rs->id])}}">{{$rs->name}}</a></li>
                                 @endif
                             @endforeach
-
+                            <li>
+                                <a href="{{asset('assets')}}/javascript:void(0)">Pages</a>
+                                <ul>
+                                    <li class="link"><a href="{{route('aboutus')}}">About Us</a></li>
+                                    <li class="link"><a href="{{route('contact')}}">Contact Us</a></li>
+                                    <li class="link"><a href="{{route('references')}}">Privacy</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 

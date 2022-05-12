@@ -69,18 +69,19 @@
                                     <a><img style="width: 1296px;height: 400px;" src="{{Storage::url($data->image)}}" alt=""></a>
                                 </div>
                                 <div class="down-content">
-                                    <a ><h4>{{$data->name}}</h4></a>
+                                    {!! $data->aboutfaculty !!}
 
-                                    <p class="description">{!! $data->aboutfaculty !!}</p>
+                                    <p class="description"></p>
                                     <div class="row">
-                                        Realeted Peoples <br><br>
+                                        <br><br>
                                         @foreach($teac as $rs)
                                            <a href="{{route('teacher',['id'=>$rs->id])}}"><div><span style="font-weight: bold">{{$rs->degree}}</span> {{$rs->fname}} {{$rs->lname}}</div></a>
                                         @endforeach
-
                                     </div>
                                 </div>
+
                             </div>
+
                         </div>
                         <div class="col-lg-12">
                             <div class="main-button-red">

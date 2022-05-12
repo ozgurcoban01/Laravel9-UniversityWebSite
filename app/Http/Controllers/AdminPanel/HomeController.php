@@ -56,8 +56,8 @@ class HomeController extends Controller
         $data->instagram=$request->input('instagram');
         $data->youtube=$request->input('youtube');
         $data->aboutus=$request->input('aboutus');
-        $data->contact=$request->input('contact');
-        $data->references=$request->input('references');
+        $data->terms=$request->input('terms');
+        $data->privacy=$request->input('privacy');
         $data->status=$request->input('status');
 
 

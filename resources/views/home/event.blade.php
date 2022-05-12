@@ -40,7 +40,7 @@
                                     <a ><h4>{{$data->name}}</h4></a>
                                     <p>{{$data->sdescription}}</p>
                                     <p class="description">
-                                        {{$data->aboutevent}}
+                                         {!! $data->aboutevent !!}
                                     </p>
                                     <div class="row">
                                         <div class="col-lg-4">

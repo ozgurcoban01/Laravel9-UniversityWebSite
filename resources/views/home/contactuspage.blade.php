@@ -15,8 +15,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>ABOUT US</h2>
-                    <h6>Get all details About Us</h6>
+                    <h2>CONTACT US</h2>
+                    <h6>Get Contact With Us For Everything!!!</h6>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                         <div class="col-lg-12">
                             <form id="contact" action="" method="post">
                                 <div class="row">
-                                    <div >{!! $settings->aboutus !!}</div>
+                                    <div >{!! $settings->terms !!}</div>
                                 </div>
                             </form>
 

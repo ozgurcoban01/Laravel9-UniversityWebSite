@@ -26,19 +26,24 @@
 
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
-                                <label for="aboutevent">About Announcement</label><br>
+                                <label for="aboutannounce">About Announcement</label><br>
                                 <textarea id="aboutannounce" name="aboutannounce" placeholder=" This Annoucement ..."></textarea>
 
-                                    <script>
-                                        ClassicEditor
-                                            .create( document.querySelector( '#aboutannounce' ) )
-                                            .then( editor => {
-                                                console.log( editor );
-                                            } )
-                                            .catch( error => {
-                                                console.error( error );
-                                            } );
-                                    </script>
+                                <script>
+                                    $('#aboutannounce').summernote({
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ['style', ['style']],
+                                            ['font', ['bold', 'underline', 'clear']],
+                                            ['color', ['color']],
+                                            ['para', ['ul', 'ol', 'paragraph']],
+                                            ['table', ['table']],
+                                            ['insert', ['link', 'picture', 'video']],
+                                            ['view', ['fullscreen', 'codeview', 'help']]
+                                        ]
+                                    });
+                                </script>
                             </div>
 
                             <button type="submit" class="btn btn-primary me-2">Submit</button>

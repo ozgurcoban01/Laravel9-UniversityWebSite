@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h6>Get all details About</h6>
-                    <h2>{{$data->description}}</h2>
+                    <h2>{!! $data->description !!}</h2>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                                     <a ><h2>{{$data->description}}</h2></a>
 
                                     <p class="description">
-                                        {{$data->aboutannounce}}
+                                        {!! $data->aboutannounce !!}
                                     </p>
                                     <div class="row">
                                         <div class="col-lg-4">
