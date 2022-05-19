@@ -42,6 +42,9 @@ Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/termsofuse', [HomeController::class,'termsofuse'])->name('termsofuse');
 Route::get('/privacy', [HomeController::class,'privacy'])->name('privacy');
 
+Route::view('/loginuser','home.login');
+Route::view('/registeruser','home.register');
+Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
 
 Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
 

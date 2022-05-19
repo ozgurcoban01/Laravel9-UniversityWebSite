@@ -2,8 +2,9 @@
 @section('desciption',$settings->desciption)
 @section('keywords',$settings->keywords)
 @section('icon',\Illuminate\Support\Facades\Storage::url($settings->icon))
-
-
+@php
+$average=$data->comment->average('rate');
+@endphp
 @extends('layouts.frontpage')
 @section('head')
     <link rel="stylesheet" href="{{asset('assets')}}/css/assets/slick.css">
@@ -107,7 +108,7 @@
                                 <h2>Write a Comment</h2>
                                 <form action="{{{route('storecomment')}}}" method="post">
                                     @csrf
-                                    <input type="hidden" name="teacher_id" value="{{$data->id}}">
+                                    <input type="hidden" name="teachers_id" value="{{$data->id}}">
                                     <input type="text" name="subject" placeholder="Your Subject" required>
                                     <textarea name="review" placeholder="Your Comment"></textarea>
 
@@ -146,9 +147,8 @@
                                 <div class="tab_contents tab-content">
                                     <div role="tabpanel" class="tab-pane fade in active show" id="information">{!! $data->description !!}</div>
                                     <div role="tabpanel" class="tab-pane fade" id="courses">
-                                        <!--Start Courses Area Section-->
+                                        <!--Start Comment Area Section-->
                                         <div class="popular_courses">
-
                                             <section class="blog_wrapper">
                                                 <div class="container">
                                                     <div class="row">
@@ -159,12 +159,27 @@
                                                                         <!-- Blog Comment Wrappper-->
                                                                         <div class="commnet-wrapper">
                                                                             <div class="comment-list-items">
+                                                                                <div class="items_title">
+                                                                                    <h3 class="title">{{count($data->comment)}} Commnets</h3>
+                                                                                    <span style="font-weight: bold">Avarage Rating:</span>
+                                                                                    @if($average<2)
+                                                                                        <span style="color: orange">★</span><span>★★★★</span>
+                                                                                    @elseif($average<3)
+                                                                                        <span style="color: orange">★★</span><span>★★★</span>
+                                                                                    @elseif($average<4)
+                                                                                        <span style="color: orange">★★★</span><span>★★</span>
+                                                                                    @elseif($average<5)
+                                                                                        <span style="color: orange">★★★★</span><span>★</span>
+                                                                                    @else
+                                                                                        <span style="color: orange">★★★★★</span>
+                                                                                    @endif
+                                                                                </div>
                                                                                 @foreach($reviews as $rs)
                                                                                     <div class="comment-list-wrapper">
                                                                                         <div class="comment-list">
-                                                                                            <div class="commnet_img">
-                                                                                                <img src="{{Storage::url($rs->image)}}" alt="member img" class="img-fluid">
-                                                                                            </div>
+{{--                                                                                            <div class="commnet_img">--}}
+{{--                                                                                                <img src="{{Storage::url($rs->image)}}" alt="member img" class="img-fluid">--}}
+{{--                                                                                            </div>--}}
                                                                                             <div class="comment-text">
                                                                                                 <div class="author_info">
                                                                                                     <div class="author_name">
@@ -202,7 +217,6 @@
                                                     </div>
                                                 </div>
                                             </section> <!-- ./ End Blog Area Wrapper-->
-
                                         </div><!-- Ends: . -->
                                     </div>
                                 </div>

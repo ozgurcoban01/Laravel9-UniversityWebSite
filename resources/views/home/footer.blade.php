@@ -5,7 +5,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col footer_intro">
                         <img src="{{asset('assets')}}/images/logo2.png" alt="" class="f_logo">
-                        <p>{{$settings->description}}</p>
+
                     </div>
                 </div>
 
@@ -24,10 +24,10 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col contact">
                         <h3>Contact Us</h3>
-                        <p>{{$settings->address}}</p>
+                        <p>1022 Nolu Sokak No:14 Öztürk Erkek Öğrenci Yurdu</p>
                         <div class="contact_info">
-                            <span>+9{{$settings->phone}}</span>
-                            <span class="email">{{$settings->email}}</span>
+                            <span>+90 545 281 22 15</span>
+                            <span class="email">cobanozgur55@gmail.com</span>
                         </div>
                         <ul class="social_items d-flex list-unstyled">
                             <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>

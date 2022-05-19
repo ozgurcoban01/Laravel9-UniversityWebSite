@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
 
             $table->integer('user_id');
-            $table->integer('teacher_id');
+            $table->integer('teachers_id');
             $table->string('subject');
             $table->string('review')->nullable();
             $table->string('ip')->nullable();

@@ -36,7 +36,7 @@ class HomeController extends Controller
 
         $data=new Comment();
         $data->user_id=Auth::id();
-        $data->teacher_id=$request->input('teacher_id');
+        $data->teachers_id=$request->input('teachers_id');
         $data->rate=$request->input('rate');
         $data->subject=$request->input('subject');
         $data->review=$request->input('review');
@@ -44,7 +44,7 @@ class HomeController extends Controller
 
         $data->save();
 
-        return redirect()->route('teacher',['id'=>$request->input('teacher_id')]);
+        return redirect()->route('teacher',['id'=>$request->input('teachers_id')]);
 
     }
 

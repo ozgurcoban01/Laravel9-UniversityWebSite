@@ -52,7 +52,7 @@ class CommentController extends Controller
     public function show($id)
     {
         $data=Comment::find($id);
-        $teacher=Teachers::find($data->teacher_id);
+        $teacher=Teachers::find($data->teachers_id);
 
         return view('admin.comment.show',['data'=>$data,'teacher'=>$teacher]);
     }
@@ -78,7 +78,7 @@ class CommentController extends Controller
     public function update(Request $request, $id)
     {
         $data=Comment::find($id);
-        $teacher=Teachers::find($data->teacher_id);
+        $teacher=Teachers::find($data->teachers_id);
         $data->status=$request->status;
         $data->save();
         return redirect()->route('admin.comment.list', ['data'=>$data,'teacher'=>$teacher,'id'=>$data->id]);

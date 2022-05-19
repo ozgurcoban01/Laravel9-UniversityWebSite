@@ -66,15 +66,15 @@ class HomeController extends Controller
         $data=new Message();
 
         $data->user_id=Auth::id();
-        $data->teacher_id=$request->input('teacher_id');
+        $data->teachers_id=$request->input('teachers_id');
         $data->subject=$request->input('subject');
         $data->review=$request->input('review');
         $data->note=$request->input('note');
-        $data->ip=request->ip();
+        $data->ip=$request->ip();
 
         $data->save();
 
-        return redirect()->route('teacher',['id'=>$request->input('teacher_id')])->with('info','Your Message Has Been Sent!!!');
+        return redirect()->route('teacher',['id'=>$request->input('teachers_id')])->with('info','Your Message Has Been Sent!!!');
 
     }
     public function termsofuse(){
@@ -157,7 +157,7 @@ class HomeController extends Controller
     public function teacher(Request $request, Teachers $Teachers,$id){
 
         $data=Teachers::find($id);
-        $reviews=Comment::where('teacher_id',$id)->get();
+        $reviews=Comment::where('teachers_id',$id)->get();
         $settings=Setting::first();
 
         return view('home.teacherdetail',['data'=>$data,'settings'=>$settings,'reviews'=>$reviews]);
@@ -171,20 +171,16 @@ class HomeController extends Controller
 
         return view('home.announcedetail',['data'=>$data,'settings'=>$settings,'otherannounces'=>$otherannounces]);
     }
-    public function faculty(Request $request,Faculties $faculties, Teachers $Teachers,$id){
 
-        $faculty=Faculties::find($id);
-        $allfaculties=Faculties::all();
 
-        $pdata=self::mainCategoryList(0);
+    public function logout(Request $request){
 
-        $teacher=$faculty->teachers;
+        Auth::logout();
 
-        $settings=Setting::first();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        $flist=self::mainCategoryList($id);
-
-        return view('home.faculties',['data'=>$faculty,'teac'=>$teacher,'flist'=>$flist,'settings'=>$settings,'pdata'=>$pdata,'allfaculties'=>$allfaculties]);
+        return redirect('/');
     }
 
 }
