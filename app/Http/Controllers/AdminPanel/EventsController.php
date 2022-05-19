@@ -165,6 +165,6 @@ class EventsController extends Controller
     {
         //
         $data=Events::find($id);
-        return view('admin.degreeblade.descriptionpage',['data'=>$data]);
+        return view('admin.eventsblade.descriptionpage',['data'=>$data]);
     }
 }

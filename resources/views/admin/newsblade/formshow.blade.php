@@ -44,7 +44,7 @@
                             </tr>
                             <tr>
                                 <td style="font-weight:bold">About News</td>
-                                <td><a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.newsblade.description',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-message-text menu-icon-right"></i></a></td>
+                                <td><a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.news.description',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-message-text menu-icon-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td style="font-weight:bold;vertical-align: top;"><div>About Image Galery</div></td>
@@ -58,10 +58,6 @@
                                     <td><img style="height: 100px;width: 100px" src="{{Storage::url($data->image)}}" alt="image"></td>
                                 </tr>
                             @endif
-                            <tr>
-                                <td style="font-weight:bold">Image Galery</td>
-                                <td>{{$data->created_at}}</td>
-                            </tr>
                             <tr>
                                 <td style="font-weight:bold">Created</td>
                                 <td>{{$data->created_at}}</td>

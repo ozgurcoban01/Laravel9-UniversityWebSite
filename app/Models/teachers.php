@@ -13,4 +13,7 @@ class Teachers extends Model
     public function faculties(){
         return $this->belongsTo(Faculties::class);
     }
+    public function comment(){
+        return $this->hasMany(Comment::class);
+    }
 }

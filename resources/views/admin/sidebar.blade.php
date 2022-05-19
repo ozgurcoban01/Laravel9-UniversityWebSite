@@ -219,6 +219,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.comment.list')}}">
+                <i class="mdi mdi-comment-check menu-icon"></i>
+                <span class="menu-title">Comments</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.faq.list')}}">
                 <i class="mdi mdi-paperclip menu-icon"></i>
                 <span class="menu-title">FAQ</span>

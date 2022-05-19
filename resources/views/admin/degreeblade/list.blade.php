@@ -50,7 +50,7 @@
                                             {{$rs->name}}
                                         </td>
                                         <td>
-                                            {{$rs->description}}
+                                            {!! $rs->description !!}
                                         </td>
 
                                         <td>

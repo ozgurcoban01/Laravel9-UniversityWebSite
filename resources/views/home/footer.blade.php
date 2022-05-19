@@ -1,68 +1,56 @@
+<footer class="footer_2">
+    <div class="container">
+        <div class="footer_top">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="footer_single_col footer_intro">
+                        <img src="{{asset('assets')}}/images/logo2.png" alt="" class="f_logo">
+                        <p>{{$settings->description}}</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="footer_single_col information">
+                        <h3>Information</h3>
+                        <ul class="quick_inf0">
+                            <li><a href="{{route('faqs')}}">FAQS</a></li>
+                            <li><a href="{{route('termsofuse')}}">Terms of Use</a></li>
+                            <li><a href="{{route('privacy')}}">Privacy</a></li>
+                            <li><a href="{{route('aboutus')}}">About us</a></li>
+                            <li><a href="{{route('contact')}}">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="footer_single_col contact">
+                        <h3>Contact Us</h3>
+                        <p>{{$settings->address}}</p>
+                        <div class="contact_info">
+                            <span>+9{{$settings->phone}}</span>
+                            <span class="email">{{$settings->email}}</span>
+                        </div>
+                        <ul class="social_items d-flex list-unstyled">
+                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
 
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-
-<script src="{{asset('assets')}}/vendor/jquery/jquery.min.js"></script>
-<script src="{{asset('assets')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<script src="{{asset('assets')}}/assets/js/isotope.min.js"></script>
-<script src="{{asset('assets')}}/assets/js/owl-carousel.js"></script>
-<script src="{{asset('assets')}}/assets/js/lightbox.js"></script>
-<script src="{{asset('assets')}}/assets/js/tabs.js"></script>
-<script src="{{asset('assets')}}/assets/js/video.js"></script>
-<script src="{{asset('assets')}}/assets/js/slick-slider.js"></script>
-<script src="{{asset('assets')}}/assets/js/custom.js"></script>
-<script src="{{asset('assets')}}/burger/script.js"></script>
-
-
-
-<script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-            $('body, html').animate({
-                    scrollTop: reqSectionPos },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
-        }
-
-    };
-
-    var checkSection = function checkSection() {
-        $('.section').each(function () {
-            var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
-            }
-        });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-        checkSection();
-    });
-</script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+            </div>
+        </div>
+    </div>
+    <div class="shapes_bg">
+        <img src="{{asset('assets')}}/images/shapes/testimonial_2_shpe_1.png" alt="" class="shape_3">
+        <img src="{{asset('assets')}}/images/shapes/footer_2.png" alt="" class="shape_1">
+    </div><br><br><br>
+</footer><!-- End Footer -->
+<section id="scroll-top" class="scroll-top">
+    <h2 class="disabled">Scroll to top</h2>
+    <div class="to-top pos-rtive">
+        <a href="#"><i class = "flaticon-right-arrow"></i></a>
+    </div>
+</section>
 

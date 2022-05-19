@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\DegreeController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\MessageController;
@@ -25,15 +26,22 @@ use App\Http\Controllers\AdminPanel\FacultyController;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('index');
+Route::get('/eventlist', [HomeController::class,'eventlist'])->name('eventlist');
 Route::get('/event/{id}', [HomeController::class,'event'])->name('event');
 Route::get('/teacher/{id}', [HomeController::class,'teacher'])->name('teacher');
+Route::get('/teacherlist', [HomeController::class,'teacherlist'])->name('teacherlist');
+Route::get('/announcelist', [HomeController::class,'announcelist'])->name('announcelist');
+Route::get('/newslist', [HomeController::class,'newslist'])->name('newslist');
 Route::get('/announce/{id}', [HomeController::class,'announce'])->name('announce');
 Route::get('/news/{id}', [HomeController::class,'news'])->name('news');
 Route::get('/faculty/{id}', [HomeController::class,'faculty'])->name('faculty');
+Route::post('/storecomment', [AdminController::class,'storecomment'])->name('storecomment');
 
 Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
-Route::get('/references', [HomeController::class,'references'])->name('references');
+Route::get('/termsofuse', [HomeController::class,'termsofuse'])->name('termsofuse');
+Route::get('/privacy', [HomeController::class,'privacy'])->name('privacy');
+
 
 Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
 
@@ -162,6 +170,20 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
     });
 
+    Route::prefix('comment')->name('comment.')->controller(CommentController::class)->group(function(){
+
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/sshow/{id}','sshow')->name('sshow');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/description/{id}','description')->name('description');
+
+    });
+
     Route::prefix('image')->name('image.')->controller(AdminImage::class)->group(function(){
         Route::get('/{nid}', 'index')->name('list');
         Route::post('/store/{nid}','store')->name('store');
@@ -171,7 +193,6 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/supdate/{nid}/{id}','supdate')->name('supdate');
         Route::get('/show/{nid}/{id}','show')->name('show');
         Route::get('/destroy/{nid}/{id}','destroy')->name('destroy');
-
     });
 
 

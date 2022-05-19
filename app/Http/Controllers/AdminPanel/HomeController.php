@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\Setting;
 use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
@@ -29,6 +31,23 @@ class HomeController extends Controller
         return view('admin.teachers.settings',['data'=>$data]);
 
     }
+
+    public function storecomment(Request $request){
+
+        $data=new Comment();
+        $data->user_id=Auth::id();
+        $data->teacher_id=$request->input('teacher_id');
+        $data->rate=$request->input('rate');
+        $data->subject=$request->input('subject');
+        $data->review=$request->input('review');
+        $data->ip=$request->input('ip');
+
+        $data->save();
+
+        return redirect()->route('teacher',['id'=>$request->input('teacher_id')]);
+
+    }
+
 
     public function update(Request $request){
 

@@ -9,7 +9,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <h2>Photo for <strong>{{$news->name}}</strong> News</h2>
+                    <h2>Photo for <strong>{{$news->name}}</strong>News</h2>
                     <form method="post" action="{{route('admin.image.store',['nid'=>$news->id])}}" enctype="multipart/form-data" class="forms-sample">
                         @csrf
                         <!-- TITLE -->
@@ -26,6 +26,7 @@
 
                         <button type="submit" class="btn btn-primary me-2">Submit</button>
                     </form>
+
 
 
                     <p class="card-description">

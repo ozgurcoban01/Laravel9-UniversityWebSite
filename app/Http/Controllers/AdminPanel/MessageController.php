@@ -51,6 +51,7 @@ class MessageController extends Controller
     {
         //
         $data=Message::find($id);
+
         if($data->status=='New'){
             $data->status='Readed';
             $data->save();
