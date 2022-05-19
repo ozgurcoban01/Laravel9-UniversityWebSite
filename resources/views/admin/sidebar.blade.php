@@ -236,6 +236,12 @@
                 <span class="menu-title">Settings</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.user.list')}}">
+                <i class="mdi mdi-human-male-female menu-icon"></i>
+                <span class="menu-title">Users</span>
+            </a>
+        </li>
 
 
     </ul>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\DegreeController;
 use App\Http\Controllers\AdminPanel\FaqController;
@@ -199,6 +200,20 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/supdate/{nid}/{id}','supdate')->name('supdate');
         Route::get('/show/{nid}/{id}','show')->name('show');
         Route::get('/destroy/{nid}/{id}','destroy')->name('destroy');
+    });
+
+    Route::prefix('user')->name('user.')->controller(AdminUserController::class)->group(function(){
+        Route::get('/', 'index')->name('list');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/sshow/{id}','sshow')->name('sshow');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/description/{id}','description')->name('description');
+        Route::post('/addrole/{id}','addrole')->name('addrole');
+        Route::get('/destroyrole/{uid}/{rid}','destroyrole')->name('destroyrole');
     });
 
 
