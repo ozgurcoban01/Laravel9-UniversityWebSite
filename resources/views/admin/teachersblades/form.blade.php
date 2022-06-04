@@ -12,7 +12,7 @@
                             @csrf
                             <!-- FIRST NAME -->
                             <div class="form-group">
-                                <label for="fname">First Name</label>
+                                <label  for="fname">First Name</label>
                                 <input required type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
                             </div>
                             <!-- LAST NAME -->

@@ -54,6 +54,16 @@ class HomeController extends Controller
 
         return view('home.contactus',['settings'=>$settings]);
     }
+
+    public function faculty(Request $request,$id){
+
+        $faculty=Faculties::find($id);
+        $pdata=$faculty
+        $settings=Setting::first();
+
+        return view('home.faculties',['data'=>$faculty,'settings'=>$settings]);
+    }
+
     public function faqs(){
 
         $data=FAQ::all();

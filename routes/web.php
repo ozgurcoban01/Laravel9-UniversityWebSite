@@ -43,11 +43,11 @@ Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/termsofuse', [HomeController::class,'termsofuse'])->name('termsofuse');
 Route::get('/privacy', [HomeController::class,'privacy'])->name('privacy');
 Route::get('/logoutuseradmin',[HomeController::class,'logoutuseradmin'])->name('logoutuseradmin');
-Route::view('/loginuser','home.login');
-Route::view('/registeruser','home.register');
+Route::view('/loginuser','home.login')->name('loginuser');
+Route::view('/registeruser','home.register')->name('registeruser');
 Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
 Route::get('/logoutuseradmin',[HomeController::class,'logoutuseradmin'])->name('logoutuseradmin');
-Route::view('/loginadmin','admin.login');
+Route::view('/loginadmin','admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 
 Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
@@ -56,7 +56,7 @@ Route::get('/ourteachers', [HomeController::class,'ourteachers'])->name('ourteac
 
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
 
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function(){
 
     Route::get('/', [AdminController::class,'index'])->name('index');
 
@@ -192,7 +192,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     });
 
     Route::prefix('image')->name('image.')->controller(AdminImage::class)->group(function(){
-        Route::get('/{nid}', 'index')->name('list');
+        Route::get('/{nid}', 'index')->name('index');
         Route::post('/store/{nid}','store')->name('store');
         Route::get('/edit/{nid}/{id}','edit')->name('edit');
         Route::get('/sedit/{id}','sedit')->name('sedit');
