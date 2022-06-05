@@ -19,6 +19,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="{{asset('assets')}}/newspageslider/style.css">
 
 @endsection
 
@@ -60,13 +61,41 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="event_intro">
-                        <img src="{{Storage::url($data->image)}}" alt="" class="img-fluid">
+                        <div style="overflow: hidden" class="thumb" >
+                            <!-- Основной блок слайдера -->
+                            <div class="slider">
+                                <div class="item">
+                                    <div class="banner">
+                                        <img src="{{Storage::url($data->image)}}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                @foreach($images as $rs)
+                                    @if($rs->content_id==$data->id)
+
+                                        <div class="item">
+                                            <div class="banner">
+                                                <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                    @endif
+                                @endforeach
+
+
+                            <!-- Кнопки-стрелочки -->
+                                <a class="previous" onclick="previousSlide()">&#10094;</a>
+                                <a class="next" onclick="nextSlide()">&#10095;</a>
+                            </div>
+
+
+
+                        </div>
                         <div class="post_content">
                             <div class="post_by d-flex justify-content-between">
-                                <span  class="date_event">{{$data->sdescription}}</span>
+                                <span  class="date_event">{{$data->description}}</span>
 
                             </div>
-                            <div class="blog_post_content">{!! $data->aboutevent !!}</div>
+                            <div class="blog_post_content">{!! $data->aboutcontent !!}</div>
                         </div>
                     </div>
                 </div>
@@ -107,10 +136,7 @@
                             </div>
                             <div class="event_location_info">
                                 <ul class="list-unstyled">
-                                    <li><p>Date</p><span><b>{{$data->sdate}}</b> to <b>{{$data->edate}}</b></span></li>
-                                    <li><p>Time</p><span><b>{{$data->stime}}</b> to <b>{{$data->etime}}</span></li>
-
-
+                                    <li><p>Date</p><span><b>{{$data->date}}</b></span></li>
                                 </ul>
                                 <ul class="list-unstyled">
                                     <li><p class="hall_location">Location</p></li>
@@ -132,6 +158,7 @@
 @endsection
 
 @section('scripts')
+    <script src="{{asset('assets')}}/newspageslider/script.js"></script>
     <!-- JavaScript -->
     <script src="{{asset('assets')}}/js/jquery-3.2.1.min.js"></script>
     <script src="{{asset('assets')}}/js/popper.min.js"></script>

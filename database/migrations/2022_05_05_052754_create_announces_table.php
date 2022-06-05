@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('aboutannounce');
             $table->date('sdate');
             $table->date('udate')->nullable();
+            $table->foreignId('faculties_id')->nullable();
 
             $table->timestamps();
         });

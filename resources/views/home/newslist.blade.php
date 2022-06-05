@@ -40,7 +40,7 @@
                         <div class="intro_text">
                             <h1>News</h1>
                             <div class="pages_links">
-                                <a href="#" title="">Home</a>
+                                <a href="/" title="">Home</a>
                                 <a href="#" title="" class="active">News</a>
                             </div>
                         </div>
@@ -65,11 +65,11 @@
                                 <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
                             </div>
                             <div class="post_content_wrapper">
-                                <div class="post_date"><p>{{$rs->date}}</p></div>
+                                <div class="post_date"><p>{{$rs->date}} - {{$rs->faculties->name}}</p></div>
                                 <h3><a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
                                 <p>{{$rs->description}}</p>
                                 <div class="post_by d-flex justify-content-between">
-                                    <a href="{{route('news',['id'=>$rs->id])}}" title="">Read More  <i class="flaticon-login-button"></i></a>
+                                    <a href="{{route('news',['id'=>$rs->id])}}" title="">Read More <i class="flaticon-login-button"></i></a>
                                 </div>
                             </div>
                         </div>

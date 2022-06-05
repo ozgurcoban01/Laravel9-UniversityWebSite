@@ -35,6 +35,8 @@
                                 </select>
                             </div>
 
+
+
                             <!-- DESCRIPTION -->
                             <div class="form-group">
                                 <label for="description">Description</label>
@@ -62,6 +64,15 @@
                                         ]
                                     });
                                 </script>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select name="type" class="js-example-basic-single w-100">
+                                    <option selected value="">News</option>
+                                    <option value="Istanbul">Event</option>
+                                    <option value="Istanbul">Announce</option>
+                                </select>
                             </div>
 
                             <!-- IMAGE -->

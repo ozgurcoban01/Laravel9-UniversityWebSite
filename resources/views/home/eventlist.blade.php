@@ -67,13 +67,10 @@
                                 <div class="event_info">
                                     <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
                                     <div class="events_time">
-                                        <span class="time"><i class="far fa-clock"></i>{{$rs->stime}} - {{$rs->etime}}</span>
+                                        <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
                                         <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
                                     </div>
-                                    <p>{{$rs->sdescription}}<div class="event_dete">
-                                        <span class="date">{{$rs->sdate}}</span>
-                                        <span>{{$rs->edate}}</span>
-                                    </div>
+                                    <p>{{$rs->description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -83,17 +80,14 @@
                                 <div class="event_info">
                                     <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
                                     <div class="events_time">
-                                        <span class="time"><i class="far fa-clock"></i>{{$rs->stime}} - {{$rs->etime}}</span>
+                                        <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
                                         <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
                                     </div>
-                                    <p>{{$rs->sdescription}}</div>
+                                    <p>{{$rs->description}}</div>
                                 <div class="event_banner">
                                     <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
                                 </div>
-                                <div class="event_dete">
-                                    <span class="date">{{$rs->sdate}}</span>
-                                    <span>{{$rs->edate}}</span>
-                                </div>
+
                             </div>
                         </div>
                     @endif

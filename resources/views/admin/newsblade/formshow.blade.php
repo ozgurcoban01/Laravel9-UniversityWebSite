@@ -49,7 +49,7 @@
                             <tr>
                                 <td style="font-weight:bold;vertical-align: top;"><div>About Image Galery</div></td>
                                 <td>
-                                    <a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.image.list',['nid'=>$data->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-folder-multiple-image menu-icon-right"></i></a>
+                                    <a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.image.index',['nid'=>$data->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-folder-multiple-image menu-icon-right"></i></a>
                                 </td>
                             </tr>
                             @if($data->image)

@@ -19,7 +19,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <link rel="stylesheet" href="{{asset('assets')}}/newspageslider/style.css">
 @endsection
 
 @section('header')
@@ -42,6 +42,7 @@
                             <div class="pages_links">
                                 <a href="#" title="">Home</a>
                                 <a href="{{route('announcelist')}}" title="">Announces</a>
+                                <a href="{{route('faculty',['id'=>$data->faculties->id])}}" title="">{{$data->faculties->name}}`s Announcement</a>
                                 <a href="#" title="" class="active">Announce Details</a>
                             </div>
                         </div>
@@ -61,7 +62,7 @@
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="event_intro">
                         <div class="post_content">
-                            <div class="blog_post_content">{!! $data->aboutannounce !!}</div>
+                            <div class="blog_post_content">{!! $data->aboutcontent !!}</div>
                         </div>
                     </div>
                 </div>
@@ -81,7 +82,7 @@
                                         <div class="post_title">
                                             <a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->description}}</a>
                                             <div class="post-date">
-                                                <span>{{$rs->sdate}}</span>
+                                                <span>{{$rs->sdate}} - {{$rs->faculties->name}}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -101,6 +102,7 @@
 @endsection
 
 @section('scripts')
+    <script src="{{asset('assets')}}/newspageslider/script.js"></script>
     <!-- JavaScript -->
     <script src="{{asset('assets')}}/js/jquery-3.2.1.min.js"></script>
     <script src="{{asset('assets')}}/js/popper.min.js"></script>

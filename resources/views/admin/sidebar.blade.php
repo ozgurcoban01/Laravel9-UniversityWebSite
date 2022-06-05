@@ -188,6 +188,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.content.list')}}">
+                <i class="mdi mdi-border-color menu-icon"></i>
+                <span class="menu-title">Contents</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin.announce.list')}}">
                 <i class="mdi mdi-bell-ring menu-icon"></i>
                 <span class="menu-title">Announcements</span>

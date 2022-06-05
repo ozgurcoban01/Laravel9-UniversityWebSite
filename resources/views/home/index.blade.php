@@ -48,13 +48,11 @@
 @endsection
 @section('content')
 
-    @include('home.posibilities')
-
-    @include('home.learnwith')
-
-    @include('home.courses')
+    @include('home.news')
 
     @include('home.professors')
+
+
 
     @include('home.announcesindex')
 

@@ -78,7 +78,7 @@
                                     <!-- Основной блок слайдера -->
                                     <div class="slider">
                                         @foreach($images as $rs)
-                                            @if($rs->news_id==$data->id)
+                                            @if($rs->content_id==$data->id)
 
                                                 <div class="item">
                                                     <div class="banner">
@@ -86,8 +86,8 @@
                                                     </div>
                                                 </div>
 
-                                        @endif
-                                    @endforeach
+                                            @endif
+                                        @endforeach
 
 
                                     <!-- Кнопки-стрелочки -->
@@ -95,7 +95,7 @@
                                         <a class="next" onclick="nextSlide()">&#10095;</a>
                                     </div>
 
-                                    {!! $data->aboutnews !!}
+                                    {!! $data->aboutcontent !!}
 
                                 </div>
 

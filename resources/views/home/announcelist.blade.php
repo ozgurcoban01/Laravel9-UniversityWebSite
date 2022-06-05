@@ -60,11 +60,11 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="single_item">
                             <div class="item_wrapper">
-                                <h3><a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->description}}</a></h3>
+                                <h3><a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
                             </div>
                             <div class="blog_title">
                                 <ul class="post_bloger">
-                                    {{$rs->sdate}}
+                                    {{$rs->date}} - {{$rs->faculties->name}}
                                 </ul>
                             </div>
                         </div>

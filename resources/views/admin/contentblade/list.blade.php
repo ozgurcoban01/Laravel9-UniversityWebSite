@@ -9,8 +9,8 @@
                 <div class="card">
 
                     <div class="card-body">
-                        <h4 class="card-title" style="font-size: xx-large">Messages</h4>
-
+                        <h4 class="card-title" style="font-size: xx-large">Contents</h4>
+                        <a href="{{route('admin.content.create')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Content</div></a>
 
                         <p class="card-description">
 
@@ -20,19 +20,22 @@
                                 <thead>
                                 <tr>
                                     <th>
-                                        Comment Id
+                                        Content Id
                                     </th>
                                     <th>
-                                        Comment Teacher
+                                        Content Name
                                     </th>
                                     <th>
-                                        Name
+                                        Content Type
                                     </th>
                                     <th>
-                                        Subject
+                                        Description
                                     </th>
                                     <th>
-                                        Comment Status
+                                        Image Galery
+                                    </th>
+                                    <th>
+                                        Edit
                                     </th>
                                     <th>
                                         Delete
@@ -49,31 +52,34 @@
                                         <td>
                                             #{{$rs->id}}
                                         </td>
-                                        @foreach($teacher as $ts)
-                                            @if($ts->id==$rs->teacher_id)
-                                                <td>
-                                                    {{$ts->fname}} {{$ts->lname}}
-                                                </td>
-                                            @endif
-                                        @endforeach
                                         <td>
-                                            {{$rs->user->name}}
+                                            {{$rs->name}}
                                         </td>
                                         <td>
-                                            {{$rs->subject}}
+                                            {{$rs->type}}
                                         </td>
                                         <td>
-                                            {{$rs->status}}
+                                            {{$rs->description}}
                                         </td>
                                         <td>
-                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.comment.destroy',['id'=>$rs->id])}}">Delete</a></div>
+                                            <a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.image.index',['nid'=>$rs->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-folder-multiple-image menu-icon-right"></i></a>
                                         </td>
+                                        <td>
+                                            <div  ><a class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.content.edit',['id'=>$rs->id])}}">Edit</a></div>
+                                        </td>
+
+                                        <td>
+                                            <div  ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('admin.content.destroy',['id'=>$rs->id])}}">Delete</a></div>
+                                        </td>
+
                                         <td >
-                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.comment.show',['id'=>$rs->id])}}">Show</a></div>
+                                            <div ><a class="btn btn-success btn-rounded btn-fw" href="{{route('admin.content.show',['id'=>$rs->id])}}">Show</a></div>
+
                                         </td>
                                     </tr>
 
                                 @endforeach
+
                                 </tbody>
                             </table>
                         </div>

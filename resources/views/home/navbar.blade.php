@@ -24,7 +24,6 @@
 
                         </ul>
                     </li>
-
                     <li class="nav-item"><a href="{{route('index')}}" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="{{route('contact')}}" class="nav-link active">Contact</a></li>
                     <li class="nav-item"><a href="{{route('faqs')}}" class="nav-link active">FAQS</a></li>

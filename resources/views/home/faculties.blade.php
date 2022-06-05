@@ -42,17 +42,15 @@
                             <div class="pages_links">
                                 <a href="#" title="">Home</a>
                                 <a href="#" title="">Faculties</a>
+                                @if($data->parent_id!=0)
+                                    <a href="#" title="">{{$data->parent->name}}</a>
+                                @endif
+                                <a href="#" title="">{{$data->name}}</a>
 
-                                @foreach($pdata as $rs)
-                                    <a href="#" title="">{{$rs->name}}</a>
-                                    @if($rs->id==$data->id)
-                                        @break
-                                    @else
-                                        @if(count($rs->children))
-                                            @include('home.subfaculty',['children'=>$rs->children])
-                                        @endif
-                                    @endif
-                                @endforeach
+{{--                                @if(count($data->parent))--}}
+{{--                                    @include('home.getparent',['data'=>$data->parent])--}}
+{{--                                    <a href="#" title="">{{$data->name}}</a>--}}
+{{--                                @endif--}}
 
                             </div>
                         </div>
@@ -66,7 +64,7 @@
 
 @section('content')
 
-    <<section class="blog_wrapper" id="courses_details_wrapper">
+    <section class="blog_wrapper" id="courses_details_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
@@ -119,18 +117,78 @@
                         <div class="archives widget_single">
                             <div class="items-title">
 
-                                <h3 class="title">All Faculties</h3>
+                                <h3 class="title">Other Faculties</h3>
 
                             </div>
                             <div class="archives-items">
                                 <ul class="list-unstyled">
                                     @foreach($allfaculties as $rs)
-                                        <li><a href="{{route('faculty',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></li>
+                                        @if($data->id!=$rs->id)
+                                            <li><a href="{{route('faculty',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></li>
+                                        @endif
                                     @endforeach
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="blog-right-items">
+                        <div class="archives widget_single">
+                            <div class="items-title">
+
+                                <h3 class="title">Events</h3>
+
+                            </div>
+                            <div class="archives-items">
+                                <ul class="list-unstyled">
+                                    @foreach($content as $rs)
+                                        @if($rs->type=='Event')
+                                            <li><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-right-items">
+                        <div class="archives widget_single">
+                            <div class="items-title">
+
+                                <h3 class="title">Newses</h3>
+
+                            </div>
+                            <div class="archives-items">
+                                <ul class="list-unstyled">
+                                    @foreach($content as $rs)
+                                        @if($rs->type=='News')
+                                            <li><a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-right-items">
+                        <div class="archives widget_single">
+                            <div class="items-title">
+
+                                <h3 class="title">Announceses</h3>
+
+                            </div>
+                            <div class="archives-items">
+                                <ul class="list-unstyled">
+                                    @foreach($content as $rs)
+                                        @if($rs->type=='Announce')
+                                            <li><a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->description}}</a></li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div> <!-- End Right Sidebar-->
 
             </div>

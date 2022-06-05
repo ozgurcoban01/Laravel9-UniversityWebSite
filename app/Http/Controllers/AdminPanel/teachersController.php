@@ -33,7 +33,7 @@ class TeachersController extends Controller
         //
         $facultylist=Faculties::all();
         $degree=Degrees::all();
-        return view('admin.teachers.create',['facultylist'=>$facultylist],['degree'=>$degree]);
+        return view('admin.teachers.create',['facultylist'=>$facultylist,'degree'=>$degree]);
     }
 
     /**
@@ -47,7 +47,7 @@ class TeachersController extends Controller
         //
         $data=new Teachers();
 
-        $data->faculties_id	=$request->faculties_id	;
+        $data->faculties_id=$request->faculties_id;
         $data->fname=$request->fname;
         $data->lname=$request->lname;
         $data->gender=$request->gender;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Content;
 use App\Models\Images;
 use App\Models\News;
 use Illuminate\Http\Request;
@@ -18,9 +19,9 @@ class AdminImage extends Controller
      */
     public function index($nid)
     {
-        $news=News::find($nid);
+        $news=Content::find($nid);
        // $images=Image::where('news_id',$nid);
-        $images=DB::table('images')->where('news_id',$nid)->get();
+        $images=DB::table('images')->where('content_id',$nid)->get();
 
         return view('admin.image.index',[
             'news'=>$news,
@@ -50,11 +51,11 @@ class AdminImage extends Controller
     {
         $data=new Images();
 
-        $data->news_id=$nid;
+        $data->content_id=$nid;
         $data->title=$request->title;
 
         if($request->file('image')){
-            $data->image=$request->file('image')->store('news_galery');
+            $data->image=$request->file('image')->store('content_galery');
         }
 
         $data->save();
@@ -81,7 +82,7 @@ class AdminImage extends Controller
     public function edit($nid,$id)
     {
         //
-        $news=News::find($nid);
+        $news=Content::find($nid);
         $images=Images::find($id);
 
         return view('admin.image.edit',['news'=>$news,'images'=>$images]);

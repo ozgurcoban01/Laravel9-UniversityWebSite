@@ -18,10 +18,12 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
+            $table->foreignId('faculties_id');
             $table->string('location')->nullable();
             $table->date('date');
             $table->longText('aboutnews');
             $table->longText('description');
+            $table->string('type');
             $table->string('image')->nullable();
 
             $table->timestamps();
