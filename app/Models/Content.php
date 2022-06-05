@@ -12,4 +12,8 @@ class Content extends Model
     public function faculties(){
         return $this->belongsTo(Faculties::class);
     }
+
+    public function comments(){
+        return $this->hasMany(Ccomment::class);
+    }
 }

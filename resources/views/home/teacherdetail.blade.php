@@ -3,7 +3,7 @@
 @section('keywords',$settings->keywords)
 @section('icon',\Illuminate\Support\Facades\Storage::url($settings->icon))
 @php
-$average=$data->comment->average('rate');
+  $average=$data->comment->average('rate');
 @endphp
 @extends('layouts.frontpage')
 @section('head')

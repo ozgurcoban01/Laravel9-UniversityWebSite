@@ -58,6 +58,9 @@
         <div class="container">
             <div class="row">
                 @foreach($data as $rs)
+                    @php
+                        $average=$rs->comments->average('rate');
+                    @endphp
                     @if($rs->id%2==1)
                         <div class="col-sm-12 events_full_box">
                             <div class="events_single">
@@ -71,6 +74,20 @@
                                         <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
                                     </div>
                                     <p>{{$rs->description}}</p>
+                                    <span style="color: orange;font-size: medium;font-weight: bold">{{count($rs->comments)}} Review<br></span>
+                                    @if(count($rs->comments)!=0)
+                                        @if($average<2)
+                                            <span style="color: orange">★</span><span>★★★★</span>
+                                        @elseif($average<3)
+                                            <span style="color: orange">★★</span><span>★★★</span>
+                                        @elseif($average<4)
+                                            <span style="color: orange">★★★</span><span>★★</span>
+                                        @elseif($average<5)
+                                            <span style="color: orange">★★★★</span><span>★</span>
+                                        @else
+                                            <span style="color: orange">★★★★★</span>
+                                        @endif
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -84,6 +101,20 @@
                                         <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
                                     </div>
                                     <p>{{$rs->description}}</div>
+                                <span style="color: orange;font-size: medium;font-weight: bold">{{count($rs->comments)}} Review<br></span>
+                                @if(count($rs->comments)!=0)
+                                    @if($average<2)
+                                        <span style="color: orange">★</span><span>★★★★</span>
+                                    @elseif($average<3)
+                                        <span style="color: orange">★★</span><span>★★★</span>
+                                    @elseif($average<4)
+                                        <span style="color: orange">★★★</span><span>★★</span>
+                                    @elseif($average<5)
+                                        <span style="color: orange">★★★★</span><span>★</span>
+                                    @else
+                                        <span style="color: orange">★★★★★</span>
+                                    @endif
+                                @endif
                                 <div class="event_banner">
                                     <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
                                 </div>

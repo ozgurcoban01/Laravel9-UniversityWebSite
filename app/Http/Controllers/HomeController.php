@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Announces;
 use App\Models\Comment;
 use App\Models\Content;
+use App\Models\Ccomment;
 use App\Models\Courses;
 use App\Models\Degrees;
 use App\Models\Events;
@@ -164,10 +165,11 @@ class HomeController extends Controller
 
         $data=Content::find($id);
         $otherevent=Content::where('type','=','Event')->get();
+        $reviews=Ccomment::where('content_id',$id)->get();
         $images=Images::all();
         $settings=Setting::first();
 
-        return view('home.eventdetail',['data'=>$data,'settings'=>$settings,'otherevent'=>$otherevent,'images'=>$images]);
+        return view('home.eventdetail',['data'=>$data,'settings'=>$settings,'otherevent'=>$otherevent,'images'=>$images,'reviews'=>$reviews]);
     }
 
     public function announcelist(Request $request, Announces $announces){
@@ -205,11 +207,6 @@ class HomeController extends Controller
 
         return view('home.newsdetail',['data'=>$data,'settings'=>$settings,'othernews'=>$othernews,'images'=>$images]);
     }
-
-
-
-
-
 
     public function logout(Request $request){
 

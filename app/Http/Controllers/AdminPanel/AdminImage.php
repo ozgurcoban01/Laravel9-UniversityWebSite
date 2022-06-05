@@ -59,7 +59,7 @@ class AdminImage extends Controller
         }
 
         $data->save();
-        return redirect()->route('admin.image.list',['nid'=>$nid]);
+        return redirect()->route('admin.image.index',['nid'=>$nid]);
     }
 
     /**

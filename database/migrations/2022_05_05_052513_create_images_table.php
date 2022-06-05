@@ -16,10 +16,7 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('teacher_id')->nullable();
-            $table->foreignId('event_id')->nullable();
-            $table->foreignId('announce_id')->nullable();
-            $table->foreignId('news_id')->nullable();
+            $table->foreignId('content_id')->nullable();
             $table->string('title',50);
             $table->string('image',100);
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/responsive.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/demo.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/teacherstar/style.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,6 +21,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="{{asset('assets')}}/newspageslider/style.css">
+    <script src="{{asset('assets')}}/teacherstar/script.js"></script>
 @endsection
 
 @section('header')

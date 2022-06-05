@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('ccomments', function (Blueprint $table) {
             $table->id()->autoIncrement();
 
             $table->integer('user_id');
-            $table->integer('teachers_id');
+            $table->foreignId('content_id');
             $table->string('subject');
             $table->string('review')->nullable();
             $table->string('ip')->nullable();
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('ccomments');
     }
 };

@@ -31,17 +31,18 @@ use App\Http\Controllers\AdminPanel\FacultyController;
 
 Route::get('/', [HomeController::class,'index'])->name('index');
 Route::get('/eventlist', [HomeController::class,'eventlist'])->name('eventlist');
-Route::get('/event/{id}', [HomeController::class,'event'])->name('event');
 Route::get('/teacher/{id}', [HomeController::class,'teacher'])->name('teacher');
 Route::get('/teacherlist', [HomeController::class,'teacherlist'])->name('teacherlist');
-Route::get('/courses/{id}', [HomeController::class,'courses'])->name('courses');
-Route::get('/courseslist', [HomeController::class,'courseslist'])->name('courseslist');
 Route::get('/announcelist', [HomeController::class,'announcelist'])->name('announcelist');
 Route::get('/newslist', [HomeController::class,'newslist'])->name('newslist');
 Route::get('/announce/{id}', [HomeController::class,'announce'])->name('announce');
 Route::get('/news/{id}', [HomeController::class,'news'])->name('news');
+Route::get('/event/{id}', [HomeController::class,'event'])->name('event');
 Route::get('/faculty/{id}', [HomeController::class,'faculty'])->name('faculty');
+
 Route::post('/storecomment', [AdminController::class,'storecomment'])->name('storecomment');
+
+Route::post('/storeeventcomment', [AdminController::class,'storeeventcomment'])->name('storeeventcomment');
 
 Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
