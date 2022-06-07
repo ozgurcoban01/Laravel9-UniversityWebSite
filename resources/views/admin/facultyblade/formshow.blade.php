@@ -26,6 +26,7 @@
                                 <td style="font-weight:bold">Name</td>
                                 <td>{{$data->name}}</td>
                             </tr>
+
                             <tr>
                                 <td style="font-weight:bold">About Faculty</td>
                                 <td><a onclick="return !window.open(this.href,'','top=50 left=100 height=700,width=1100')" href="{{route('admin.faculty.description',['id'=>$data ->id])}}"><i style="cursor: pointer;font-size: xx-large" class="nav-link mdi mdi-message-text menu-icon-right"></i></a></td>
@@ -60,16 +61,29 @@
                                 <td style="font-weight:bold">Updated</td>
                                 <td >{{$data->updated_at}}</td>
                             </tr>
+                            <tr>
+                                <td style="font-weight:bold">Status</td>
+                                <td>
+                                    <form method="post" action="{{route('admin.faculty.supdate',['id'=>$data->id])}}">
+                                        @csrf
+                                        <select name="status" class="js-example-basic-single w-100">
+                                            <option selected value="False">False</option>
+                                            <option value="True">True</option>
+                                        </select><br><br>
 
+                                        <button type="submit" class="btn btn-primary me-2">Update</button>
+
+                                    </form>
+
+                                </td>
+                            </tr>
 
                             </tbody>
                         </table>
 
                         {{--BOTTOM BUTTONS--}}
                         <div style="margin: 5px">
-                            <a href="{{route('admin.faculty.sedit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;">
-                                <div class="btn btn-warning btn-rounded btn-fw" style="margin: 5px">Edit Faculty</div>
-                            </a>
+
 
                             <a href="{{route('admin.faculty.destroy',['id'=>$data->id])}}"  style="text-decoration:none;color: inherit;">
                                 <div class="btn btn-danger btn-rounded btn-fw" style="margin: 5px">Delete Faculty</div>

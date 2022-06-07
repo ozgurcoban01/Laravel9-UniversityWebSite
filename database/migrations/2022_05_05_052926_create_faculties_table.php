@@ -18,6 +18,8 @@ return new class extends Migration
 
             $table->foreignId('parent_id')->default(0);
             $table->string('name');
+            $table->integer('user_id');
+            $table->string('status')->default('NEW');
             $table->longText('aboutfaculty');
             $table->string('image')->nullable();
 

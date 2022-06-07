@@ -72,6 +72,16 @@ Route::middleware('auth')->group(function (){
         Route::get('/comments','comments')->name('comments');
         Route::get('/commentdestroy/{id}','commentdestroy')->name('commentdestroy');
 
+        Route::get('/faculties','faculties')->name('faculties');
+        Route::get('/facultiesform','facultiesform')->name('facultiesform');
+        Route::post('/facultiesstore','facultiesstore')->name('facultiesstore');
+        Route::get('/facultiesdestroy/{id}','facultiesdestroy')->name('facultiesdestroy');
+
+        Route::get('/contents','contents')->name('contents');
+        Route::get('/contentsform','contentsform')->name('contentsform');
+        Route::post('/contentsstore','contentsstore')->name('contentsstore');
+        Route::get('/contentsdestroy/{id}','contentsdestroy')->name('contentsdestroy');
+
     });
 
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function(){

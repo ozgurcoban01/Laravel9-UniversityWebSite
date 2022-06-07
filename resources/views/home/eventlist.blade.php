@@ -61,19 +61,47 @@
                     @php
                         $average=$rs->comments->average('rate');
                     @endphp
-                    @if($rs->id%2==1)
-                        <div class="col-sm-12 events_full_box">
-                            <div class="events_single">
-                                <div class="event_banner">
-                                    <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
-                                </div>
-                                <div class="event_info">
-                                    <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
-                                    <div class="events_time">
-                                        <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
-                                        <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
+                    @if($rs->status=='True')
+                        @if($rs->id%2==1)
+                            <div class="col-sm-12 events_full_box">
+                                <div class="events_single">
+                                    <div class="event_banner">
+                                        <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
                                     </div>
-                                    <p>{{$rs->description}}</p>
+                                    <div class="event_info">
+                                        <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
+                                        <div class="events_time">
+                                            <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
+                                            <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
+                                        </div>
+                                        <p>{{$rs->description}}</p>
+                                        <span style="color: orange;font-size: medium;font-weight: bold">{{count($rs->comments)}} Review<br></span>
+                                        @if(count($rs->comments)!=0)
+                                            @if($average<2)
+                                                <span style="color: orange">★</span><span>★★★★</span>
+                                            @elseif($average<3)
+                                                <span style="color: orange">★★</span><span>★★★</span>
+                                            @elseif($average<4)
+                                                <span style="color: orange">★★★</span><span>★★</span>
+                                            @elseif($average<5)
+                                                <span style="color: orange">★★★★</span><span>★</span>
+                                            @else
+                                                <span style="color: orange">★★★★★</span>
+                                            @endif
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="col-sm-12 events_full_box">
+                                <div class="events_single events_single_left">
+                                    <div class="event_info">
+                                        <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
+                                        <div class="events_time">
+                                            <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
+                                            <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
+                                        </div>
+                                        <p>{{$rs->description}}</div>
                                     <span style="color: orange;font-size: medium;font-weight: bold">{{count($rs->comments)}} Review<br></span>
                                     @if(count($rs->comments)!=0)
                                         @if($average<2)
@@ -88,39 +116,13 @@
                                             <span style="color: orange">★★★★★</span>
                                         @endif
                                     @endif
-                                </div>
-                            </div>
-                        </div>
-                    @else
-                        <div class="col-sm-12 events_full_box">
-                            <div class="events_single events_single_left">
-                                <div class="event_info">
-                                    <h3><a href="{{route('event',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
-                                    <div class="events_time">
-                                        <span class="time"><i class="far fa-clock"></i>{{$rs->date}}</span>
-                                        <span><i class="fas fa-map-marker-alt"></i>{{$rs->location}}</span>
+                                    <div class="event_banner">
+                                        <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
                                     </div>
-                                    <p>{{$rs->description}}</div>
-                                <span style="color: orange;font-size: medium;font-weight: bold">{{count($rs->comments)}} Review<br></span>
-                                @if(count($rs->comments)!=0)
-                                    @if($average<2)
-                                        <span style="color: orange">★</span><span>★★★★</span>
-                                    @elseif($average<3)
-                                        <span style="color: orange">★★</span><span>★★★</span>
-                                    @elseif($average<4)
-                                        <span style="color: orange">★★★</span><span>★★</span>
-                                    @elseif($average<5)
-                                        <span style="color: orange">★★★★</span><span>★</span>
-                                    @else
-                                        <span style="color: orange">★★★★★</span>
-                                    @endif
-                                @endif
-                                <div class="event_banner">
-                                    <a href="{{route('event',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
-                                </div>
 
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     @endif
                 @endforeach
 

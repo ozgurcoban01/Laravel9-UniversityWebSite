@@ -61,7 +61,7 @@
                     @php
                         $average=$rs->comment->average('rate');
                     @endphp
-                    <div class="single-wrappe col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="single-wrappe col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="team-single-item">
                             <figure>
                                 <div class="member-img">

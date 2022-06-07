@@ -60,19 +60,21 @@
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
 
                     @foreach($data as $rs)
-                        <div class="single_blog">
-                            <div class="blog_banner">
-                                <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="post_content_wrapper">
-                                <div class="post_date"><p>{{$rs->date}} - {{$rs->faculties->name}}</p></div>
-                                <h3><a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
-                                <p>{{$rs->description}}</p>
-                                <div class="post_by d-flex justify-content-between">
-                                    <a href="{{route('news',['id'=>$rs->id])}}" title="">Read More <i class="flaticon-login-button"></i></a>
+                        @if($rs->status=='True')
+                            <div class="single_blog">
+                                <div class="blog_banner">
+                                    <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
+                                </div>
+                                <div class="post_content_wrapper">
+                                    <div class="post_date"><p>{{$rs->date}} - {{$rs->faculties->name}}</p></div>
+                                    <h3><a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
+                                    <p>{{$rs->description}}</p>
+                                    <div class="post_by d-flex justify-content-between">
+                                        <a href="{{route('news',['id'=>$rs->id])}}" title="">Read More <i class="flaticon-login-button"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
 
                     <div class="pagination_blog">
@@ -93,7 +95,7 @@
                             </div>
 
                             @foreach($events as $rs)
-
+                                @if($rs->status=='True')
                                     <div class="single-post">
                                         <div class="recent_img">
                                             <a href="{{route('event',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
@@ -105,7 +107,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                @endif
                             @endforeach
 
                         </div>

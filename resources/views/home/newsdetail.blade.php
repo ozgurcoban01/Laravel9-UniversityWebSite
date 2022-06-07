@@ -81,13 +81,13 @@
                                     <div class="slider">
                                         @foreach($images as $rs)
                                             @if($rs->content_id==$data->id)
-
-                                                <div class="item">
-                                                    <div class="banner">
-                                                        <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
+                                                @if($rs->status=='True')
+                                                    <div class="item">
+                                                        <div class="banner">
+                                                            <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
+                                                        </div>
                                                     </div>
-                                                </div>
-
+                                                @endif
                                             @endif
                                         @endforeach
 
@@ -115,17 +115,19 @@
                             </div>
                             @foreach($othernews as $rs)
                                 @if($rs->id!=$data->id)
-                                    <div class="single-post">
-                                        <div class="recent_img">
-                                            <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
-                                        </div>
-                                        <div class="post_title">
-                                            <a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a>
-                                            <div class="post-date">
-                                                <span>{{$rs->date}}</span>
+                                    @if($rs->status=='True')
+                                        <div class="single-post">
+                                            <div class="recent_img">
+                                                <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
+                                            </div>
+                                            <div class="post_title">
+                                                <a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a>
+                                                <div class="post-date">
+                                                    <span>{{$rs->date}}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 @endif
                             @endforeach
 

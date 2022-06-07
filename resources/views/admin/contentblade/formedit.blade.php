@@ -17,6 +17,15 @@
                                 <input required type="text" class="form-control" id="name" name="name" placeholder="News Name" value="{{$data->name}}">
                             </div>
 
+                            <!-- Status -->
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="js-example-basic-single w-100">
+                                    <option selected value="False">False</option>
+                                    <option value="True">True</option>
+                                </select>
+                            </div>
+
                             <!-- DATE -->
                             <div class="form-group">
                                 <label for="sdate">Date</label>

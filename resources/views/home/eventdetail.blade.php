@@ -78,14 +78,14 @@
                             @foreach($images as $rs)
                                 @if($rs->content_id==$data->id)
 
-                                    <div class="item">
-                                        <div class="banner">
-                                            <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
+                                        <div class="item">
+                                            <div class="banner">
+                                                <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
+                                            </div>
                                         </div>
-                                    </div>
 
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
 
 
                         <!-- Кнопки-стрелочки -->
@@ -122,35 +122,36 @@
                                         @endif
                                     </div>
                                     <div class="comment-list-items">
-                                        @foreach($reviews as $rs)
-                                            <div class="comment-list-wrapper">
-                                                <div class="comment-list">
-                                                    <div>
-                                                        @if($rs->rate==1)
-                                                            <span style="color: orange">★</span><span>★★★★</span>
-                                                        @elseif($rs->rate==2)
-                                                            <span style="color: orange">★★</span><span>★★★</span>
-                                                        @elseif($rs->rate==3)
-                                                            <span style="color: orange">★★★</span><span>★★</span>
-                                                        @elseif($rs->rate==4)
-                                                            <span style="color: orange">★★★★</span><span>★</span>
-                                                        @else
-                                                            <span style="color: orange">★★★★★</span>
-                                                        @endif
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <div class="author_info">
-                                                            <div class="author_name">
-                                                                <a href="#" class="">{{$rs->user->name}} <span style="font-weight: normal">says</span> {{$rs->subject}}</a>
-                                                                <span>{{$rs->created_at}}</span>
-                                                            </div>
 
+                                    @foreach($reviews as $rs)
+                                        <div class="comment-list-wrapper">
+                                            <div class="comment-list">
+                                                <div>
+                                                    @if($rs->rate==1)
+                                                        <span style="color: orange">★</span><span>★★★★</span>
+                                                    @elseif($rs->rate==2)
+                                                        <span style="color: orange">★★</span><span>★★★</span>
+                                                    @elseif($rs->rate==3)
+                                                        <span style="color: orange">★★★</span><span>★★</span>
+                                                    @elseif($rs->rate==4)
+                                                        <span style="color: orange">★★★★</span><span>★</span>
+                                                    @else
+                                                        <span style="color: orange">★★★★★</span>
+                                                    @endif
+                                                </div>
+                                                <div class="comment-text">
+                                                    <div class="author_info">
+                                                        <div class="author_name">
+                                                            <a href="#" class="">{{$rs->user->name}} <span style="font-weight: normal">says</span> {{$rs->subject}}</a>
+                                                            <span>{{$rs->created_at}}</span>
                                                         </div>
-                                                        <p>{{$rs->review}}</p>
+
                                                     </div>
+                                                    <p>{{$rs->review}}</p>
                                                 </div>
                                             </div>
-                                        @endforeach
+                                        </div>
+                                    @endforeach
 
                                     </div>
                                     <!--  Leave Commnent Wrapper -->
@@ -214,17 +215,19 @@
                             </div>
                             @foreach($otherevent as $rs)
                                 @if($rs->id!=$data->id)
-                                    <div class="single-post">
-                                        <div class="recent_img">
-                                            <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
-                                        </div>
-                                        <div class="post_title">
-                                            <a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a>
-                                            <div class="post-date">
-                                                <span>{{$rs->date}}</span>
+                                    @if($rs->status=='True')
+                                        <div class="single-post">
+                                            <div class="recent_img">
+                                                <a href="{{route('news',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
+                                            </div>
+                                            <div class="post_title">
+                                                <a href="{{route('news',['id'=>$rs->id])}}" title="">{{$rs->name}}</a>
+                                                <div class="post-date">
+                                                    <span>{{$rs->date}}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 @endif
                             @endforeach
 

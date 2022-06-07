@@ -13,6 +13,11 @@ class Content extends Model
         return $this->belongsTo(Faculties::class);
     }
 
+    public function user(){
+
+        return $this->belongsTo(User::class);
+    }
+
     public function comments(){
         return $this->hasMany(Ccomment::class);
     }

@@ -78,14 +78,16 @@
 
                             @foreach($otherannounces as $rs)
                                 @if($rs->id!=$data->id)
-                                    <div class="single-post">
-                                        <div class="post_title">
-                                            <a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->description}}</a>
-                                            <div class="post-date">
-                                                <span>{{$rs->sdate}} - {{$rs->faculties->name}}</span>
+                                    @if($rs->status=='True')
+                                        <div class="single-post">
+                                            <div class="post_title">
+                                                <a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->description}}</a>
+                                                <div class="post-date">
+                                                    <span>{{$rs->sdate}} - {{$rs->faculties->name}}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 @endif
                             @endforeach
                         </div>

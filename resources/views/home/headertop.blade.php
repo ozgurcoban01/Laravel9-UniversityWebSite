@@ -10,20 +10,26 @@
                         </ul>
                     </div>
                     <div class="login_info">
-                        <ul class="d-flex">
+
                             @auth()
-                                <li class="nav-item"><a href="/userpanel" class="nav-link sign-in js-modal-show"><i class="flaticon-user-male-black-shape-with-plus-sign"></i>{{Auth::user()->name}}</a></li>
-                                <li class="nav-item"><a href="/logoutuser" class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Logout</a></li>
+                            <ul class="d-flex">
+                                    <li class="nav-item"><a href="/userpanel" class="nav-link sign-in js-modal-show"><i class="flaticon-user-male-black-shape-with-plus-sign"></i>{{Auth::user()->name}}</a></li>
+                                    <li class="nav-item"><a href="/logoutuser" class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Logout</a></li>
+                                </ul>
+                              <a href="/admin/user" title="" class="apply_btn">Admin Panel</a>
                             @endauth
                             @guest()
-                                <li class="nav-item"><a href="/loginuser" class="nav-link sign-in js-modal-show"><i class="flaticon-user-male-black-shape-with-plus-sign"></i>Log in</a></li>
-                                <li class="nav-item"><a href="/registeruser" class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Register</a></li>
+                                <ul class="d-flex">
+                                 <li class="nav-item"><a href="/loginuser" class="nav-link sign-in js-modal-show"><i class="flaticon-user-male-black-shape-with-plus-sign"></i>Log in</a></li>
+                                  <li class="nav-item"><a href="/registeruser" class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Register</a></li>
+                                </ul>
                             @endguest
-                        </ul>
-                        <a href="#" title="" class="apply_btn">Apply Now</a>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

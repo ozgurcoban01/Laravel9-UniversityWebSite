@@ -26,6 +26,9 @@
                                         Faculty Name
                                     </th>
                                     <th>
+                                        Faculty Status
+                                    </th>
+                                    <th>
                                         Edit
                                     </th>
                                     <th>
@@ -45,6 +48,9 @@
                                         </td>
                                         <td>
                                             {{$rs->name}}
+                                        </td>
+                                        <td>
+                                            {{$rs->status}}
                                         </td>
                                         <td>
                                             <div  ><a  class="btn btn-warning btn-rounded btn-fw" href="{{route('admin.faculty.edit',['id'=>$rs->id])}}">Edit</a></div>

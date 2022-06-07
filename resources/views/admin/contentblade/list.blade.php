@@ -29,6 +29,9 @@
                                         Content Type
                                     </th>
                                     <th>
+                                        Content Status
+                                    </th>
+                                    <th>
                                         Description
                                     </th>
                                     <th>
@@ -57,6 +60,9 @@
                                         </td>
                                         <td>
                                             {{$rs->type}}
+                                        </td>
+                                        <td>
+                                            {{$rs->status}}
                                         </td>
                                         <td>
                                             {{$rs->description}}

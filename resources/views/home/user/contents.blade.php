@@ -64,24 +64,23 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                     <div class="contact_info">
                         <h3 class="title">User Details</h3>
+                        <a href="{{route('userpanel.contentsform')}}" style="text-decoration:none;color: inherit;"><div class="btn btn-primary">Add Contents</div></a>
+
                         <div class="event_location_info">
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>
-                                        Comment Id
+                                        Content Id
                                     </th>
                                     <th>
-                                        Commented Thing
+                                        Content Name
                                     </th>
                                     <th>
-                                        Rate
+                                        Content Type
                                     </th>
                                     <th>
-                                        Subject
-                                    </th>
-                                    <th>
-                                        Comment Status
+                                        Content Status
                                     </th>
                                     <th>
                                         Delete
@@ -97,33 +96,16 @@
                                             #{{$rs->id}}
                                         </td>
                                         <td>
-                                            @if($rs->content->type=='News')
-                                                <a href="{{route('event',['id'=>$rs->id])}}">{{$rs->content->name}}</a>
-                                            @endif
-                                            @if($rs->content->type=='Announce')
-                                                <a href="{{route('event',['id'=>$rs->id])}}">{{$rs->content->name}}</a>
-                                            @endif
-                                            @if($rs->content->type=='Event')
-                                                <a href="{{route('event',['id'=>$rs->id])}}">{{$rs->content->name}}</a>
-                                            @endif
-
-{{--                                            @foreach($content as $ts)--}}
-{{--                                                @if($rs->content_id==$ts->id)--}}
-{{--                                                    {{$ts->name}}--}}
-{{--                                                @endif--}}
-{{--                                            @endforeach--}}
+                                            {{$rs->name}}
                                         </td>
                                         <td>
-                                            {{$rs->rate}}
-                                        </td>
-                                        <td>
-                                            {{$rs->subject}}
+                                            {{$rs->type}}
                                         </td>
                                         <td>
                                             {{$rs->status}}
                                         </td>
                                         <td>
-                                            <div ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('userpanel.commentdestroy',['id'=>$rs->id])}}">Delete</a></div>
+                                            <div ><a class="btn btn-danger btn-rounded btn-fw" href="{{route('userpanel.contentsdestroy',['id'=>$rs->id])}}">Delete</a></div>
                                         </td>
 
                                     </tr>

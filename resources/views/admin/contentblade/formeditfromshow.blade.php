@@ -14,13 +14,22 @@
                         <!-- Event Name -->
                             <div class="form-group">
                                 <label for="name">Content Name</label>
-                                <input required type="text" class="form-control" id="name" name="name" placeholder="Event Name" value="{{$data->name}}">
+                                <input required type="text" class="form-control" id="name" name="name" placeholder="News Name" value="{{$data->name}}">
+                            </div>
+
+                            <!-- Status -->
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="js-example-basic-single w-100">
+                                    <option selected value="False">False</option>
+                                    <option value="True">True</option>
+                                </select>
                             </div>
 
                             <!-- DATE -->
                             <div class="form-group">
                                 <label for="sdate">Date</label>
-                                <input required type="date" class="form-control" id="date" name="date" value="{{$data->sdate}}">
+                                <input required type="date" class="form-control" id="date" name="date" value="{{$data->date}}">
                             </div>
 
                             <div class="form-group">
@@ -44,11 +53,11 @@
 
                             <!-- ABOUTEVENT -->
                             <div class="form-group">
-                                <label for="aboutnews">About News</label><br>
-                                <textarea id="aboutnews" name="aboutnews" placeholder=" News About ...">{!! $data->aboutnews !!}</textarea>
+                                <label for="aboutcontent">About Content</label><br>
+                                <textarea id="aboutcontent" name="aboutcontent" placeholder=" Cotnent About ...">{!! $data->aboutcontent !!}</textarea>
 
                                 <script>
-                                    $('#aboutnews').summernote({
+                                    $('#aboutcontent').summernote({
 
                                         tabsize: 2,
                                         height: 120,
@@ -63,6 +72,24 @@
                                         ]
                                     });
                                 </script>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Faculty</label>
+                                <select required name="faculties_id" class="js-example-basic-multiple w-100" >
+                                    @foreach($facultylist as $rs)
+                                        <option value="{{$rs->id}}">{{\App\Http\Controllers\AdminPanel\FacultyController::getParentsTree($rs,$rs->name)}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select name="type" class="js-example-basic-single w-100">
+                                    <option selected value="News">News</option>
+                                    <option value="Event">Event</option>
+                                    <option value="Announce">Announce</option>
+                                </select>
                             </div>
 
                             <!-- IMAGE -->

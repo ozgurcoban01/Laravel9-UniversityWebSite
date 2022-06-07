@@ -10,10 +10,20 @@
                         </p>
                         <form method="post" action="{{route('admin.content.store')}}" enctype="multipart/form-data" class="forms-sample">
                             @csrf
+
                             <!-- Event Name -->
                             <div class="form-group">
                                 <label for="name">Content Name</label>
                                 <input required type="text" class="form-control" id="name" name="name" placeholder="News Name" >
+                            </div>
+
+                            <!-- Status -->
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="js-example-basic-single w-100">
+                                    <option selected value="">False</option>
+                                    <option value="Istanbul">True</option>
+                                </select>
                             </div>
 
                             <!-- DATE -->

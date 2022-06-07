@@ -8,7 +8,7 @@
             </div>
         @foreach($content as $rs)
             @if($rs->type=='News')
-
+                @if($rs->status=='True')
                     <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="single-courses">
                             <div class="courses_banner_wrapper">
@@ -22,6 +22,7 @@
                             </div>
                         </div><!-- Ends: .single courses -->
                     </div><!-- Ends: . -->
+                @endif
             @endif
         @endforeach
 

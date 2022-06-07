@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
 
+
             $table->string('name');
+            $table->integer('user_id');
+            $table->string('status')->default('NEW');
             $table->foreignId('faculties_id');
             $table->string('location')->nullable();
             $table->date('date');

@@ -15,6 +15,11 @@ class Faculties extends Model
 
     protected $appends=['parent'];
 
+    public function user(){
+
+        return $this->belongsTo(User::class);
+    }
+
     public function teachers(){
         return $this->hasMany(Teachers::class);
     }

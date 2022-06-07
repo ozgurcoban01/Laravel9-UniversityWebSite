@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/assets/css/lightbox.css">
     <link rel="stylesheet" href="{{asset('assets')}}/burger/style.css">
     <link rel="stylesheet" href="{{asset('assets')}}/headerdropdown/style.css">
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 
 
     <!--

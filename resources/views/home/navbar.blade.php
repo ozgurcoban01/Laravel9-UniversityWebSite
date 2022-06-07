@@ -5,21 +5,23 @@
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-faded">
             <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('assets')}}/images/logo.png" alt="logo"></a>
+            @livewire('search')
+
             <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                 <ul class="navbar-nav nav lavalamp ml-auto menu">
 
                     <li class="nav-item"><a href="#" class="nav-link active">Faculties</a>
                         <ul class="navbar-nav nav mx-auto">
                             @foreach($faculties as $rs)
-
-                                @if(count($rs->children))
-                                    <li class="nav-item"><a href="{{route('faculty',['id'=>$rs->id])}}"class="nav-link dropdown_icon" >{{$rs->name}}</a>
-                                        @include('home.navbarforeach',['children'=>$rs->children])
-                                    </li>
-                                @else
-                                    <li class="nav-item"><a href="{{route('faculty',['id'=>$rs->id])}}"class="nav-link">{{$rs->name}}</a></li>
+                                @if($rs->status=='True')
+                                    @if(count($rs->children))
+                                        <li class="nav-item"><a href="{{route('faculty',['id'=>$rs->id])}}"class="nav-link dropdown_icon" >{{$rs->name}}</a>
+                                            @include('home.navbarforeach',['children'=>$rs->children])
+                                        </li>
+                                    @else
+                                        <li class="nav-item"><a href="{{route('faculty',['id'=>$rs->id])}}"class="nav-link">{{$rs->name}}</a></li>
+                                    @endif
                                 @endif
-
                             @endforeach
 
                         </ul>
@@ -48,18 +50,7 @@
                 </ul>
             </div>
 
-            <div class="mr-auto search_area ">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><i class="search_btn flaticon-magnifier"></i>
-                        <div id="search">
-                            <button type="button" class="close">×</button>
-                            <form>
-                                <input type="search" value="" placeholder="Search here...."  required/>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
         </nav><!-- END NAVBAR -->
     </div>
 </div>

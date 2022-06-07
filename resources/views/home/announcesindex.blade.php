@@ -36,23 +36,25 @@
             </div>
             @foreach($content as $rs)
                 @if($rs->type=='Announce')
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                        <div class="single_item">
-                            <div class="item_wrapper">
-                                <div class="blog-img">
-                                    <a href="{{route('announce',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
+                    @if($rs->status=='True')
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="single_item">
+                                <div class="item_wrapper">
+                                    <div class="blog-img">
+                                        <a href="{{route('announce',['id'=>$rs->id])}}" title=""><img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid"></a>
+                                    </div>
+                                    <h3><a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
                                 </div>
-                                <h3><a href="{{route('announce',['id'=>$rs->id])}}" title="">{{$rs->name}}</a></h3>
-                            </div>
-                            <div class="blog_title">
-                                <ul class="post_bloger">
-                                    <li><i class="fas fa-user"></i>{{$rs->description}}</li>
+                                <div class="blog_title">
+                                    <ul class="post_bloger">
+                                        <li><i class="fas fa-user"></i>{{$rs->description}}</li>
 
-                                </ul>
-                            </div>
+                                    </ul>
+                                </div>
 
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 @endif
             @endforeach
         </div>

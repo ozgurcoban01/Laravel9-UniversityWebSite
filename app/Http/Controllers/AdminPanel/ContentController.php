@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Content;
 use App\Models\Faculties;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ContentController extends Controller
@@ -47,6 +48,7 @@ class ContentController extends Controller
         $data=new Content();
 
         $data->name=$request->name;
+        $data->user_id=Auth::id();
         $data->location=$request->location;
         $data->date=$request->date;
         $data->aboutcontent=$request->aboutcontent;
@@ -113,6 +115,7 @@ class ContentController extends Controller
         Storage::delete($data->image);
         $data->name=$request->name;
         $data->location=$request->location;
+        $data->status=$request->status;
         $data->date=$request->date;
         $data->aboutcontent=$request->aboutcontent;
         $data->description=$request->description;
@@ -133,18 +136,7 @@ class ContentController extends Controller
 
         $data=Content::find($id);
 
-        Storage::delete($data->image);
-        $data->name=$request->name;
-        $data->location=$request->location;
-        $data->date=$request->date;
-        $data->aboutcontent=$request->aboutcontent;
-        $data->description=$request->description;
-        $data->type=$request->type;
-        $data->faculties_id=$request->faculties_id;
-
-        if($request->file('image')){
-            $data->image=$request->file('image')->store('content_images');
-        }
+        $data->status=$request->status;
 
         $data->save();
         return redirect()->route('admin.content.show', ['id' => $id]);

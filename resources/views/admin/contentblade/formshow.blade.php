@@ -46,6 +46,7 @@
                                 <td style="font-weight:bold">Type</td>
                                 <td>{{$data->type}}</td>
                             </tr>
+
                             <tr>
                                 <td style="font-weight:bold">Faculty</td>
                                 <td>{{$data->faculties->name}}</td>
@@ -74,16 +75,27 @@
                                 <td style="font-weight:bold">Updated</td>
                                 <td >{{$data->updated_at}}</td>
                             </tr>
+                            <tr>
+                                <td style="font-weight:bold">Status</td>
+                                <td>
+                                    <form method="post" action="{{route('admin.content.supdate',['id'=>$data->id])}}">
+                                        @csrf
+                                        <select name="status" class="js-example-basic-single w-100">
+                                            <option selected value="False">False</option>
+                                            <option value="True">True</option>
+                                        </select><br><br>
 
+                                        <button type="submit" class="btn btn-primary me-2">Update</button>
+                                    </form>
+
+                                </td>
+                            </tr>
 
                             </tbody>
                         </table>
 
                         {{--BOTTOM BUTTONS--}}
                         <div style="margin: 5px">
-                            <a href="{{route('admin.content.sedit',['id'=>$data->id])}}" style="text-decoration:none;color: inherit;">
-                                <div class="btn btn-warning btn-rounded btn-fw" style="margin: 5px">Edit Event</div>
-                            </a>
 
                             <a href="{{route('admin.content.destroy',['id'=>$data->id])}}"  style="text-decoration:none;color: inherit;">
                                 <div class="btn btn-danger btn-rounded btn-fw" style="margin: 5px">Delete Event</div>

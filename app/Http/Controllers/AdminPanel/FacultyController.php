@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Faculties;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class FacultyController extends Controller
@@ -67,6 +68,7 @@ class FacultyController extends Controller
         $data=new Faculties();
 
         $data->parent_id=$request->parent_id;
+        $data->user_id=Auth::id();
         $data->name=$request->name;
         $data->aboutfaculty=$request->aboutfaculty;
 
@@ -148,6 +150,7 @@ class FacultyController extends Controller
 
         $data->parent_id=$request->parent_id;
         $data->name=$request->name;
+        $data->status=$request->status;
         $data->aboutfaculty=$request->aboutfaculty;
 
         if($request->file('image')){
@@ -163,15 +166,7 @@ class FacultyController extends Controller
         //
         $data=Faculties::find($id);
 
-        Storage::delete($data->image);
-
-        $data->parent_id=$request->parent_id;
-        $data->name=$request->name;
-        $data->aboutfaculty=$request->aboutfaculty;
-
-        if($request->file('image')){
-            $data->image=$request->file('image')->store('faculty_images');
-        }
+        $data->status=$request->status;
 
         $data->save();
         return redirect()->route('admin.faculty.show', ['id' => $id]);
